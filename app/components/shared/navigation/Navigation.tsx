@@ -20,7 +20,7 @@ export function Navigation () {
       <nav>
         <ul className={styles.navigation}>
           {links.map(({ label, route }) => (
-            <li key={route}>
+            <li className={styles.navigationElement} key={route}>
               <Link href={route}>{label}</Link>
             </li>
           ))}

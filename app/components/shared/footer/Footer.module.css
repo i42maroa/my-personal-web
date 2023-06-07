@@ -1,0 +1,27 @@
+.footer{
+    width: 100%;
+    padding: 0 3rem;
+    background-color: #3e3e3e;
+}
+
+.footerContainer{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(50vh, 1fr));
+    width: 100%;
+}
+
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.leftContainer button{
+    width: 100px;
+}
+
+.rightContainer{
+    display: flex;
+    width: 100%;
+}
