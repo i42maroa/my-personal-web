@@ -4,17 +4,13 @@
         auto-fit, minmax(50%, 1fr));
 }
 
-.leftContainer{
+
+.leftContainer, .rightContainer{
     display: flex;
     flex-direction: column;
-    width: 100%;
+
 }
 
-.leftContainer button{
+.leftContainer button, .rightContainer button{
     width: 100px;
-}
-
-.rightContainer{
-    display: flex;
-    width: 100%;
 }

@@ -7,7 +7,6 @@
 .leftContainer{
     display: flex;
     flex-direction: column;
-    width: 100%;
 }
 
 .leftContainer button{
@@ -16,5 +15,4 @@
 
 .rightContainer{
     display: flex;
-    width: 100%;
 }

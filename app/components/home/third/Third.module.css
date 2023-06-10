@@ -1,16 +1,29 @@
 .mainContainer{
     display: grid;
     grid-template-columns: repeat(
-        auto-fit, minmax(50vh, 1fr));
-    width: 100%;
+        auto-fit, minmax(50%, 1fr));
 }
 
 .leftContainer, .rightContainer{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    background-color: white;
+    padding: 3rem;
+    border: 1px solid black;
 }
 
 .leftContainer button, .rightContainer button{
     width: 100px;
+}
+
+.mainContainer h2{
+    padding: 2rem 0;
+}
+
+.mainContainer P{
+    padding: 1rem 0;
+}
+
+.mainContainer button{
+    margin: 1rem; 
 }

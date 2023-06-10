@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-width: 5vh;
+}
+
+.container h4{
+    text-align: center;
+}
+
+.imageContainer{
+    display: flex;
+    margin: 0 auto;
+}

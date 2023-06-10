@@ -1,12 +1,9 @@
 .mainContainer{
     display: grid;
     grid-template-columns: repeat(
-        auto-fit, minmax(50vh, 1fr));
-    width: 100%;
+        auto-fit, minmax(50%, 1fr));
 }
-
-.leftContainer, .rightContainer{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
+/* 
+.textContainer{
+    padding: 0 2rem;
+} */
