@@ -9,7 +9,7 @@ export function Footer () {
     <footer>
       <div className={styles.footerContainer}>
         <div className={styles.leftContainer}>
-          <h3>SAY HELLO</h3>
+          <h4>SAY HELLO</h4>
           <ul>
             <li>asfdasd@gmail.com</li>
             <li>asfdasd@gmail.com</li>

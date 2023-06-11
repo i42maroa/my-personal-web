@@ -12,10 +12,12 @@ export default function SecondComponent () {
   return (
     <section id={LINKS[PAGES.ABOUT].sections[1]} className={styles.mainContainer}>
       <div className={styles.leftContainer}>
-        <h2>WHAT I KNOW?</h2>
-        <button onClick={() => setTechnology(FRONT_TECHNOLOGY)}>FRONT</button>
-        <button onClick={() => setTechnology(BACK_TECHNOLOGY)}>BACK</button>
-        <button onClick={() => setTechnology(MIXT_TECHNOLOGY)}>MIX</button>
+        <h2>What I know?</h2>
+        <div className={styles.buttonContainer}>
+          <button onClick={() => setTechnology(FRONT_TECHNOLOGY)}>FRONT</button>
+          <button onClick={() => setTechnology(BACK_TECHNOLOGY)}>BACK</button>
+          <button onClick={() => setTechnology(MIXT_TECHNOLOGY)}>MIX</button>
+        </div>
       </div>
       <div className={styles.rightContainer}>
         <div className={styles.technologyContainer}>

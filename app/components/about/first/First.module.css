@@ -1,7 +1,5 @@
 .mainContainer{
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fit, minmax(50%, 1fr));
+    display: flex;
 }
 
 .leftContainer{
@@ -16,3 +14,15 @@
 .rightContainer{
     display: flex;
 }
+
+@media (max-width: 1000px) {
+
+    .leftContainer p{
+        padding: 3rem 0;
+    }
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+

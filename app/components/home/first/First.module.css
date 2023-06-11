@@ -1,13 +1,14 @@
 .mainContainer{
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fit, minmax(50%, 1fr));
+    display: flex;
+    margin: 0 auto;
+
 }
 
 .leftContainer{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    margin: auto;
+    width: 50%;
 }
 
 .leftContainer button{
@@ -16,5 +17,47 @@
 
 .rightContainer{
     display: flex;
-    width: 100%;
+    width: 50%;
+    position: relative;
+    height: 30rem;
 }
+
+.rightContainer img{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@media (max-width: 1000px) {
+
+    .mainContainer{
+        flex-direction: column-reverse;
+    }
+
+    .rightContainer,
+    .leftContainer{
+        width: 100%;
+    }
+
+    .leftContainer h1{
+        text-align: center;
+    }
+ 
+    .leftContainer p{
+        display: none;
+    }
+
+    .button{
+        margin: 1rem auto;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+  
+}
+

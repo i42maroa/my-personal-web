@@ -1,0 +1,19 @@
+.children{
+    margin-top: 10rem;
+}
+
+@media (max-width: 1000px) {
+
+    .children{
+        margin-top: 8rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .children{
+        margin-top: 100px;
+    }
+
+}

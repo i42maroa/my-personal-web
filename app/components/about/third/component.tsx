@@ -5,7 +5,7 @@ export default function ThirdComponent () {
   return (
     <section id={LINKS[PAGES.ABOUT].sections[2]} className={styles.mainContainer}>
       <div className={styles.leftContainer}>
-        <h3>WHERE I WORK</h3>
+        <h3>Where I work</h3>
         <ul>
           <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quo!</li>
           <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quo!</li>

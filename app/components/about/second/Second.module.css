@@ -18,3 +18,15 @@
 .leftContainer button{
     width: 100px;
 }
+
+@media (max-width: 1000px) {
+
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rightContainer{
+        padding: 3rem 0;
+    }
+}

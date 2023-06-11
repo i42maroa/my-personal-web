@@ -3,7 +3,16 @@
     grid-template-columns: repeat(
         auto-fit, minmax(50%, 1fr));
 }
-/* 
-.textContainer{
-    padding: 0 2rem;
-} */
+
+@media (max-width: 1000px) {
+
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .textContainer{
+        padding: 3rem 0;
+    }
+
+}
