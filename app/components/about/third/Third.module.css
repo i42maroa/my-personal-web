@@ -1,0 +1,16 @@
+.mainContainer{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(50%, 1fr));
+}
+
+
+.leftContainer, .rightContainer{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.leftContainer button, .rightContainer button{
+    width: 100px;
+}

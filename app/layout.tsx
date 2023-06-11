@@ -1,10 +1,8 @@
-import { Inter } from 'next/font/google'
-import { Navigation } from './components/navigation/Navigation'
+import { Navigation } from './components/shared/navigation/Navigation'
 import '../styles/globals.css'
-import { Footer } from './components/footer/Footer'
 import React from 'react'
-
-const inter = Inter({ subsets: ['latin'] })
+import styles from './Layout.module.css'
+import { Footer } from './components/shared/footer/Footer'
 
 export const metadata = {
   title: 'Create Next App',
@@ -21,9 +19,9 @@ export default function RootLayout ({
       <head>
         <title>My personal web</title>
       </head>
-      <body className={inter.className}>
+      <body>
         <Navigation />
-        {children}
+        <div className={styles.children}>{children}</div>
         <Footer />
       </body>
     </html>

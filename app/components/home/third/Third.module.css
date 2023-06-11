@@ -1,0 +1,40 @@
+.mainContainer{
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(50%, 1fr));
+        
+}
+
+.leftContainer, .rightContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem;
+    border: 1px solid black;
+}
+
+.leftContainer button, .rightContainer button{
+    width: 100px;
+}
+
+.mainContainer h2{
+    padding: 2rem 0;
+}
+
+.mainContainer P{
+    padding: 1rem 0;
+}
+
+.mainContainer button{
+    margin: 1rem; 
+}
+
+
+
+@media (max-width: 1000px) {
+
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+}

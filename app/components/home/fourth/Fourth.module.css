@@ -1,0 +1,29 @@
+.mainContainer{
+    display: flex;
+    padding: 5rem 10rem;
+    background-color: white;
+    width: 100%;
+}
+
+.leftContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.leftContainer button{
+    width: 100px;
+}
+
+.rightContainer{
+    display: flex;
+    width: 100%;
+}
+
+@media (max-width: 1000px) {
+
+    .mainContainer{
+        padding: 3rem ;
+    }
+
+}

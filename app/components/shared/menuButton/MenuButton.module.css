@@ -1,0 +1,43 @@
+.menuIconBox{
+    height: 3rem;
+    width:  3rem;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.line1, .line2{
+    height: 4px;
+    background-color: #0f0f0f;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+
+.line1{
+    width: 40px;
+    margin: 10px 0;
+}
+
+.line2{
+    width: 30px;
+    margin: 10px 8px;
+}
+
+.active1{
+    transform: translate(0px, 7px)rotate(45deg);
+}
+
+.active2{
+    transform: translate(0px, -7px)rotate(-45deg);
+    width: 40px;
+    margin: 10px 0;
+}
+
+
+@media (max-width: 500px) {
+
+  
+}
