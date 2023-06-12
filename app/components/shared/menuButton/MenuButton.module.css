@@ -9,12 +9,15 @@
     transform: translate(-50%, -50%);
 }
 
+
+
 .line1, .line2{
     height: 4px;
-    background-color: #0f0f0f;
+    background-color: var(--font-color);
     border-radius: 30px;
     transition: 0.2s;
 }
+
 
 .line1{
     width: 40px;

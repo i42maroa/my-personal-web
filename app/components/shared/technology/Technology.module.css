@@ -1,15 +1,54 @@
 .container{
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    min-width: 5vh;
+    padding: 2rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5px;
+    background-color: var(--font-color);
+    color: var(--inverse-font-color);
+    cursor: pointer;
+    margin: 2rem auto;
+    justify-content: space-around;
+}
+
+.container:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
 }
 
 .container h4{
     text-align: center;
+    font-size: 18px;
 }
 
 .imageContainer{
     display: flex;
     margin: 0 auto;
+}
+
+.imageContainer img{
+    transform: scale(1.5);
+}
+
+
+@media (max-width: 1000px) {
+    .container{
+        width: 8rem;
+        height: 8rem;
+        padding: 1.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .container{
+        width: 5rem;
+        height: 5rem;
+        padding: 1.5rem;
+    }
+
+    .imageContainer img{
+        transform: scale(1);
+    }
 }

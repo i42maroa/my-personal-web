@@ -8,9 +8,9 @@
 .leftContainer, .rightContainer{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--section);
     padding: 3rem;
-    border: 1px solid black;
+    box-shadow: 2px 1px 1px #afafaf;
 }
 
 .leftContainer button, .rightContainer button{

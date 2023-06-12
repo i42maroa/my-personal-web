@@ -4,12 +4,14 @@
     grid-template-columns: repeat(
         auto-fit, minmax(50%, 1fr));
     padding: 3rem 5rem;
+    
 }
 
 .leftContainer{
     display: flex;
     flex-direction: column;
     width: 100%;
+    
 }
 
 .leftContainer button{

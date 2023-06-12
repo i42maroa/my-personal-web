@@ -1,5 +1,6 @@
 .buttonContainer{
-    border: red solid 2px;
+    border: var(--font-color) solid 2px;
+    color:  var(--font-color);
     padding: 1rem 0.5rem;
     text-align: center;
     margin: 1rem;
