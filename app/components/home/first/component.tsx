@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from './First.module.css'
 import getRouteWithSection, { LINKS, PAGES } from '@/data/links.data'
+import { FaceFront } from '../../shared/svg/Face/face'
 
 export default function FirstComponent () {
   return (
@@ -11,7 +12,8 @@ export default function FirstComponent () {
         <Link className={styles.button} href={getRouteWithSection(PAGES.ABOUT, 0)}>SABER MAS</Link>
       </div>
       <div className={styles.rightContainer}>
-        <img src='https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000' alt='imagen' height={400} />
+        {/* <img src='https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000' alt='imagen' height={400} /> */}
+        <FaceFront />
       </div>
     </section>
   )
