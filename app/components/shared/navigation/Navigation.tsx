@@ -4,9 +4,9 @@ import styles from './Navigation.module.css'
 import { useEffect, useState } from 'react'
 import { LINKS } from '@/data/links.data'
 import { MenuButton } from '../menuButton/MenuButton'
-import changeRootColors from '@/hook/changeColor'
 import startAnimation from '@/hook/startAnimation'
 import { showNavbarDependOfScroll } from '@/hook/scrollHandler'
+import { Toggle } from '../toggle/Toggle'
 
 const links = LINKS
 
@@ -14,11 +14,6 @@ export function Navigation () {
   const [showNav, setShowNav] = useState(false)
   const [lastScrol, setLastScroll] = useState(0)
   const [isScrollDown, setIsScrollingDown] = useState(false)
-
-  function changeColorAndCloseNav (key:string) {
-    changeRootColors(key)
-    setShowNav(false)
-  }
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -54,11 +49,8 @@ export function Navigation () {
               <li>hello@olaolu.dev</li>
               <li>hello@olaolu.dev</li>
             </ul>
-            <ul>
-              <li><button onClick={() => changeColorAndCloseNav('white')}>White</button></li>
-              <li><button onClick={() => changeColorAndCloseNav('middle')}>Med</button></li>
-              <li><button onClick={() => changeColorAndCloseNav('dark')}>Black</button></li>
-            </ul>
+            <h4>ELIGE MODO</h4>
+            <Toggle />
           </nav>}
       </div>
     </header>
