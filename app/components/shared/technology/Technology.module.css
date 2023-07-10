@@ -1,9 +1,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    padding: 2rem;
     width: 10rem;
-    height: 10rem;
     border-radius: 5px;
     background-color: var(--font-color);
     color: var(--inverse-font-color);
@@ -24,13 +22,13 @@
 
 .imageContainer{
     display: flex;
-    margin: 0 auto;
+    margin: 1rem auto 0 auto;
 }
 
-.imageContainer img{
-    transform: scale(1.5);
+.image{
+    max-width: 100px;
+    max-height: 100px;
 }
-
 
 @media (max-width: 1000px) {
     .container{

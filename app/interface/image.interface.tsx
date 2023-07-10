@@ -1,8 +1,8 @@
 export interface ImageInterface {
     url: string;
     alt: string;
-    height: string;
-    width: string;
+    height: number;
+    width: number;
 }
 
 export interface TechnologyInterface {
