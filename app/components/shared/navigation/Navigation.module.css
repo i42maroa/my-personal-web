@@ -68,6 +68,10 @@
     font-size: 20px;
 }
 
+.button{
+    background-color: transparent;
+    border: none;
+}
 
 
 @media (max-width: 1000px) {

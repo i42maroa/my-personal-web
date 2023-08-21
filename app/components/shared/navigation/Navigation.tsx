@@ -32,7 +32,7 @@ export function Navigation () {
         <div className={styles.navigationHeader}>
           <Link href='/' className={styles.logo}><img src='https://brandemia.org/sites/default/files/inline/images/volkswagen_logo-portada.jpg' alt='' width={40} /></Link>
           <div className={styles.displayButton}>
-            <button onClick={() => setShowNav(!showNav)}><MenuButton stateValue={showNav} /></button>
+            <button className={styles.button} onClick={() => setShowNav(!showNav)}><MenuButton stateValue={showNav} /></button>
           </div>
         </div>
         {showNav && !isScrollDown &&
