@@ -3,6 +3,7 @@ import { LINKS, PAGES } from '@/data/links.data'
 import styles from './Fourth.module.css'
 import { useState } from 'react'
 import { Button } from '../../shared/button/Button'
+import { WorkCoffee } from '../../shared/svg/Work&Coffee/WorkCoffee'
 
 export default function FourthComponent () {
   const [showForm, setShowForm] = useState(false)
@@ -23,7 +24,7 @@ export default function FourthComponent () {
               <button onClick={() => setShowForm(true)}> <Button buttonText='FORM' /></button>
             </div>
             <div className={styles.rightContainer}>
-              <img src='https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000' alt='imagen' height={100} width={100} />
+              <WorkCoffee />
             </div>
           </div>}
         {showForm &&
