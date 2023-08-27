@@ -10,7 +10,7 @@ export default function FirstComponent () {
         <button>Nuevo dato</button>
       </div>
       <div className={styles.rightContainer}>
-        <img src='https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000' alt='imagen' height={400} />
+        {/* <img src='https://img.freepik.com/vector-premium/perfil-avatar-hombre-icono-redondo_24640-14044.jpg?w=2000' alt='imagen' height={400} /> */}
       </div>
     </section>
   )

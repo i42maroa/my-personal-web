@@ -1,0 +1,133 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr  4fr;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1.5rem 0;
+}
+
+
+.yearContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.yearExperience{
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 800;
+    padding: 1.5rem 0;
+}
+
+.imageContainer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: var(--font-color);
+}
+
+.imageContainer img{
+    margin: auto;
+}
+
+.contentContainer{
+    display: flex;
+    margin: auto 0;
+    background-color: var(--font-color);
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.title{
+    font-weight: 800;
+    margin: auto 0;
+    padding: 1.5rem;
+    color: var(--inverse-font-color);
+}
+
+.subtitle{
+    font-style: italic;
+    font-weight: 400;
+    margin: auto 0;
+    padding: 1.5rem;
+    color: var(--inverse-font-color);
+}
+
+.descriptionContainer{
+    background-color: var(--background); 
+}
+
+.descriptionContainerUnity{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 1rem 0;
+}
+
+.titleDescriptionContainer{
+    display: flex;
+    flex-direction: column;  
+    padding: 0 1.5rem;
+}
+
+.titleDescription, .description{
+    margin: auto 0;
+}
+
+.titleDescription{ 
+    font-weight: 800;
+}
+
+.contentTechnologies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    padding: 0 0.5rem;
+}
+
+.contentTechnologies img{
+    margin: 0.5rem;
+}
+
+@media (max-width: 700px) {
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .descriptionContainerUnity{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .title, .subtitle{
+        width: 100%;
+        text-align: center;
+    } 
+
+    .title{
+        padding: 1.5rem 0 0.5rem 0;
+    }
+
+    .subtitle{
+        padding: 0.5rem 0 1.5rem 0;
+    }
+
+    .titleDescriptionContainer{
+        padding: 0;
+    }
+
+    .contentTechnologies{
+        width: 100%;
+        margin: 1.5rem auto;
+        padding: 0 ;
+    }    
+}
