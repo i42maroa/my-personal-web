@@ -3,7 +3,6 @@ import { LINKS, PAGES } from '@/data/links.data'
 import styles from './Fourth.module.css'
 import { useState } from 'react'
 import { Button } from '../../shared/button/Button'
-import { WorkCoffee } from '../../shared/svg/Work&Coffee/WorkCoffee'
 import { CoffeeMachine } from '../../shared/svg/CoffeeMachine/CoffeeMachine'
 
 export default function FourthComponent () {
