@@ -4,6 +4,7 @@ import styles from './Fourth.module.css'
 import { useState } from 'react'
 import { Button } from '../../shared/button/Button'
 import { WorkCoffee } from '../../shared/svg/Work&Coffee/WorkCoffee'
+import { CoffeeMachine } from '../../shared/svg/CoffeeMachine/CoffeeMachine'
 
 export default function FourthComponent () {
   const [showForm, setShowForm] = useState(false)
@@ -24,7 +25,8 @@ export default function FourthComponent () {
               <button onClick={() => setShowForm(true)}> <Button buttonText='FORM' /></button>
             </div>
             <div className={styles.rightContainer}>
-              <WorkCoffee />
+              {/* <WorkCoffee /> */}
+              <CoffeeMachine />
             </div>
           </div>}
         {showForm &&
