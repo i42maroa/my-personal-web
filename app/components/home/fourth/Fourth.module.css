@@ -1,14 +1,14 @@
 .mainContainer{
     display: flex;
-    padding: 5rem 10rem;
-    background-color: var(--section);
-    width: 100%;
+
+    margin: 0 auto;
 }
 
 .leftContainer{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    margin: auto;
+    width: 50%;
 }
 
 .leftContainer button{
@@ -17,13 +17,62 @@
 
 .rightContainer{
     display: flex;
-    width: 100%;
+    width: 50%;
+    position: relative;
+    min-width: 30rem;
+    min-height: 40rem;
 }
+
+.buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.button{
+    border: none;
+    background-color: var(--font-color);
+    color: var(--inverse-font-color);
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.button:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
 
 @media (max-width: 1000px) {
 
     .mainContainer{
-        padding: 3rem ;
+        flex-direction: column;
     }
 
+    .rightContainer,
+    .leftContainer{
+        width: 100%;
+    }
+
+    .leftContainer h1{
+        text-align: center;
+    }
+ 
+    .leftContainer p{
+        display: none;
+    }
+
+    .button{
+        margin: 1rem auto;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+  
 }

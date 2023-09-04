@@ -47,8 +47,8 @@ export function CoffeeMachine () {
       {/* BUTTONS */}
       {/* //////////////////////////// */}
       <g id='buttons'>
-        <g id='ready_x5F_button' className={`${styles.readyButton} ${showComponent(state.showReadyButton, styles.disableClass)}`} onClick={() => setMachineState(CLICK_OK_BUTTON)}>
-          <circle className={styles.st9} cx='405.04' cy='550.53' r='62.88' />
+        <g id='ready_x5F_button' className={`${styles.readyButton}  ${styles.section} ${showComponent(state.showReadyButton, styles.disableClass)}`} onClick={() => setMachineState(CLICK_OK_BUTTON)}>
+          <circle className={`${styles.st9}`} cx='405.04' cy='550.53' r='62.88' />
           <g id='enjoy'>
             <text transform='matrix(0.9668 0 0 1 368.1782 561.1173)' className={styles.text}>OK</text>
           </g>

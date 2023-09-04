@@ -1,59 +1,66 @@
+export enum DRINK{
+  COFFEE, LATTE, MILK, NONE
+}
+
 export interface CoffeeMachineStateInterface {
-    showCoffeePanel:boolean,
-    showMilkPanel:boolean,
-    showLattePanel:boolean,
-    showEnjoyPanel:boolean,
+    showPanel:boolean,
+    showEnjoyPanel: boolean,
     showReadyButton:boolean,
     showGlass:boolean,
-    showChorro:boolean
+    showChorro:boolean,
+    drinkPress:DRINK
 }
 
 export const INITIAL_STATE:CoffeeMachineStateInterface = {
-  showCoffeePanel: false,
-  showMilkPanel: false,
-  showLattePanel: false,
+  showPanel: false,
   showEnjoyPanel: false,
   showReadyButton: false,
   showGlass: false,
-  showChorro: false
+  showChorro: false,
+  drinkPress: DRINK.NONE
 }
 
 export const CLICK_COFFEE_BUTTON:CoffeeMachineStateInterface = {
-  showCoffeePanel: true,
-  showMilkPanel: false,
-  showLattePanel: false,
+  showPanel: true,
   showEnjoyPanel: false,
   showReadyButton: true,
   showGlass: false,
-  showChorro: false
+  showChorro: false,
+  drinkPress: DRINK.COFFEE
 }
 
 export const CLICK_MILK_BUTTON:CoffeeMachineStateInterface = {
-  showCoffeePanel: false,
-  showMilkPanel: true,
-  showLattePanel: false,
+  showPanel: true,
   showEnjoyPanel: false,
   showReadyButton: true,
   showGlass: false,
-  showChorro: false
+  showChorro: false,
+  drinkPress: DRINK.MILK
 }
 
 export const CLICK_LATTE_BUTTON:CoffeeMachineStateInterface = {
-  showCoffeePanel: false,
-  showMilkPanel: false,
-  showLattePanel: true,
+  showPanel: true,
   showEnjoyPanel: false,
   showReadyButton: true,
   showGlass: false,
-  showChorro: false
+  showChorro: false,
+  drinkPress: DRINK.LATTE
 }
 
-export const CLICK_OK_BUTTON:CoffeeMachineStateInterface = {
-  showCoffeePanel: false,
-  showMilkPanel: false,
-  showLattePanel: false,
+export const PUT_GLASS_EVENT:CoffeeMachineStateInterface = {
+  showPanel: false,
   showEnjoyPanel: true,
   showReadyButton: false,
   showGlass: true,
-  showChorro: true
+  showChorro: true,
+  drinkPress: DRINK.NONE
+}
+
+export const CLICK_OK_BUTTON:CoffeeMachineStateInterface = {
+  showPanel: false,
+  showEnjoyPanel: true,
+  showReadyButton: false,
+  showGlass: true,
+  showChorro: true,
+  drinkPress: DRINK.NONE
 }

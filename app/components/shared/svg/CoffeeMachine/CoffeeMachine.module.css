@@ -73,3 +73,12 @@
 .disableClass{
 	display: none;
 } 
+
+
+.section:hover{
+	fill: red;
+}
+
+.section{
+	transition: all 0.5s;
+}
