@@ -25,7 +25,7 @@
     overflow:hidden;  
     display: flex;
     justify-content: space-between;
-    height: 10rem;
+    height: 5rem;
     width: 100%;
     z-index: 20;
 }
@@ -77,7 +77,7 @@
 @media (max-width: 1000px) {
 
     .navigationHeader{
-        height: 8rem;
+        height: 4rem;
     }
 
     .displayButton, .logo{

@@ -1,11 +1,11 @@
 .children{
-    margin-top: 10rem;
+    margin-top: 0rem;
 }
 
 @media (max-width: 1000px) {
 
     .children{
-        margin-top: 8rem;
+        margin-top: 0rem;
     }
 
 }
