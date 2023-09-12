@@ -1,9 +1,9 @@
 import { LINKS, PAGES } from '@/data/links.data'
-import styles from './Fourth.module.css'
+import styles from './Contact.module.css'
 import Image from 'next/image'
 import { CoffeeMachine2 } from '../../shared/svg/CoffeeMachine/CoffeeMachine2'
 
-export default function FourthComponent () {
+export default function ContactComponent () {
   return (
     <section>
       <div id={LINKS[PAGES.HOME].sections[3]} className={styles.mainContainer}>

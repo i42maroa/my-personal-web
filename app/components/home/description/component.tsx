@@ -1,7 +1,7 @@
 import { LINKS, PAGES } from '@/data/links.data'
-import styles from './Second.module.css'
+import styles from './Description.module.css'
 
-export default function SecondComponent () {
+export default function DescriptionComponent () {
   return (
     <section id={LINKS[PAGES.HOME].sections[1]} className={styles.mainContainer}>
       <div className={styles.textContainer}>

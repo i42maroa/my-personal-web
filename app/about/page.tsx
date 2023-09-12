@@ -1,8 +1,8 @@
 import FirstComponent from '../components/about/first/component'
-import ThirdComponent from '../components/about/third/component'
+import ExperienceComponent from '../components/home/experience/component'
 
 export default function About () {
   return (
-    <><FirstComponent /><ThirdComponent /></>
+    <><FirstComponent /><ExperienceComponent /></>
   )
 }

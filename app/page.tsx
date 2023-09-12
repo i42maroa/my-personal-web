@@ -1,10 +1,11 @@
-import FirstComponent from './components/home/first/component'
-import FourthComponent from './components/home/fourth/component'
-import SecondComponent from './components/home/second/component'
-import ThirdComponent from './components/home/third/component'
+import ExperienceComponent from './components/home/experience/component'
+import PresentationComponent from './components/home/presentation/component'
+import ContactComponent from './components/home/contact/component'
+import DescriptionComponent from './components/home/description/component'
+import ThecnologiesComponent from './components/home/thecnologies/component'
 
 export default function Home () {
   return (
-    <><FirstComponent /><SecondComponent /><ThirdComponent /><FourthComponent /></>
+    <><PresentationComponent /><DescriptionComponent /><ExperienceComponent /><ThecnologiesComponent /><ContactComponent /></>
   )
 }

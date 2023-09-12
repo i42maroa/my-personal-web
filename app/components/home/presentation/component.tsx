@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import styles from './First.module.css'
+import styles from './Presentation.module.css'
 import getRouteWithSection, { LINKS, PAGES } from '@/data/links.data'
 import { FaceFront } from '../../shared/svg/Face/face'
 
-export default function FirstComponent () {
+export default function PresentationComponent () {
   return (
     <section id={LINKS[PAGES.HOME].sections[0]} className={styles.mainContainer}>
       <div className={styles.leftContainer}>

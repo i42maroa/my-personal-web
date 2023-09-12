@@ -2,12 +2,12 @@
 
 import { BACK_TECHNOLOGY, FRONT_TECHNOLOGY, MIXT_TECHNOLOGY } from '@/data/technologies.data'
 import { Technology } from '../../shared/technology/Technology'
-import styles from './Third.module.css'
+import styles from './Thecnologies.module.css'
 import { useState } from 'react'
 import { LINKS, PAGES } from '@/data/links.data'
 import startAnimation from '@/hook/startAnimation'
 
-export default function ThirdComponent () {
+export default function ThecnologiesComponent () {
   const [tecnologies, setTechnology] = useState(FRONT_TECHNOLOGY)
 
   function handleStyles (type:any) {
