@@ -49,7 +49,7 @@ export function Navigation () {
               <li>hello@olaolu.dev</li>
               <li>hello@olaolu.dev</li>
             </ul>
-            <h4>ELIGE MODO</h4>
+            <h4>¿Cuánto café le echas a la vida?</h4>
             <Toggle />
           </nav>}
       </div>

@@ -1,13 +1,13 @@
 export const STATE_TOGGLE = [
   {
     color: 'white',
-    text: 'late'
+    text: 'nada'
   },
   {
     color: 'middle',
-    text: 'amateur'
+    text: 'un poco'
   },
   {
     color: 'dark',
-    text: 'hard'
+    text: 'a tope'
   }]

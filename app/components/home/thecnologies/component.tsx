@@ -16,7 +16,7 @@ export default function ThecnologiesComponent () {
 
   return (
     <section id={LINKS[PAGES.ABOUT].sections[1]} className={styles.mainContainer}>
-      <h2>What I know?</h2>
+      <h2>Mis herramientas</h2>
       <div className={styles.buttonContainer}>
         <button className={`${styles.buttonStyle} ${handleStyles(FRONT_TECHNOLOGY)}`} onClick={() => setTechnology(FRONT_TECHNOLOGY)}>FRONTEND</button>
         <button className={`${styles.buttonStyle} ${handleStyles(BACK_TECHNOLOGY)}`} onClick={() => setTechnology(BACK_TECHNOLOGY)}>BACKEND</button>
