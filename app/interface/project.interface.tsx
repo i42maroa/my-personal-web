@@ -1,4 +1,4 @@
-import { ImageInterface, TechnologyInterface } from "./image.interface";
+import { ImageInterface, TechnologyInterface } from './image.interface'
 
 export interface ProjectInterface{
     title:string;

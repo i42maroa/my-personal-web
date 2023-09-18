@@ -6,7 +6,7 @@ export default function DescriptionComponent () {
     <section id={LINKS[PAGES.HOME].sections[1]} className={styles.mainContainer}>
       <div className={styles.textContainer}>
         <h2>Diseño</h2>
-        <p>Propongo soluciones llamativas siempre garantizando una buena experiencia de usuario. Lo que no entra por los ojos no funciona.</p>      
+        <p>Propongo soluciones llamativas siempre garantizando una buena experiencia de usuario. Lo que no entra por los ojos no funciona.</p>
       </div>
       <div />
       <div />
