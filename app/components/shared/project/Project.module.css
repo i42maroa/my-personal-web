@@ -1,0 +1,52 @@
+.container{
+    background-color: var(--hard-brown);
+    display: flex;
+    width: 400px;
+    height: 300px;
+    outline: 3px solid var(--hard-brown);
+    
+}
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    
+    margin: auto 0 0 0;
+    width: 100%
+  
+}
+
+.titleContainer{
+    padding: 1rem;
+}
+
+.title{
+    color: var(--white)
+}
+
+.shortText{
+    color: var(--white);
+    font-size: 15px;
+}
+
+.github{
+    margin: auto 0;
+}
+
+.technologiesContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    background-color:var(--white);
+    padding: 0.5rem 1rem;
+    margin: 0;
+}
+
+@media (max-width: 500px) {
+
+    .container{
+        width: 100%;
+        
+    }
+}

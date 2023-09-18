@@ -1,18 +1,26 @@
 import { ProjectInterface } from '@/app/interface/project.interface'
 import styles from './Project.module.css'
 import Image from 'next/image'
-import { Technology } from '../technology/Technology'
 
 export function ProjectCardComponent ({ project }: {
-  project: ProjectInterface}  ) {
-    return (
-      <div className={styles.container}>
-        {/* <Image alt={project.images[0].alt} src={project.images[0].url} width={project.images[0].width} height={project.images[0].height}/> */}
-        <h2>{project.title}</h2>
-        <p>{project.shortDescription}</p>
-        {project.technologies && project.technologies.map((data) => (
-            <Image alt={data.image.alt}  src={data.image.url} width={40} height={40}></Image>
-        ))}
+  project: ProjectInterface}) {
+  return (
+    <div className={styles.container}>
+
+      <div className={styles.textContainer}>
+
+        <div className={styles.titleContainer}>
+          <h4 className={styles.title}>{project.title}</h4>
+          <p className={styles.shortText}>{project.shortDescription}</p>
+        </div>
+
+        <div className={styles.technologiesContainer}>
+          {project.technologies && project.technologies.map((data) => (
+            <Image key={data.image.alt} alt={data.image.alt} src={data.image.url} width={40} height={40} />
+          ))}
+        </div>
+
       </div>
-    )
-  }
+    </div>
+  )
+}

@@ -17,7 +17,7 @@ export const PROJECTS_DATA: ProjectInterface[] = [
       'Búsqueda de palabras en caliente',
       'Desarrollo de una API propia'
     ],
-    descriptionSolution: ' El motivo por el cuál he querido desarrollar una aplicación que mantenga el registro de palabras en inglés es para poder usarlo en aquellos momentos que estoy viendo alguna serie, pelicula o leyendo un libro y justo aparece una palabra que no conozco y no me gustaría dejar pasar. Por este motivo elegí un desarrollo Movile First, ya que esta aplicación está pensada para ser usada en el dispositivo móvil. La elección del framework Angular se debe a que no deseo colocar la apliación a nivel SEO y no me importe que penalize al ser una SPA.',
+    descriptionSolution: ' El motivo por el cuál he querido desarrollar una aplicación que mantenga el registro de palabras en inglés es para poder usarlo en aquellos momentos que estoy viendo alguna serie, pelicula o leyendo un libro y justo aparece una palabra que no conozco y no me gustaría dejar pasar. Por este motivo elegí un desarrollo Movile First, ya que esta aplicación está pensada para ser usada en el dispositivo móvil.',
     shortDescription: 'Permite almacenar palabras en inglés para llevar un registro y luego su posterior aprendizaje',
     technologies: [
       ANGULAR, REDUX, FIREBASE
@@ -25,8 +25,8 @@ export const PROJECTS_DATA: ProjectInterface[] = [
     images: [
       {
         alt: '/images/english-training.jpeg',
-        width: 100,
-        height: 200,
+        width: 300,
+        height: 600,
         url: '/images/english-training.jpeg'
       }
     ],
