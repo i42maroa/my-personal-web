@@ -1,0 +1,25 @@
+.container{
+    background-color: red;
+    padding: 2rem 3rem;
+}
+
+.titleContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title{
+    display: flex;
+    padding: 1rem 0;
+}
+
+.github{
+    margin: auto 0;
+
+}
+
+.imagesContainer{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem auto;
+}

@@ -1,5 +1,11 @@
+import ProjectsComponent from "../components/projects/project/component";
+
 export default function Projects () {
   return (
-    <h1>Projects page</h1>
+    <div>
+      <h1>Projects page</h1>
+      <ProjectsComponent></ProjectsComponent>
+    </div>
+    
   )
 }
