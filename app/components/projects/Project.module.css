@@ -1,0 +1,27 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.projectsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 3rem;
+    margin: 2rem auto;
+}
+
+
+.button{
+    background: transparent;
+    width: fit-content;
+    display: flex;
+    margin: auto;
+}
+
+.button:hover{
+    transform: scale(1.02);
+    transition: 0.5s;
+}

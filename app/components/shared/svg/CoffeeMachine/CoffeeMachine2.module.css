@@ -14,9 +14,10 @@
 
 .titleContainer p{
     text-align: center;
-    padding: 0.5rem auto;
+    padding: 0.5rem 2rem;
     background-color: var(--white);
     margin: auto;
+    font-weight: 800;
 }
 
 .machineContainer{
@@ -24,7 +25,7 @@
     padding: 2rem;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap: 20px;
+    gap: 1rem;
     margin: 0 1rem;
 }
 
@@ -245,3 +246,105 @@
     transform: scale(1);
   }
 }
+
+@media (max-width: 500px) {
+
+  .container2{
+    width: 18rem;
+    height: 30rem;
+  }
+
+  .machineContainer{
+    padding: 1.2rem;
+    margin: 0 0.6rem
+  }
+
+  .panelConatiner{
+    width: 9rem;
+    height: 9rem;
+}
+
+
+.textPanel{
+    margin: 0.3rem auto;
+    font-size: 20px;
+    padding: 0.5rem 0;
+}
+
+
+.imagePanel{
+    padding: 0 1.8rem;
+    height: 18px;
+}
+
+.coffeeButtons{
+    margin: 0 0.6rem;
+}
+
+.button{
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+}
+
+.dispensatorContainer{
+    border-radius: 12px 12px 0 0;
+    margin: 1.2rem 0.6rem;
+    height: 144px;
+}
+
+.dispensator{
+    height: 15px;
+    width: 12px;
+}
+
+.coffeExit {
+    width: 36px;
+    height: 12px;
+    left: calc(50% - 18px);
+  }
+
+  
+  .coffeExit::before {
+    content: "";
+    width: 30px;
+    height: 12px;
+    bottom: -12px;
+    left: calc(50% - 15px);
+  }
+  .coffeExit::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    bottom: -18px;
+    left: calc(50% - 4px);
+  }
+  
+
+.chorro{
+  width: 4px;
+  height: 38px;
+  top: 30px;
+  left: calc(50% - 2px);
+}
+
+.glassContainer{
+    width: 80px;
+    left: calc(50% - 40px); 
+}
+
+.glassContainer:hover{
+  transform: scale(1.05);
+}
+
+
+.buttonOk{
+    margin: 1.2rem auto;
+    width: 48px;
+    height: 48px;
+    font-size: 12px;
+}
+}
+
+
+

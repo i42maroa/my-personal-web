@@ -1,14 +1,15 @@
 .mainContainer{
     display: flex;
-
+    justify-content: space-between;
+    gap: 3rem;
     margin: 0 auto;
+    width: 100%;
 }
 
 .leftContainer{
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 50%;
 }
 
 .leftContainer button{
@@ -17,10 +18,8 @@
 
 .rightContainer{
     display: flex;
-    width: 50%;
     position: relative;
-    min-width: 30rem;
-    min-height: 40rem;
+    margin: auto;
 }
 
 .buttonContainer {
@@ -45,6 +44,23 @@
     transition: 0.5s;
 }
 
+.sumupContainer{
+    margin: 2rem 0;
+}
+
+.sumupContainer p{
+    text-align: center;
+}
+
+.sumupContainer button{
+    background-color: var(--green);
+    padding: 1rem 2rem;
+    font-size: 20px;
+    width: fit-content;
+    margin: 1rem auto;
+    display: flex;
+}
+
 
 @media (max-width: 1000px) {
 
@@ -52,23 +68,12 @@
         flex-direction: column;
     }
 
-    .rightContainer,
-    .leftContainer{
-        width: 100%;
-    }
 
     .leftContainer h1{
         text-align: center;
     }
- 
-    .leftContainer p{
-        display: none;
-    }
 
-    .button{
-        margin: 1rem auto;
-        text-align: center;
-    }
+   
 }
 
 

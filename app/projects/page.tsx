@@ -1,4 +1,4 @@
-import ProjectsComponent from '../components/projects/project/component'
+import ProjectsComponent from '../components/projects/component'
 
 export default function Projects () {
   return (

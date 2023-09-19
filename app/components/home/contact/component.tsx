@@ -22,7 +22,7 @@ export default function ContactComponent () {
             </button>
           </div>
 
-          <div>
+          <div className={styles.sumupContainer}>
             <p>Te ha quedado alguna duda?</p>
             <button className={styles.button}>Te lo resumo</button>
           </div>
