@@ -4,9 +4,7 @@ export const ANGULAR: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/angular.png',
-    alt: 'angular',
-    height: 400,
-    width: 400
+    alt: 'angular'
   },
   name: 'Angular'
 }
@@ -15,9 +13,7 @@ export const REACT: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/react.png',
-    alt: 'react',
-    height: 400,
-    width: 400
+    alt: 'react'
   },
   name: 'React'
 }
@@ -26,9 +22,7 @@ export const NEXTJS: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/nextjs.png',
-    alt: 'nextjs',
-    height: 400,
-    width: 400
+    alt: 'nextjs'
   },
   name: 'NextJs'
 }
@@ -37,9 +31,7 @@ export const HTML: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/html.png',
-    alt: 'html',
-    height: 400,
-    width: 400
+    alt: 'html'
   },
   name: 'HTML'
 }
@@ -48,9 +40,7 @@ export const CSS: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/css.png',
-    alt: 'css',
-    height: 400,
-    width: 400
+    alt: 'css'
   },
   name: 'CSS'
 }
@@ -59,9 +49,7 @@ export const JAVASCRIPT: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/js.png',
-    alt: 'javascript',
-    height: 400,
-    width: 400
+    alt: 'javascript'
   },
   name: 'Javascript'
 }
@@ -70,9 +58,7 @@ export const SPRING: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/spring.png',
-    alt: 'spring',
-    height: 400,
-    width: 400
+    alt: 'spring'
   },
   name: 'Spring'
 }
@@ -81,9 +67,7 @@ export const JAVA: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/java.png',
-    alt: 'java',
-    height: 400,
-    width: 400
+    alt: 'java'
   },
   name: 'Java'
 }
@@ -92,9 +76,7 @@ export const GRAPHQL: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/graphql.png',
-    alt: 'graphql',
-    height: 400,
-    width: 400
+    alt: 'graphql'
   },
   name: 'GraphQL'
 }
@@ -103,9 +85,7 @@ export const MONGO_DB: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/mongodb.png',
-    alt: 'mongo',
-    height: 400,
-    width: 400
+    alt: 'mongo'
   },
   name: 'MongoDb'
 }
@@ -114,20 +94,16 @@ export const KAFKA: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/kafka.png',
-    alt: 'kafka',
-    height: 400,
-    width: 400
+    alt: 'kafka'
   },
-  name: 'Apache Kafka'
+  name: 'Kafka'
 }
 
 export const ILLUSTRATOR: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/illustrator.png',
-    alt: 'illustrator',
-    height: 400,
-    width: 400
+    alt: 'illustrator'
   },
   name: 'Illustrator'
 }
@@ -136,9 +112,7 @@ export const PHOTOSHOP: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/photoshop.png',
-    alt: 'photshop',
-    height: 400,
-    width: 400
+    alt: 'photshop'
   },
   name: 'Photoshop'
 }
@@ -147,9 +121,7 @@ export const SCRUM: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/scrum.png',
-    alt: 'scrum',
-    height: 400,
-    width: 400
+    alt: 'scrum'
   },
   name: 'Scrum'
 }
@@ -158,9 +130,7 @@ export const FIREBASE: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/firebase.png',
-    alt: 'firebase',
-    height: 400,
-    width: 400
+    alt: 'firebase'
   },
   name: 'Firebase'
 }
@@ -169,9 +139,7 @@ export const REDUX: TechnologyInterface = {
   description: '',
   image: {
     url: '/images/redux.png',
-    alt: 'redux',
-    height: 400,
-    width: 400
+    alt: 'redux'
   },
   name: 'Redux'
 }
