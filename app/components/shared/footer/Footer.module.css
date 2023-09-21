@@ -23,6 +23,7 @@
     outline: none;
     color: var(--white);
     font-size: 22px;
+    text-decoration: none;
 }
 
 .navigationElement:hover{

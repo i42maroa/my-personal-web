@@ -20,24 +20,29 @@
     display: flex;
     position: relative;
     margin: auto;
-    height: 40rem;
+    height: 100%;
+    width: 100%;
+    max-width: 50rem;
+    max-height: 50rem;
 }
 
 .buttonContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 2rem 0;
+    gap: 0.5rem;
 }
 
 .button{
+    display: flex;
     border: none;
-    background-color: var(--font-color);
+    /* background-color: var(--font-color); */
+    background-color: transparent;
     color: var(--inverse-font-color);
-    width: fit-content;
-    height: fit-content;
-    padding: 0.5rem;
-    border-radius: 10px;
+    border-radius: 5px;
+    width: 5rem;
+    justify-content: center;
 }
 
 .button:hover{
@@ -66,14 +71,13 @@
 @media (max-width: 1000px) {
 
     .mainContainer{
-        flex-direction: column;
+        flex-direction: column-reverse;
+    
     }
-
 
     .leftContainer h1{
         text-align: center;
     }
-
    
 }
 
