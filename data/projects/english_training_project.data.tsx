@@ -24,8 +24,6 @@ export const ENGLISH_TRAINNING_PROJECT: ProjectInterface = {
   images: [
     {
       alt: '/images/english-training.jpeg',
-      width: 300,
-      height: 600,
       url: '/images/english-training.jpeg'
     }
   ],

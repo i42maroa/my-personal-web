@@ -24,7 +24,7 @@ export function ProjectDescriptionComponent ({ project }: {
 
         <div className={styles.imagesContainer}>
           {project.images && project.images.map((data) => (
-            <Image className={styles.image} key={data.alt} alt={data.alt} src={data.url} height={data.height} width={data.width} />
+            <Image className={styles.image} key={data.alt} alt={data.alt} src={data.url} height={600} width={300} />
           ))}
         </div>
 
