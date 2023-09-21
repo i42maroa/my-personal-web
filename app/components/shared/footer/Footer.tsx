@@ -1,28 +1,43 @@
 import Link from 'next/link'
 import styles from './Footer.module.css'
-import { LINKS } from '@/data/links.data'
-
-const links = LINKS
+import { CoffeeMachine2 } from '../svg/CoffeeMachine/CoffeeMachine2'
 
 export function Footer () {
   return (
     <footer>
       <div className={styles.footerContainer}>
         <div className={styles.leftContainer}>
-          <h4>SAY HELLO</h4>
-          <ul>
-            <li>asfdasd@gmail.com</li>
-            <li>asfdasd@gmail.com</li>
+          <h3>¿Sigues con dudas?</h3>
+
+          <ul className={styles.listContainer}>
+            <li>
+              <Link className={styles.navigationElement} href='/#quality'>Qué te puedo aportar</Link>
+            </li>
+            <li>
+              <Link className={styles.navigationElement} href='/#experience'>Mi recorrido</Link>
+            </li>
+            <li>
+              <Link className={styles.navigationElement} href='/#technology'>Mis herramientas</Link>
+            </li>
+            <li>
+              <Link className={styles.navigationElement} href='/#projects'>Qué he hecho</Link>
+            </li>
+            <li>
+              <Link className={styles.navigationElement} href='/#contact'>Cómo contactarme</Link>
+            </li>
           </ul>
+
+          <div className={styles.sumupContainer}>
+            {/* <p>Sigues con dudas?</p> */}
+            <button className={styles.button}>Te lo resumo</button>
+          </div>
+
         </div>
         <div className={styles.rightContainer}>
-          <ul>
-            {links.map(({ label, route }) => (
-              <li className={styles.navigationElement} key={route}>
-                <Link href={route}>{label}</Link>
-              </li>
-            ))}
-          </ul>
+          <div className={styles.coffeeMachineContainer}>
+            <CoffeeMachine2 />
+          </div>
+
         </div>
       </div>
       <hr />

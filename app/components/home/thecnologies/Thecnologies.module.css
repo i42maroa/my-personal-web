@@ -27,3 +27,9 @@
         margin: 1rem auto;
     }
 }
+
+@media (max-width: 500px) {
+    .technologyContainer{
+        gap: 1rem;
+    }
+}

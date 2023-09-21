@@ -1,42 +1,91 @@
 
 .footerContainer{
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fit, minmax(50%, 1fr));
-    padding: 3rem 5rem;
-    
+    display: flex;
+    margin-bottom: 1rem;
 }
 
 .leftContainer{
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+    margin: auto 0;
 }
 
-.leftContainer button{
-    width: 100px;
+.listContainer{
+    padding: 1rem;
+}
+
+.listContainer li{
+    padding: 1rem 0;
+}
+
+.navigationElement{
+    outline: none;
+    color: var(--white);
+    font-size: 22px;
+}
+
+.navigationElement:hover{
+    color: var(--green);
 }
 
 .rightContainer{
     display: flex;
+    margin: auto;
     width: 100%;
 }
+
+.coffeeMachineContainer{
+    margin: auto;
+}
+
+.button{
+    display: flex;
+    border: none;
+    color: var(--white);
+    border-radius: 5px;
+    background-color: var(--green);
+    padding: 0.75rem 1rem;
+    font-size: 20px;
+}
+
+.button:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
 
 @media (max-width: 1000px) {
 
     .footerContainer{
-        display: flex;
         flex-direction: column;
-        padding: 2.5rem 0;
+        gap: 3rem;
+    }
+
+    .button{
+        margin: 2rem auto;
+    }   
+
+    .navigationElement{
+      font-size: 20px;
     }
 
 }
 
 @media (max-width: 500px) {
+    
+    .navigationElement{
+        font-size: 16px;
+      }
 
-    .footerContainer{
-        padding: 2rem 0;
+    .listContainer li{
+        padding: 0.5rem 0;
+    }
+
+    .button{
+        padding: 0.5rem 0.75rem;
+        font-size: 16px;
+        margin: 1rem auto;
     }
 
 }

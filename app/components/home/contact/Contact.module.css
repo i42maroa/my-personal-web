@@ -20,6 +20,7 @@
     display: flex;
     position: relative;
     margin: auto;
+    height: 40rem;
 }
 
 .buttonContainer {

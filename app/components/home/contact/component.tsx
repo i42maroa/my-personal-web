@@ -1,12 +1,15 @@
 import { LINKS, PAGES } from '@/data/links.data'
 import styles from './Contact.module.css'
 import Image from 'next/image'
-import { CoffeeMachine2 } from '../../shared/svg/CoffeeMachine/CoffeeMachine2'
+import { WorkCoffee } from '../../shared/svg/Work&Coffee/WorkCoffee'
 
 export default function ContactComponent () {
   return (
     <section>
       <div id={LINKS[PAGES.HOME].sections[3]} className={styles.mainContainer}>
+        <div className={styles.rightContainer}>
+          <WorkCoffee />
+        </div>
         <div className={styles.leftContainer}>
           <h2>Contactame</h2>
           <p>No hay nada que con un café no se pueda conseguir.</p>
@@ -22,15 +25,8 @@ export default function ContactComponent () {
             </button>
           </div>
 
-          <div className={styles.sumupContainer}>
-            <p>Te ha quedado alguna duda?</p>
-            <button className={styles.button}>Te lo resumo</button>
-          </div>
+        </div>
 
-        </div>
-        <div className={styles.rightContainer}>
-          <CoffeeMachine2 />
-        </div>
       </div>
     </section>
   )

@@ -20,10 +20,11 @@ body{
 
 section{
     display: flex;
-    width: 80%;
-    padding: 10rem 0;
+    padding: 10rem 12rem;
     margin: 0 auto;
 }
+
+
 
 h1{
     font-size: 80px;
@@ -61,8 +62,7 @@ footer{
     flex-direction: column;
     background-color: var(--footer-container);
     color: var(--inverse-font-color);
-    padding: 5rem;
-    
+    padding: 6rem 8rem; 
 }
 
 li{
@@ -91,8 +91,17 @@ button{
         font-size: 50px;
     }
 
-    section{
-        padding: 5rem 0;
+    section, footer{
+        padding: 5rem ;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+
+   footer{
+        padding: 3rem ;
     }
 
 }
@@ -115,11 +124,9 @@ button{
         font-size: 16px;
     }
 
-    section{
-        padding: 2.5rem 0;
+    section, footer{
+        padding: 2rem 1.5rem;
     }
 
-    footer{
-        padding: 3rem;
-    }
+
 }

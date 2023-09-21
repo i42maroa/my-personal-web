@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 export default function ProjectsComponent () {
   const router = useRouter()
   return (
-    <section id={LINKS[PAGES.ABOUT].sections[0]} className={styles.mainContainer}>
+    <section id={LINKS[PAGES.PROJECTS].sections[0]} className={styles.mainContainer}>
       <h2>Mis proyectos</h2>
 
       <div className={styles.projectsContainer}>
