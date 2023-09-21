@@ -13,14 +13,10 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
         tecnologies: [
           {
             alt: 'scrum',
-            height: 200,
-            width: 200,
             url: '/images/scrum.png'
           },
           {
             alt: 'java',
-            height: 200,
-            width: 200,
             url: '/images/java.png'
           }
         ]
@@ -39,26 +35,18 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
         tecnologies: [
           {
             alt: 'angular',
-            height: 200,
-            width: 200,
             url: '/images/angular.png'
           },
           {
             alt: 'html',
-            height: 200,
-            width: 200,
             url: '/images/html.png'
           },
           {
             alt: 'css',
-            height: 200,
-            width: 200,
             url: '/images/css.png'
           },
           {
             alt: 'javascript',
-            height: 200,
-            width: 200,
             url: '/images/js.png'
           }
         ]
@@ -69,26 +57,18 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
         tecnologies: [
           {
             alt: 'spring',
-            height: 200,
-            width: 200,
             url: '/images/spring.png'
           },
           {
             alt: 'graphql',
-            height: 200,
-            width: 200,
             url: '/images/graphql.png'
           },
           {
             alt: 'mongodb',
-            height: 200,
-            width: 200,
             url: '/images/mongodb.png'
           },
           {
             alt: 'kafka',
-            height: 200,
-            width: 200,
             url: '/images/kafka.png'
           }
         ]
