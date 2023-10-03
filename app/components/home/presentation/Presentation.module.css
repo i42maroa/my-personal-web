@@ -40,14 +40,8 @@
         width: 100%;
     }
 
-    .leftContainer h1{
-        text-align: center;
-    }
- 
-    .leftContainer p{
-        display: none;
-    }
 
+ 
     .button{
         margin: 1rem auto;
         text-align: center;

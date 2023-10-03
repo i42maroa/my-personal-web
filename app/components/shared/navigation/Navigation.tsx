@@ -2,13 +2,11 @@
 import Link from 'next/link'
 import styles from './Navigation.module.css'
 import { useEffect, useState } from 'react'
-import { LINKS } from '@/data/links.data'
 import { MenuButton } from '../menuButton/MenuButton'
 import startAnimation from '@/hook/startAnimation'
 import { showNavbarDependOfScroll } from '@/hook/scrollHandler'
-import { Toggle } from '../toggle/Toggle'
-
-const links = LINKS
+import { LogoSvg } from '../svg/Logo/logo'
+import { MenuNavigation } from './Menu'
 
 export function Navigation () {
   const [showNav, setShowNav] = useState(false)
@@ -30,28 +28,18 @@ export function Navigation () {
     <header className={`${styles.header} ${showNavbarDependOfScroll(isScrollDown, styles.scrollDown, styles.scrollUp)} ${startAnimation(showNav, styles.headerOpen)} `}>
       <div className={styles.navigation}>
         <div className={styles.navigationHeader}>
-          <Link href='/' className={styles.logo}><img src='https://brandemia.org/sites/default/files/inline/images/volkswagen_logo-portada.jpg' alt='' width={40} /></Link>
+
+          <Link href='/' className={styles.logoContainer}>
+            <LogoSvg />
+          </Link>
+
           <div className={styles.displayButton}>
             <button className={styles.button} onClick={() => setShowNav(!showNav)}><MenuButton stateValue={showNav} /></button>
           </div>
         </div>
+
         {showNav && !isScrollDown &&
-          <nav className={styles.navigationContainer}>
-            <ul className={styles.navigationList}>
-              {links.map(({ label, route }) => (
-                <li className={styles.navigationElement} key={route}>
-                  <Link onClick={() => setShowNav(false)} href={route}>{label}</Link>
-                </li>
-              ))}
-            </ul>
-            <h4>SAY HELLO</h4>
-            <ul className={styles.navigationList}>
-              <li>hello@olaolu.dev</li>
-              <li>hello@olaolu.dev</li>
-            </ul>
-            <h4>¿Cuánto café le echas a la vida?</h4>
-            <Toggle />
-          </nav>}
+          <MenuNavigation />}
       </div>
     </header>
   )

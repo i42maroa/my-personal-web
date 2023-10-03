@@ -2,6 +2,7 @@ import { ProjectInterface } from '@/app/interface/project.interface'
 import styles from './ProjectDescription.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import { GithubSvg } from '../svg/Buttons/Github'
 
 export function ProjectDescriptionComponent ({ project }: {
   project: ProjectInterface}) {
@@ -12,7 +13,8 @@ export function ProjectDescriptionComponent ({ project }: {
         <h2 className={styles.title}>{project.title}</h2>
 
         <Link className={styles.github} href={project.urlGithub}>
-          <Image alt='github' src='/images/github.png' height={40} width={40} />
+          {/* <Image alt='github' src='/images/github.png' height={40} width={40} /> */}
+          <GithubSvg />
         </Link>
       </div>
 
