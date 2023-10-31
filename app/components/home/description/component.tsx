@@ -1,6 +1,6 @@
 import { LINKS, PAGES } from '@/data/links.data'
 import styles from './Description.module.css'
-import { EngranajeSvg } from '../../shared/svg/Engranaje/engranaje'
+import { EngranajeSvg } from '../../shared/svg/Engranaje/Engranaje'
 
 export default function DescriptionComponent () {
   return (
