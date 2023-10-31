@@ -4,6 +4,10 @@
         auto-fit, minmax(50%, 1fr));
 }
 
+.engranajeContainer{
+    padding:  0 5rem;
+}
+
 @media (max-width: 1000px) {
 
     .mainContainer{

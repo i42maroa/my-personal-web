@@ -1,0 +1,38 @@
+.e1, .e2, .e3, .e4{
+
+    fill: var(--font-color);
+    animation-timeline: scroll();
+    animation-fill-mode: forwards;
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.e1, .e3{
+    animation-name: rotate;
+}
+
+.e2, .e4{
+    animation-name: rotate_inverse;
+}
+
+
+@keyframes rotate {
+    0% {
+        
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+
+  
+@keyframes rotate_inverse {
+    0% {
+        
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  }

@@ -1,5 +1,6 @@
 import { LINKS, PAGES } from '@/data/links.data'
 import styles from './Description.module.css'
+import { EngranajeSvg } from '../../shared/svg/Engranaje/engranaje'
 
 export default function DescriptionComponent () {
   return (
@@ -14,6 +15,11 @@ export default function DescriptionComponent () {
         <h2>Ingeniería</h2>
         <p>Un bonito diseño no es nada sin una buena maquinaria detrás. Todos los proyectos garantizan una buena optimización.</p>
       </div>
+
+      <div className={styles.engranajeContainer}>
+        <EngranajeSvg />
+      </div>
+
     </section>
   )
 }
