@@ -57,10 +57,6 @@
 
 @media (max-width: 1000px) {
 
-    .navigationHeader{
-        /* height: 4rem; */
-    }
-
     .logoContainer{
         padding: 0 1rem;
         margin: 1rem 0 0 0;  
@@ -80,7 +76,7 @@
     }
 
     .headerOpen{
-        background: #fff;
+        background: var(--section);
     }
 
 

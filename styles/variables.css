@@ -4,14 +4,15 @@
     /* --white: #FAEBC2; */
     --white: #f8f4e1;
     --dirty-white: #dcd8c3;
-    --soft-brown:#9f856c;
+    --soft-brown:#9D836A;
     --constract-hard-brown: #897853;
     --second: #f8f4e1;
     --hard-brown:#4e3620;
     --background: var(--white);
-    --section:  var(--soft-brown);
+    --section:  var(--dirty-white);
     --navbar: var(--dirty-white);
     --font-color:  var(--hard-brown);
+    --font-color-navbar: var(--hard-brown);
     --inverse-font-color:  var(--white);
     --footer-container: var(--hard-brown);
     --focus: var(--blue)

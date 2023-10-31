@@ -6,7 +6,7 @@ import styles from './Menu.module.css'
 export function MenuNavigation () {
   return (
     <nav className={styles.navigationContainer}>
-      <h3>¿Qué quieres saber?</h3>
+      <h3 className={styles.title}>¿Qué quieres saber?</h3>
 
       <ul className={styles.listContainer}>
         <li>
@@ -27,7 +27,7 @@ export function MenuNavigation () {
       </ul>
 
       <div className={styles.toggleContainer}>
-        <h4>¿Cuánto café le echas a la vida?</h4>
+        <h4 className={styles.toggleTitle}>¿Cuánto café le echas a la vida?</h4>
         <Toggle />
       </div>
     </nav>

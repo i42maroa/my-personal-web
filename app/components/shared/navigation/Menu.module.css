@@ -1,5 +1,5 @@
 .navigationContainer{
-    border: 3px solid var(--hard-brown);
+    border: 3px solid var(--font-color-navbar);
     background-color: var(--navbar);
     display: flex;
     flex-direction: column;
@@ -21,9 +21,13 @@
 
 .navigationElement{
     outline: none;
-    color: var(--white);
+    color: var(--font-color-navbar);
     font-size: 22px;
     text-decoration: none;
+}
+
+.toggleTitle, .title{
+    color: var(--font-color-navbar);
 }
 
 .navigationElement:hover{
@@ -50,7 +54,6 @@
 @media (max-width: 500px) {
     .navigationContainer{
         border: none;
-        background-color: var(--navbar);
         width: 100%;
         position: relative;
         height: 100vh;

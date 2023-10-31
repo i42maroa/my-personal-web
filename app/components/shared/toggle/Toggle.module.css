@@ -10,7 +10,7 @@
 .toggleContainer{
     display: flex;
   justify-content: space-evenly;
-  border: 3px solid var(--font-color);
+  border: 3px solid var(--font-color-navbar);
   border-radius: 20px;
   background-color: var(--dirty-white);
   width: fit-content;
@@ -38,5 +38,6 @@
     font-size: 16px;
     font-weight: 800;
     padding: 0.5rem;
+    color: var(--font-color-navbar);
 }
 
