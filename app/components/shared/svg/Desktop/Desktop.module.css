@@ -1,0 +1,133 @@
+.st0, .l1, .l2, .l3, .l4, .l5, .l6, .l7{
+    fill: var(--font-color);
+}
+
+.l1, .l2, .l3, .l4, .l5, .l6, .l7{
+    fill: var(--font-color);
+    width: 0px; 
+    animation-timeline: scroll();
+    animation-fill-mode: forwards; 
+}
+
+
+.l1{
+     animation-name: l1_animation;   
+}
+
+.l2{
+    animation-name: l2_animation; 
+}
+
+.l3{
+    animation-name: l3_animation; 
+}
+
+.l4{
+    animation-name: l4_animation; 
+}
+
+.l5{
+    animation-name: l5_animation; 
+}
+
+.l6{
+    animation-name: l6_animation; 
+}
+
+.l7{
+    animation-name: l7_animation; 
+}
+
+
+@keyframes l1_animation {
+    2%{
+        width: 328px;
+    }
+    100%{
+        width: 328px;
+    }
+}
+
+@keyframes l2_animation {
+    2%{
+        width: 0px;
+    }
+
+    4%{
+        width: 280px;
+    }
+    100%{
+        width: 280px;
+    }
+}
+
+@keyframes l3_animation {
+    4%{
+        width: 0px;
+    }
+
+    6%{
+        width: 318px;
+    }
+    100%{
+        width: 318px;
+    }
+}
+
+
+@keyframes l4_animation {
+    6%{
+        width: 0px;
+    }
+
+    8%{
+        width: 267px;
+    }
+    100%{
+        width: 267px;
+    }
+}
+
+
+@keyframes l5_animation {
+    8%{
+        width: 0px;
+    }
+
+    10%{
+        width: 316px;
+    }
+
+    100%{
+        width: 316px;
+    }
+}
+
+
+@keyframes l6_animation {
+    10%{
+        width: 0px;
+    }
+
+    12%{
+        width: 171px;
+    }
+
+    100%{
+        width: 171px;
+    }
+}
+
+@keyframes l7_animation {
+    12%{
+        width: 0px;
+    }
+
+    14%{
+        width: 316px;
+    }
+
+    100%{
+        width: 316px;
+    }
+}
