@@ -5,8 +5,10 @@
 .l1, .l2, .l3, .l4, .l5, .l6, .l7{
     fill: var(--font-color);
     width: 0px; 
-    animation-timeline: scroll();
-    animation-fill-mode: forwards; 
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: entry exit ;
+     animation-fill-mode: forwards;  
 }
 
 
@@ -40,7 +42,10 @@
 
 
 @keyframes l1_animation {
-    2%{
+    40%{
+        width: 0px;
+    }
+    50%{
         width: 328px;
     }
     100%{
@@ -49,11 +54,10 @@
 }
 
 @keyframes l2_animation {
-    2%{
+    50%{
         width: 0px;
     }
-
-    4%{
+    55%{
         width: 280px;
     }
     100%{
@@ -62,11 +66,10 @@
 }
 
 @keyframes l3_animation {
-    4%{
+    55%{
         width: 0px;
     }
-
-    6%{
+    65%{
         width: 318px;
     }
     100%{
@@ -76,11 +79,10 @@
 
 
 @keyframes l4_animation {
-    6%{
+    65%{
         width: 0px;
     }
-
-    8%{
+    75%{
         width: 267px;
     }
     100%{
@@ -90,14 +92,12 @@
 
 
 @keyframes l5_animation {
-    8%{
+    75%{
         width: 0px;
     }
-
-    10%{
+    85%{
         width: 316px;
     }
-
     100%{
         width: 316px;
     }
@@ -105,28 +105,24 @@
 
 
 @keyframes l6_animation {
-    10%{
+    85%{
         width: 0px;
     }
-
-    12%{
+    90%{
         width: 171px;
     }
-
     100%{
         width: 171px;
     }
 }
 
 @keyframes l7_animation {
-    12%{
+    0%{
         width: 0px;
     }
-
-    14%{
-        width: 316px;
+    90%{
+        width: 0px;
     }
-
     100%{
         width: 316px;
     }
