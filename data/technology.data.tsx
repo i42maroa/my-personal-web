@@ -143,3 +143,13 @@ export const REDUX: TechnologyInterface = {
   },
   name: 'Redux'
 }
+
+
+export const ANDROID: TechnologyInterface = {
+  description: '',
+  image: {
+    url: '/images/mongodb.png',
+    alt: 'android'
+  },
+  name: 'Android'
+}

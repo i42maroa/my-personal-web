@@ -1,4 +1,5 @@
 import { ExperienceInterface } from '@/app/interface/experience.interface'
+import * as TEC from '@/data/technology.data'
 
 export const EXPERIENCE_DATA: ExperienceInterface[] = [
   {
@@ -11,14 +12,7 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
         title: 'Especialidad Software',
         description: '',
         tecnologies: [
-          {
-            alt: 'scrum',
-            url: '/images/scrum.png'
-          },
-          {
-            alt: 'java',
-            url: '/images/java.png'
-          }
+          TEC.SCRUM, TEC.JAVA, TEC.ANDROID
         ]
       }
     ]
@@ -33,44 +27,20 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
         title: 'Frontend',
         description: 'Desarrollo frontales para el cliente Santander',
         tecnologies: [
-          {
-            alt: 'angular',
-            url: '/images/angular.png'
-          },
-          {
-            alt: 'html',
-            url: '/images/html.png'
-          },
-          {
-            alt: 'css',
-            url: '/images/css.png'
-          },
-          {
-            alt: 'javascript',
-            url: '/images/js.png'
-          }
+          TEC.ANGULAR,
+          TEC.HTML,
+          TEC.CSS,
+          TEC.JAVASCRIPT
         ]
       },
       {
         title: 'Backend',
         description: 'Desarrollo microservicios para el cliente PagoNxt',
         tecnologies: [
-          {
-            alt: 'spring',
-            url: '/images/spring.png'
-          },
-          {
-            alt: 'graphql',
-            url: '/images/graphql.png'
-          },
-          {
-            alt: 'mongodb',
-            url: '/images/mongodb.png'
-          },
-          {
-            alt: 'kafka',
-            url: '/images/kafka.png'
-          }
+          TEC.SPRING,
+          TEC.GRAPHQL,
+          TEC.MONGO_DB,
+          TEC.KAFKA
         ]
       }
     ]

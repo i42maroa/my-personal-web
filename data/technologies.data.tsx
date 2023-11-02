@@ -4,11 +4,11 @@ import * as TEC from '@/data/technology.data'
 
 export const FRONT_TECHNOLOGY: TechnologyInterface[] = [
   TEC.ANGULAR,
-  TEC.REACT,
   TEC.NEXTJS,
   TEC.HTML,
   TEC.CSS,
-  TEC.JAVASCRIPT
+  TEC.JAVASCRIPT,
+  TEC.ANDROID
 ]
 
 export const BACK_TECHNOLOGY: TechnologyInterface[] = [

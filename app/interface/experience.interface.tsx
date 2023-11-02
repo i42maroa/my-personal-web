@@ -1,9 +1,9 @@
-import { ImageInterface } from './image.interface'
+import { ImageInterface, TechnologyInterface } from './image.interface'
 
 export interface DescriptionsExperienceInterface{
     title:string,
     description:string,
-    tecnologies: ImageInterface[]
+    tecnologies: TechnologyInterface[]
 }
 
 export interface ExperienceInterface {

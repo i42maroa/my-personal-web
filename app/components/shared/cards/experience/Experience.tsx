@@ -1,5 +1,6 @@
 import { ExperienceInterface } from '@/app/interface/experience.interface'
 import styles from './Experience.module.css'
+import Image from 'next/image'
 
 export function Experience ({ experience } : {experience:ExperienceInterface}) {
   return (
@@ -29,7 +30,10 @@ export function Experience ({ experience } : {experience:ExperienceInterface}) {
               </div>
               <div className={styles.contentTechnologies}>
                 {e.tecnologies.length > 0 && e.tecnologies.map((t) => (
-                  <img src={t.url} key={t.alt} alt={t.alt} height={40} width={40} />
+
+                  <div className={styles.imageContainer}>
+                    <Image className={styles.image} src={t.image.url} key={t.name} alt={t.image.alt} fill sizes='10vh'/> 
+                  </div>
                 ))}
               </div>
             </div>
