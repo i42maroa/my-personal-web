@@ -9,6 +9,14 @@
     justify-content: space-between;
     padding: 1rem 0.5rem;
     gap: 1rem;
+
+    opacity: 0;
+
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: 15% 50%; 
+    animation-name: appear;  
+    animation-fill-mode: forwards; 
 }
 
 .container h4{
@@ -23,6 +31,21 @@
     margin: 0 auto;
     height: 120px;
     width: 120px;
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+        transform: translate(2vh, 5vh);
+    }
+    30%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0vh, 0vh);
+    }
 }
 
 

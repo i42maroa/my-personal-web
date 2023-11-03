@@ -1,7 +1,7 @@
 import { LINKS, PAGES } from '@/data/links.data'
 import styles from './Project.module.css'
 import { PROJECTS_DATA } from '@/data/projects.data'
-import { ProjectDescriptionComponent } from '../../shared/project/ProjectDescription'
+import { ProjectDescriptionComponent } from '../../../shared/project/ProjectDescription'
 
 export default function ProjectDetailComponent () {
   return (

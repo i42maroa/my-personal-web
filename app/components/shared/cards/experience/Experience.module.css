@@ -1,9 +1,17 @@
 .container{
     display: grid;
-    grid-template-columns: 1fr  4fr;
+    grid-template-columns: 1fr 4fr;
     width: 100%;
     margin-bottom: 2rem;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
+
+    opacity: 0;
+
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: 5% 25%; 
+    animation-name: appear_right;  
+    animation-fill-mode: forwards; 
 }
 
 
@@ -11,6 +19,8 @@
     width: 100%;
     height: 100%;
     display: flex;
+    background-color: var(--font-color);
+    color: var(--inverse-font-color);
 }
 
 .yearExperience{
@@ -35,11 +45,19 @@
 .contentContainer{
     display: flex;
     margin: auto 0;
-    background-color: var(--font-color);
+    background-color: var(--inverse-font-color);
     height: 100%;
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    opacity: 0;
+
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: 25% 35%; 
+    animation-name: appear_up;  
+    animation-fill-mode: forwards; 
 }
 
 
@@ -47,7 +65,7 @@
     font-weight: 800;
     margin: auto 0;
     padding: 1.5rem;
-    color: var(--inverse-font-color);
+    color: var(--font-color);
 }
 
 .subtitle{
@@ -55,17 +73,24 @@
     font-weight: 400;
     margin: auto 0;
     padding: 1.5rem;
-    color: var(--inverse-font-color);
+    color: var(--font-color);
 }
 
 .descriptionContainer{
-    background-color: var(--background); 
+    background-color: var(--background);  
 }
 
 .descriptionContainerUnity{
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 1rem 0;
+    opacity: 0;
+
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: 25% 35%; 
+    animation-name: appear_right;  
+    animation-fill-mode: forwards; 
 }
 
 .titleDescriptionContainer{
@@ -89,6 +114,14 @@
     margin: auto;
     padding: 0 0.5rem;
     position: relative;
+
+    opacity: 0;
+
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: 35% 50%; 
+    animation-name: appear_right;  
+    animation-fill-mode: forwards; 
 }
 
 .imageContainer{
@@ -135,4 +168,35 @@
         margin: 1.5rem auto;
         padding: 0 ;
     }    
+}
+
+
+/* KEYFRAMES */
+
+@keyframes appear_right {
+    0%{
+        opacity: 0;
+        transform: translateX(5vh);
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vh);
+    }
+}
+
+@keyframes appear_up {
+    0%{
+        opacity: 0;
+        transform: translateY(-5vh);
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vh);
+    }
 }

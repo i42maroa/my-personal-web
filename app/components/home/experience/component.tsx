@@ -9,12 +9,17 @@ export default function ExperienceComponent () {
   return (
     <section id={LINKS[PAGES.ABOUT].sections[2]} className={styles.mainContainer}>
 
-      <h3>Mi camino</h3>
+      <h2>Mi camino</h2>
 
       {experience.length > 0 &&
         <div className={styles.experienceContainer}>
+          <div className={styles.line}></div>
+          <div className={styles.experienceContentContainer}>
           {experience.map((experience) => (
-            <Experience key={experience.title} experience={experience} />))}
+            <Experience  key={experience.title} experience={experience} />
+           ))}
+          </div>
+          
         </div>}
     </section>
   )

@@ -32,6 +32,13 @@
     justify-content: space-evenly;
     margin: 2rem 0;
     gap: 0.5rem;
+
+    opacity: 0;
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: 25% 55%; 
+    animation-name: appear_down;  
+    animation-fill-mode: forwards; 
 }
 
 .button{
@@ -67,6 +74,15 @@
     display: flex;
 }
 
+.text{
+    opacity: 0;
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: 25% 50%; 
+    animation-name: appear_right;  
+    animation-fill-mode: forwards; 
+}
+
 
 @media (max-width: 1000px) {
 
@@ -85,4 +101,35 @@
 @media (max-width: 500px) {
 
   
+}
+
+
+/* KEYFRAMES */
+
+@keyframes appear_right {
+    0%{
+        opacity: 0;
+        transform: translateX(5vh);
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vh);
+    }
+}
+
+@keyframes appear_down {
+    0%{
+        opacity: 0;
+        transform: translateY(5vh);
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vh);
+    }
 }

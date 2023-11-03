@@ -7,7 +7,7 @@
     width: 0px; 
     view-timeline-name: --item-timeline;
     animation-timeline: --item-timeline;
-    animation-range: entry exit ;
+    animation-range: entry exit;
      animation-fill-mode: forwards;  
 }
 

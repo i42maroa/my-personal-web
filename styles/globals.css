@@ -73,6 +73,15 @@ button{
     cursor: pointer;
 }
 
+section h2 {
+    opacity: 0;
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: 15% 40%; 
+    animation-name: appear_left;  
+    animation-fill-mode: forwards; 
+}
+
 
 @media (max-width: 1200px) {
 
@@ -131,6 +140,20 @@ button{
     section, footer{
         padding: 2rem 1.5rem;
     }
+}
 
 
+/* KEYFRAMES */
+@keyframes appear_left {
+    0%{
+        opacity: 0;
+        transform: translateX(-5vh);
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vh);
+    }
 }

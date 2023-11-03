@@ -19,7 +19,6 @@ export function ProjectCardComponent ({ project }: {
             <Image key={data.image.alt} alt={data.image.alt} src={data.image.url} width={40} height={40} />
           ))}
         </div>
-
       </div>
     </div>
   )

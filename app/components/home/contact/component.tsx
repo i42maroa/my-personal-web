@@ -15,7 +15,7 @@ export default function ContactComponent () {
         </div>
         <div className={styles.leftContainer}>
           <h2>Contactame</h2>
-          <p>No hay nada que con un café no se pueda conseguir.</p>
+          <p className={styles.text}>No hay nada que con un café no se pueda conseguir.</p>
           <div className={styles.buttonContainer}>
             <Link href='https://www.linkedin.com/in/antonio-mar%C3%ADn-rodr%C3%ADguez-07681b1bb/' className={styles.button}>
               <LinkedinSvg />

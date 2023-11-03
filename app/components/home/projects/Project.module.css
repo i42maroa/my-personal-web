@@ -11,6 +11,7 @@
     width: 100%;
     gap: 3rem;
     margin: 2rem auto;
+    outline: 0;
 }
 
 
@@ -19,6 +20,7 @@
     width: fit-content;
     display: flex;
     margin: auto;
+    border: none;
 }
 
 .button:hover{

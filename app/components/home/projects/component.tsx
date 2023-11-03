@@ -2,8 +2,8 @@
 import { LINKS, PAGES } from '@/data/links.data'
 import styles from './Project.module.css'
 import { PROJECTS_DATA } from '@/data/projects.data'
-import { ProjectCardComponent } from '../shared/project/ProjectCard'
 import { useRouter } from 'next/navigation'
+import { ProjectCardComponent } from '../../shared/project/ProjectCard'
 
 export default function ProjectsComponent () {
   const router = useRouter()
