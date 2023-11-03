@@ -9,7 +9,7 @@
 
     view-timeline-name: --item-timeline;
     animation-timeline: --item-timeline;
-    animation-range: 5% 25%; 
+    animation-range: 5% 20%; 
     animation-name: appear_right;  
     animation-fill-mode: forwards; 
 }
@@ -55,7 +55,7 @@
 
     view-timeline-name: --item-timeline;
     animation-timeline: --item-timeline;
-    animation-range: 25% 35%; 
+    animation-range: 15% 25%; 
     animation-name: appear_up;  
     animation-fill-mode: forwards; 
 }
@@ -88,7 +88,7 @@
 
     view-timeline-name: --item-timeline;
     animation-timeline: --item-timeline;
-    animation-range: 25% 35%; 
+    animation-range: 15% 25%; 
     animation-name: appear_right;  
     animation-fill-mode: forwards; 
 }
@@ -119,7 +119,7 @@
 
     view-timeline-name: --item-timeline;
     animation-timeline: --item-timeline;
-    animation-range: 35% 50%; 
+    animation-range: 25% 30%; 
     animation-name: appear_right;  
     animation-fill-mode: forwards; 
 }
