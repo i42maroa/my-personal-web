@@ -13,13 +13,13 @@ export default function ExperienceComponent () {
 
       {experience.length > 0 &&
         <div className={styles.experienceContainer}>
-          <div className={styles.line}></div>
+          <div className={styles.line} />
           <div className={styles.experienceContentContainer}>
-          {experience.map((experience) => (
-            <Experience  key={experience.title} experience={experience} />
-           ))}
+            {experience.map((experience) => (
+              <Experience key={experience.title} experience={experience} />
+            ))}
           </div>
-          
+
         </div>}
     </section>
   )

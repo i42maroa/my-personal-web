@@ -1,5 +1,4 @@
-import ProjectDetailComponent from "@/app/components/home/projects/projectDetail/component";
-
+import ProjectDetailComponent from '@/app/components/home/projects/projectDetail/component'
 
 export default function ProjectDetail () {
   return (

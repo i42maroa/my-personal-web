@@ -2,7 +2,7 @@ import { ExperienceInterface } from '@/app/interface/experience.interface'
 import styles from './Experience.module.css'
 import Image from 'next/image'
 
-export function Experience ({ experience } : {experience:ExperienceInterface}) {
+export function Experience ({ experience }: { experience: ExperienceInterface }) {
   return (
     <div key={experience.title} className={styles.container}>
       <div className={styles.yearContainer}>
@@ -13,9 +13,7 @@ export function Experience ({ experience } : {experience:ExperienceInterface}) {
         <h3 className={styles.title}> {experience.title}</h3>
         <h4 className={styles.subtitle}>{experience.subtitle}</h4>
       </div>
-
       <div />
-      
       <div className={styles.descriptionContainer}>
         {experience.descriptions.length > 0 &&
           experience.descriptions.map((e) => (
@@ -26,9 +24,8 @@ export function Experience ({ experience } : {experience:ExperienceInterface}) {
               </div>
               <div className={styles.contentTechnologies}>
                 {e.tecnologies.length > 0 && e.tecnologies.map((t) => (
-
-                  <div className={styles.imageContainer}>
-                    <Image className={styles.image} src={t.image.url} key={t.name} alt={t.image.alt} fill sizes='10vh'/> 
+                  <div key={t.name} className={styles.imageContainer}>
+                    <Image className={styles.image} src={t.image.url} alt={t.image.alt} fill sizes='10vh' />
                   </div>
                 ))}
               </div>
