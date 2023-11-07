@@ -74,7 +74,7 @@ section h2 {
     opacity: 0;
     view-timeline-name: --item-timeline;
     animation-timeline: --item-timeline;
-    animation-range: 15% 40%; 
+    animation-range: 15% 25%; 
     animation-name: appear_left;  
     animation-fill-mode: forwards; 
 }

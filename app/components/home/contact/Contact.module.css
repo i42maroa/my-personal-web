@@ -36,7 +36,7 @@
     opacity: 0;
     view-timeline-name: --item-timeline;
     animation-timeline: --item-timeline;
-    animation-range: 25% 55%; 
+    animation-range: 15% 30%; 
     animation-name: appear_down;  
     animation-fill-mode: forwards; 
 }
@@ -78,7 +78,7 @@
     opacity: 0;
     view-timeline-name: --item-timeline;
     animation-timeline: --item-timeline;
-    animation-range: 25% 50%; 
+    animation-range: 15% 25%; 
     animation-name: appear_right;  
     animation-fill-mode: forwards; 
 }
