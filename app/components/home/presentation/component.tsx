@@ -1,18 +1,21 @@
-import Link from 'next/link'
 import styles from './Presentation.module.css'
-import getRouteWithSection, { LINKS, PAGES } from '@/data/links.data'
+import { LINKS, PAGES } from '@/data/links.data'
 import { FaceFront } from '../../shared/svg/Face/face'
+import { DATA_INFO } from '@/data/info.data'
 
 export default function PresentationComponent () {
+
   return (
     <section id={LINKS[PAGES.HOME].sections[0]} className={styles.mainContainer}>
       <div className={styles.leftContainer}>
-        <h1>Hola, soy  <b>Antonio</b> </h1>
-        <p>Soy un desarollador creativo e independiente de Córdoba, España.</p>
-        <Link className={styles.button} href={getRouteWithSection(PAGES.ABOUT, 0)}>SABER MAS</Link>
+        <h1 ><span className={styles.title}>Hola, soy  <b>Antonio</b> </span></h1>
+        <p>{DATA_INFO[0]}</p>
       </div>
+
       <div className={styles.rightContainer}>
-        <FaceFront />
+
+         <FaceFront />
+ 
       </div>
     </section>
   )

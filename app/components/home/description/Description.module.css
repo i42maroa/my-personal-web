@@ -2,10 +2,16 @@
     display: grid;
     grid-template-columns: repeat(
         auto-fit, minmax(50%, 1fr));
+    min-height: 100vh;
 }
 
-.engranajeContainer{
-    padding:  0 5rem;
+.desktopContainer, .engranajeContainer{
+    width: 20rem;
+    margin: auto;
+}
+
+.textContainer{
+    margin: auto 0;
 }
 
 .textContainer p{
@@ -15,6 +21,10 @@
     animation-range: 15% 30%; 
     animation-name: appear_right;  
     animation-fill-mode: forwards; 
+}
+
+.svgContainer svg{
+    margin: auto 0;
 }
 
 @media (max-width: 1000px) {
@@ -28,6 +38,16 @@
         padding: 3rem 0;
     }
 
+    .engranajeContainer{
+        order: 4;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .desktopContainer, .engranajeContainer{
+        width: 15rem;
+    }
 }
 
 

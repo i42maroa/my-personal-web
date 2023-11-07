@@ -11,7 +11,7 @@ export default function DescriptionComponent () {
         <p>Propongo soluciones llamativas siempre garantizando una buena experiencia de usuario. Lo que no entra por los ojos no funciona.</p>
       </div>
 
-      <div className={styles.engranajeContainer}>
+      <div className={styles.desktopContainer}>
         <DesktopSvg />
       </div>
 
