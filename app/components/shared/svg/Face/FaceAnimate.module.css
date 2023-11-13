@@ -1,0 +1,68 @@
+.st0{fill:#66BAAF;}
+	.st1{fill:#F8F4E1;}
+	.st2{fill:none;stroke:var(--font-color);stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:#EAE6D6;}
+	.st4{fill:none;stroke:#4E3620;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st5{fill:var(--hard-brown);}
+	.st6{fill:#C17948;stroke:#4E3620;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+	.st7{fill:#F7F6F5;stroke:#4E3620;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+
+.containerFace, .face{
+    position: absolute;
+	transform-box: fill-box;
+    transform-origin: center;
+	transition: transform .35s ease-out;
+}
+
+.cara{
+	transform-box: fill-box;
+    transform-origin: center;
+}
+
+.containerBody{
+    position: absolute;
+}
+
+.avatarWrap{
+	perspective: 1000px;
+    position: relative;
+    width: 100%;
+	height: 100%;
+}
+
+.avatar{
+	width: 60vw;
+    height: auto;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    transform-origin: bottom center;
+    backface-visibility: hidden;
+    will-change: transform;
+	max-width: 575px;
+    top: 35%;
+    left: 70%;
+}
+
+
+@media (max-width: 1200px) {
+	.avatar{
+		max-width: 485px;
+		width: 50vw;
+		left: 70%;
+	}
+}
+
+
+@media (max-width: 1000px) {
+	.avatar{
+		top: 0;
+		transform: translate(-50%);
+		width: 75vw;
+		height: 45vh;
+		min-height: 300px;
+		left: 50%;
+		max-width: 400px;
+	}
+}
+
+

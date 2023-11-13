@@ -1,76 +1,84 @@
-.mainContainer{
-    display: flex;
-    margin: 0 auto;
+.sectionContainer{
     min-height: 100vh;
+
 }
 
-.leftContainer{
+.header{
+    position: relative;
+    display: flex;
+}
+
+.pageHeaderInr{
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 50%;
+    justify-content: center;
 }
 
-.leftContainer p {
-    margin: 1rem 0;
-}
-
-.title{
-    display: block;
-    white-space: nowrap;
-    border-right: 4px solid;
-    width: 13ch;
-    animation: typing 1s steps(13), blink_animation .5s infinite step-end alternate;
-    overflow: hidden;
-}
-
-.rightContainer{
-    display: flex;
+.pageContent{
     position: relative;
-    height: 30rem;
-    margin: auto ;
-    width: 50%;
+    max-width: 600px;
+    width: 100%;
+    min-height: 25vh;
+    margin-bottom: 100px;
 }
 
-.button{
-    width: 5rem;
+.avatarBg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -10;
+}
+
+.pageContent h1{
+    animation: reveal .8s cubic-bezier(.215,.61,.355,1) .25s backwards;
+}
+
+.pageContent p{
+    animation: reveal .8s cubic-bezier(.215,.61,.355,1) .25s backwards;
 }
 
 
 @media (max-width: 1000px) {
 
-    .mainContainer{
+    .sectionContainer{
         flex-direction: column-reverse;
+        justify-content: start;
     }
 
-    .rightContainer,
-    .leftContainer{
-        width: 100%;
+    .avatarBg{
+        position: relative;
+        margin-top: 100px;
+        left: 0;
+        height: 35vh;
+        min-height: 300px;
     }
 
-    .button{
-        margin: 1rem auto;
+    .pageHeaderInr{
+        margin: auto;
+        justify-content: center;
         text-align: center;
     }
+
 }
 
 
 @media (max-width: 500px) {
 
+    .avatarBg{
+        position: relative;
+        margin-top: 100px;
+        left: 0;
+        height: 25vh;
+        min-height: 200px;
+    }
   
 }
-
-
-/* KEYFRAMES */
-
-@keyframes typing {
-    from{
-        width: 0;
-    }
-}
-
-@keyframes blink_animation {
-    50%{
-        border-color: transparent;
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
     }
 }

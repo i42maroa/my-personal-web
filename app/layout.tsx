@@ -19,7 +19,7 @@ export default function RootLayout ({
       <head>
         <title>My personal web</title>
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <Navigation />
         <div className={styles.children}>{children}</div>
         <Footer />

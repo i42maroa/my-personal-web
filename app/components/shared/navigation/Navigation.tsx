@@ -5,8 +5,8 @@ import { useEffect, useState } from 'react'
 import { MenuButton } from '../menuButton/MenuButton'
 import startAnimation from '@/hook/startAnimation'
 import { showNavbarDependOfScroll } from '@/hook/scrollHandler'
-import { LogoSvg } from '../svg/Logo/logo'
 import { MenuNavigation } from './Menu'
+import { LogoAnimateSvg } from '../svg/Logo/LogoAnimate'
 
 export function Navigation () {
   const [showNav, setShowNav] = useState(false)
@@ -30,7 +30,8 @@ export function Navigation () {
         <div className={styles.navigationHeader}>
 
           <Link href='/' className={styles.logoContainer}>
-            <LogoSvg />
+            {/* <LogoSvg /> */}
+            <LogoAnimateSvg />
           </Link>
 
           <div className={styles.displayButton}>
