@@ -8,12 +8,13 @@ import { LatteSvg } from './coffes/Latte/Latte'
 import { GlassSvg } from './coffes/Glass/Glass'
 import showComponent from '@/hook/showComponent'
 import showComponentOr from '@/hook/showComponentOr'
-import changeRootColors from '@/hook/changeColor'
-import { STATE_TOGGLE } from '@/data/state-toggle.data'
+import { useStateDispatch } from '@/app/StatusContextProvider'
 
 export function CoffeeMachine2 () {
   const [state, setMachineState] = useState(STATES.INITIAL_STATE)
   const [drink, setDrinkChoice] = useState(STATES.DRINK.NONE)
+
+  const dispatchNewStateContext = useStateDispatch()
 
   const showLiquidDependOfChoice = () => {
     switch (drink) {
@@ -36,13 +37,13 @@ export function CoffeeMachine2 () {
   const changeColor = () => {
     switch (drink) {
       case STATES.DRINK.COFFEE:
-        changeRootColors(STATE_TOGGLE[2].color)
+        dispatchNewStateContext(2)
         break
       case STATES.DRINK.LATTE:
-        changeRootColors(STATE_TOGGLE[1].color)
+        dispatchNewStateContext(1)
         break
       case STATES.DRINK.MILK:
-        changeRootColors(STATE_TOGGLE[0].color)
+        dispatchNewStateContext(0)
     }
 
     setMachineState(STATES.INITIAL_STATE)

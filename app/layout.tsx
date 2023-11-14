@@ -3,6 +3,7 @@ import '../styles/globals.css'
 import React from 'react'
 import styles from './Layout.module.css'
 import { Footer } from './components/shared/footer/Footer'
+import { StatusContextProvider } from './StatusContextProvider'
 
 export const metadata = {
   title: 'Create Next App',
@@ -20,9 +21,11 @@ export default function RootLayout ({
         <title>My personal web</title>
       </head>
       <body suppressHydrationWarning>
-        <Navigation />
-        <div className={styles.children}>{children}</div>
-        <Footer />
+        <StatusContextProvider>
+          <Navigation />
+          <div className={styles.children}>{children}</div>
+          <Footer />
+        </StatusContextProvider>
       </body>
     </html>
   )

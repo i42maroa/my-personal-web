@@ -21,6 +21,7 @@ export function DesktopSvg () {
 		C273.5,549.9,286.6,536.7,286.6,520.5z M473.5,216.4H36.4v264.7h437h0V216.4z M257.6,502.1c-10.1,0-18.2,8.2-18.2,18.2
 		s8.2,18.2,18.2,18.2c10.1,0,18.2-8.2,18.2-18.2S267.7,502.1,257.6,502.1z'
         />
+        <rect id='screen' x='36.4' y='216.4' className={styles.screen} width='437' height='264.7' />
       </g>
       <g id='lines'>
         <rect x='77.8' y='419.1' className={styles.l7} width='316' height='6' />

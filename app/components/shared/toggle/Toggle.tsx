@@ -1,19 +1,19 @@
-import changeRootColors from '@/hook/changeColor'
 import styles from './Toggle.module.css'
 import { useState } from 'react'
 import { STATE_TOGGLE } from '@/data/state-toggle.data'
+import { useStateContext, useStateDispatch } from '@/app/StatusContextProvider'
 
 export function Toggle () {
-  const [state, setState] = useState(0)
-  const [text, setText] = useState(STATE_TOGGLE[0].text)
+  const state = useStateContext()
+  const dispatchNewState = useStateDispatch()
+
+  const [text, setText] = useState(STATE_TOGGLE[state].text)
 
   function changeHandler (event:any) {
     const key = event.target.value
-    const type = STATE_TOGGLE[key].color
     const text = STATE_TOGGLE[key].text
-    changeRootColors(type)
     setText(text)
-    setState(key)
+    dispatchNewState(key)
   }
 
   return (

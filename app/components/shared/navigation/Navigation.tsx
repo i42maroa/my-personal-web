@@ -30,7 +30,6 @@ export function Navigation () {
         <div className={styles.navigationHeader}>
 
           <Link href='/' className={styles.logoContainer}>
-            {/* <LogoSvg /> */}
             <LogoAnimateSvg />
           </Link>
 
