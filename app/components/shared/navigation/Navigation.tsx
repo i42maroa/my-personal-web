@@ -13,6 +13,10 @@ export function Navigation () {
   const [lastScrol, setLastScroll] = useState(0)
   const [isScrollDown, setIsScrollingDown] = useState(false)
 
+  const colorStroke = {
+    stroke: 'var(--font-color-navbar)'
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -30,7 +34,7 @@ export function Navigation () {
         <div className={styles.navigationHeader}>
 
           <Link href='/' className={styles.logoContainer}>
-            <LogoAnimateSvg />
+            <LogoAnimateSvg colorStroke={colorStroke} />
           </Link>
 
           <div className={styles.displayButton}>

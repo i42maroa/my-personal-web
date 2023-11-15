@@ -1,0 +1,31 @@
+.container{
+    width: 96vw;
+    height: 96vh;
+    z-index: 100;
+    /* background-color: red; */
+    background-color: var(--hard-brown);
+    position: fixed;
+    
+    justify-content: center;
+    display: flex;
+
+    animation: fade-up 0.3s ease-out 2s forwards;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.logoContainer{
+   width: 20vw;
+   display: flex;
+}
+
+@keyframes fade-up {
+
+    100%{
+         transform: translate3d(0, -100%, 0);  
+         display: none;
+    }
+}

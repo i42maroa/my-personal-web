@@ -6,6 +6,7 @@
     z-index: 10;
     top: 0;
     transition: transform 0.4s;
+    animation: appear 0.4s ease-in 2.5s backwards;
 }
 
 .scrollDown  {
@@ -32,7 +33,7 @@
 
 .logoContainer{
     padding: 2rem 0 0 2rem;
-    
+    width: 5rem;
 }
 
 .displayButton{
@@ -87,3 +88,12 @@
 
 }
 
+
+@keyframes appear {
+    0%{
+        transform: translate3d(0, -100%, 0);
+    }
+    100%{
+        transform: none;
+    }
+}

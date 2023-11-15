@@ -5,7 +5,6 @@ import changeRootColors from '@/hook/changeColor'
 import React, { createContext, useContext, useReducer } from 'react'
 
 export const StatusColorContext = createContext(0)
-
 export const StatusColorDispatchContext = createContext((value:number) => {})
 
 export function useStateContext () {
