@@ -1,6 +1,6 @@
 .container{
-    width: 96vw;
-    height: 96vh;
+    width: 100vw;
+    height: 100vh;
     z-index: 100;
     /* background-color: red; */
     background-color: var(--hard-brown);
@@ -25,7 +25,7 @@
 @keyframes fade-up {
 
     100%{
-         transform: translate3d(0, -100%, 0);  
+         transform: translate3d(0, -120%, 0);  
          display: none;
     }
 }
