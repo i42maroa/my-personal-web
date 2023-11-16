@@ -12,6 +12,16 @@
         enable-background:new 0 0 866 834;
     }
 
+	
+	
+	.avatar{
+		width: 70vw;
+		height: auto;
+		margin: auto;
+		max-width: 600px;
+	}
+	
+
 
 .smoke1, .smoke2, .smoke3, .smoke4, .smoke5{
 	fill: #A09E98;
@@ -105,5 +115,24 @@
 	}
 	100%{
 		opacity: 1;
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.avatar{
+		max-width: 500px;
+		width: 60vw;
+	}
+}
+
+
+@media (max-width: 1000px) {
+	.avatar{
+		top: 0;
+		width: 75vw;
+		height: auto;
+		min-height: 350px;
+		max-width: 450px;
 	}
 }

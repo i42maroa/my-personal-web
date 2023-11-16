@@ -19,6 +19,7 @@ export default function Home () {
       <ProjectsComponent />
       <Delimiter />
       <ContactComponent />
+      <Delimiter />
     </>
   )
 }

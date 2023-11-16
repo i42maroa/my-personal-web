@@ -13,9 +13,7 @@ export default function PresentationComponent () {
             <h1><span className={styles.title}>Hola, soy  <b>Antonio</b> </span></h1>
             <p>{DATA_INFO[0]}</p>
           </div>
-
         </div>
-
       </header>
 
       <div className={styles.avatarBg}>

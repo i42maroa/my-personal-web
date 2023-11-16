@@ -1,6 +1,5 @@
 .sectionContainer{
     min-height: 100vh;
-
 }
 
 .header{
@@ -45,7 +44,7 @@
 
     .sectionContainer{
         flex-direction: column-reverse;
-        justify-content: start;
+        justify-content: center;
     }
 
     .avatarBg{

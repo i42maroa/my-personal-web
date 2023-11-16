@@ -1,30 +1,48 @@
 .mainContainer{
     display: flex;
-    justify-content: space-between;
-    gap: 3rem;
-    margin: 0 auto;
     width: 100%;
     min-height: 100vh;
+    position: relative;
 }
 
-.leftContainer{
+
+.header{
+    position: relative;
+    display: flex;
+}
+
+.pageHeaderInr{
     display: flex;
     flex-direction: column;
     margin: auto;
+    justify-content: center;
 }
 
-.leftContainer button{
+.pageContent{
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    min-height: 25vh;
+    margin-bottom: 100px;
+}
+
+
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+}
+
+.textContainer button{
     width: 100px;
 }
 
-.rightContainer{
-    display: flex;
-    position: relative;
-    margin: auto;
-    height: 100%;
+.avatarContainer{
+    height: 100vh;
     width: 100%;
-    max-width: 50rem;
-    max-height: 50rem;
+    display: flex;
+    margin: auto;
 }
 
 .buttonContainer {
@@ -89,19 +107,65 @@
 
     .mainContainer{
         flex-direction: column-reverse;
-    
+        justify-content: center;
+        gap: 5rem;
     }
 
-    .leftContainer h1{
+    .pageContent{
+        position: relative;
+        max-width: 60vh;
+        min-height: 0;
+        margin: 0;
+    }
+
+    .textContainer{
+        margin: 0 auto;
+    }
+
+    .textContainer h1{
         text-align: center;
     }
-   
+
+    .avatarBg{
+        position: relative;
+    }
+
+    .avatarContainer{
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .buttonContainer {
+        margin: 2rem ;
+    }
+
+    .button{
+        width: 4rem;
+    }
 }
 
 
 @media (max-width: 500px) {
 
-  
+    .mainContainer{
+        gap: 4rem;
+    }
+
+    .avatarBg{
+        position: relative;
+        margin-top: 100px;
+        left: 0;
+        height: 25vh;
+        min-height: 200px;
+    }
+
+    .buttonContainer {
+        margin: 2rem 0;
+    }
+
+    .button{
+        width: 3rem;
+    }
 }
 
 
