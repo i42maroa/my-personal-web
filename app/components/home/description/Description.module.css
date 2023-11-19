@@ -8,6 +8,10 @@
 .desktopContainer, .engranajeContainer{
     width: 20rem;
     margin: auto;
+    opacity: 0;
+    animation: appear_up linear both;
+    animation-timeline: view();
+    animation-range: 20% 40%;
 }
 
 .textContainer{
@@ -16,16 +20,11 @@
 
 .textContainer p{
     opacity: 0;
-    view-timeline-name: --item-timeline;
-    animation-timeline: --item-timeline;
-    animation-range: 15% 30%; 
-    animation-name: appear_right;  
-    animation-fill-mode: forwards; 
+    animation: appear_right linear both;
+    animation-timeline: view();
+    animation-range: 15% 25%;
 }
 
-.svgContainer svg{
-    margin: auto 0;
-}
 
 @media (max-width: 1000px) {
 
@@ -64,5 +63,22 @@
     100%{
         opacity: 1;
         transform: translateX(0vh);
+    }
+}
+
+@keyframes appear_up {
+    0%{
+        scale: 0.9;
+        opacity: 0;
+        transform: translateY(5vh);
+    }
+    30%{
+        scale: 0.9;
+        opacity: 1;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+        transform: translateY(0vh);
     }
 }
