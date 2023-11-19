@@ -2,42 +2,42 @@
     fill: var(--font-color);
 }
 
-.l1, .l2, .l3, .l4, .l5, .l6, .l7{
-    fill: var(--font-color);
-    width: 0px; 
-    view-timeline-name: --item-timeline;
-    animation-timeline: --item-timeline;
-    animation-range: entry exit;
-     animation-fill-mode: forwards;  
-}
-
 .l1{
-     animation-name: l1_animation;   
+    animation: l1_animation linear both;   
 }
 
 .l2{
-    animation-name: l2_animation; 
+   animation: l2_animation linear both; 
 }
 
 .l3{
-    animation-name: l3_animation; 
+   animation: l3_animation linear both; 
 }
 
 .l4{
-    animation-name: l4_animation; 
+   animation: l4_animation linear both; 
 }
 
 .l5{
-    animation-name: l5_animation; 
+   animation: l5_animation linear both; 
 }
 
 .l6{
-    animation-name: l6_animation; 
+   animation: l6_animation linear both; 
 }
 
 .l7{
-    animation-name: l7_animation; 
+   animation: l7_animation linear both; 
 }
+
+.l1, .l2, .l3, .l4, .l5, .l6, .l7{
+    fill: var(--font-color);
+    width: 0px; 
+    animation-timeline: view();
+    animation-range: entry exit;
+}
+
+
 
 .screen{
     fill: var(--background);
