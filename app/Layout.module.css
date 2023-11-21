@@ -10,13 +10,20 @@
         margin-top: 0rem;
         padding: 0 5rem;
     }
+}
+
+@media (max-width: 700px) {
+
+    .children{
+        padding: 0 4rem;
+    }
 
 }
 
 @media (max-width: 500px) {
 
     .children{
-        padding: 0 3rem;
+        padding: 0 2rem;
     }
 
 }

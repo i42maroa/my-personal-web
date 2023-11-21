@@ -2,7 +2,6 @@
     width: 100vw;
     height: 100vh;
     z-index: 100;
-    /* background-color: red; */
     background-color: var(--hard-brown);
     position: fixed;
     
@@ -15,6 +14,7 @@
     right: 0;
     top: 0;
     bottom: 0;
+    display: none;
 }
 
 .logoContainer{

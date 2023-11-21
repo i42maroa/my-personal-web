@@ -1,26 +1,27 @@
 .container{
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 212px 1fr;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     padding: 2rem 0;
 
-    opacity: 0;
-
-    view-timeline-name: --item-timeline;
-    animation-timeline: --item-timeline;
-    animation-range: 5% 20%; 
-    animation-name: appear_right;  
-    animation-fill-mode: forwards; 
+    
+   
 }
 
 
 .yearContainer{
-    width: 100%;
+    width: 198px;
     height: 100%;
     display: flex;
     background-color: var(--font-color);
     color: var(--inverse-font-color);
+    outline: 3px solid var(--font-color);
+
+    animation: appear_left linear both;
+    animation-timeline: view();
+    animation-range: 10% 25%; 
+    
 }
 
 .yearExperience{
@@ -45,7 +46,7 @@
 .contentContainer{
     display: flex;
     margin: auto 0;
-    background-color: var(--inverse-font-color);
+    background-color: var(--font-color);
     height: 100%;
     width: 100%;
     justify-content: space-between;
@@ -53,11 +54,12 @@
 
     opacity: 0;
 
-    view-timeline-name: --item-timeline;
-    animation-timeline: --item-timeline;
+    animation: appear_right linear both; 
+    animation-timeline: view();
     animation-range: 15% 25%; 
-    animation-name: appear_up;  
-    animation-fill-mode: forwards; 
+     
+    outline: 3px solid var(--font-color);
+    z-index: 1;
 }
 
 
@@ -65,7 +67,7 @@
     font-weight: 800;
     margin: auto 0;
     padding: 1.5rem;
-    color: var(--font-color);
+    color: var(--inverse-font-color);
 }
 
 .subtitle{
@@ -73,24 +75,21 @@
     font-weight: 400;
     margin: auto 0;
     padding: 1.5rem;
-    color: var(--font-color);
+    color: var(--inverse-font-color);
 }
 
-.descriptionContainer{
-    background-color: var(--background);  
-}
+
 
 .descriptionContainerUnity{
+    background-color: var(--white);  
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 1rem 0;
     opacity: 0;
-
-    view-timeline-name: --item-timeline;
-    animation-timeline: --item-timeline;
+    /* outline: 3px solid var(--font-color); */
+    animation: appear_right linear both; 
+    animation-timeline: view();
     animation-range: 15% 25%; 
-    animation-name: appear_right;  
-    animation-fill-mode: forwards; 
 }
 
 .titleDescriptionContainer{
@@ -105,7 +104,16 @@
 
 .titleDescription{ 
     font-weight: 800;
+    padding: 1rem 0 0 0;
 }
+
+.description{
+    opacity: 0;
+    animation: appear_right linear both; 
+    animation-timeline: view();
+    animation-range: 20% 30%; 
+}
+
 
 .contentTechnologies{
     display: flex;
@@ -117,11 +125,9 @@
 
     opacity: 0;
 
-    view-timeline-name: --item-timeline;
-    animation-timeline: --item-timeline;
+    animation: appear_right linear both;
+    animation-timeline: view();
     animation-range: 25% 30%; 
-    animation-name: appear_right;  
-    animation-fill-mode: forwards; 
 }
 
 .imageContainer{
@@ -132,43 +138,120 @@
     margin: 0.2rem 0.5rem;
 }
 
-@media (max-width: 700px) {
+.separateLine{
+    width: 0;
+    margin: 0 0 1.5rem 0;
+    height: 3px;
+    background-color: var(--font-color);
+    opacity: 0;
 
-    .container{
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-    }
+    animation: increase linear both;
+    animation-timeline: view();
+    animation-range: 15% 25%; 
+}
 
+@media (max-width: 1200px) {
     .descriptionContainerUnity{
         display: flex;
         flex-direction: column;
         margin: 0;
     }
-
-    .title, .subtitle{
-        width: 100%;
-        text-align: center;
-    } 
-
-    .title{
-        padding: 1.5rem 0 0.5rem 0;
-    }
-
-    .subtitle{
-        padding: 0.5rem 0 1.5rem 0;
-    }
-
-    .titleDescriptionContainer{
+    .contentTechnologies{
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
         padding: 0;
+        
+    }    
+}
+
+
+@media (max-width: 1000px) {
+    .container{
+        grid-template-columns: 162px 1fr;
+    }
+
+    .yearContainer{
+        width: 148px;
+        justify-content: center;
+    }
+
+    .yearExperience{
+        padding: 0;
+        margin: auto;
+    }
+
+    .contentContainer{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        justify-content: center;
+    } 
+    .title, .subtitle{
+        text-align: center;
+    }
+    .title{
+        padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+    }
+    .subtitle{
+        padding: 0 0.5rem 1.5rem 0.5rem;
     }
 
     .contentTechnologies{
-        width: 100%;
-        margin: 1.5rem auto;
-        padding: 0 ;
-    }    
+        animation: appear_down linear both;
+        animation-timeline: view();
+        animation-range: 15% 30%; 
+    }   
 }
+
+@media (max-width: 700px) {
+
+    .container{
+        grid-template-columns: 122px 1fr;
+    }
+
+    .yearContainer{
+        width: 118px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .container{
+        grid-template-columns: 70px 1fr;
+    }
+
+    .imageContainer{
+        width: 2rem;
+        height: 2rem;
+        margin: 0.1rem 0.3rem;
+    }
+
+    .yearContainer{
+        width: 65px;
+    }
+
+    .title{
+        padding: 1rem 0.2rem 0.5rem 0.2rem;
+    }
+    .subtitle{
+        padding: 0.2rem 0.2rem 1rem 0.2rem;
+    }
+
+    .titleDescriptionContainer{
+        padding: 0 1rem;
+    }
+
+    .contentTechnologies{
+       margin: 1rem 1rem 0 1rem;
+    }
+    .separateLine{
+        margin: 0 0 1rem 0;
+    }
+}
+
 
 
 /* KEYFRAMES */
@@ -177,6 +260,20 @@
     0%{
         opacity: 0;
         transform: translateX(5vh);
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vh);
+    }
+}
+
+@keyframes appear_left {
+    0%{
+        opacity: 0;
+        transform: translateX(-5vh);
     }
     30%{
         opacity: 1;
@@ -198,5 +295,33 @@
     100%{
         opacity: 1;
         transform: translateY(0vh);
+    }
+}
+
+
+@keyframes appear_down {
+    0%{
+        opacity: 0;
+        transform: translateY(5vh);
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+
+@keyframes increase {
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        width: 80%;
     }
 }

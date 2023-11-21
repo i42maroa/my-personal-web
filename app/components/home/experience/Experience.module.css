@@ -6,23 +6,31 @@
 
 .experienceContainer{
     display: grid;
-    grid-template-columns: 5px 1fr;
+    grid-template-columns: 1fr;
     margin: 1.5rem 0;
+    position: relative;
 }
 
 .experienceContentContainer{
     display: grid;
+    margin: 10rem 0;
+    
 }
 
 .line{
-    background-color: var(--font-color);
+    background-color: var(--green);
     height: 0%;
+    width: 10px;
 
+    position: absolute;
+    left: 200px;
+    
     view-timeline-name: --item-timeline;
     animation-timeline: --item-timeline;
     animation-range: 20% exit; 
     animation-name: showLine;  
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
+    z-index: 2;
 }
 
 @keyframes showLine {
@@ -31,5 +39,25 @@
     }
     100%{
         height: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .line{
+        left: 150px;
+    }
+}
+
+@media (max-width: 700px) {
+    .line{
+        width: 8px;
+        left: 120px;
+    }
+}
+
+@media (max-width: 500px) {
+    .line{
+        width: 5px;
+        left: 65px;
     }
 }
