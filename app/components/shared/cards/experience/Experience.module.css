@@ -81,7 +81,7 @@
 
 
 .descriptionContainerUnity{
-    background-color: var(--white);  
+    background-color: transparent;  
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 1rem 0;
