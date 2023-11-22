@@ -34,9 +34,6 @@
     position: relative;
 }
 
-.textContainer button{
-    width: 100px;
-}
 
 .avatarContainer{
     height: 100vh;
@@ -100,6 +97,12 @@
     animation-range: 15% 25%; 
     animation-name: appear_right;  
     animation-fill-mode: forwards; 
+}
+
+
+.form{
+    display: flex;
+    flex-direction: column;
 }
 
 
