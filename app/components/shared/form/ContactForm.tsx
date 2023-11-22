@@ -5,12 +5,12 @@ import styles from './ContactForm.module.css'
 export default function ContactForm () {
   const [formData, setFormData] = useState({ user_name: '', user_email: '', user_message: '' })
 
-  const handleChange = (event) => {
+  const handleChange = (event:any) => {
     const { name, value } = event.target
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }))
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event:any) => {
     event.preventDefault()
     const id = 'service_l8afvph'
     const templateId = 'template_pb7xl9l'
