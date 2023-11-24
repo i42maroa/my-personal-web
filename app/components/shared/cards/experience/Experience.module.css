@@ -4,9 +4,6 @@
     width: 100%;
     margin-bottom: 5rem;
     padding: 2rem 0;
-
-    
-   
 }
 
 
@@ -37,10 +34,6 @@
     height: 100%;
     margin: auto;
     background-color: var(--font-color);
-}
-
-.imageContainer img{
-    margin: auto;
 }
 
 .contentContainer{

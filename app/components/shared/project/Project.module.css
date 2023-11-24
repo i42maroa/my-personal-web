@@ -1,66 +1,105 @@
 .container{
-    background-color: var(--hard-brown);
+    background-color: var(--font-color);
     display: flex;
-    width: 25rem;
-    height: 20rem;
-    outline: 3px solid var(--hard-brown);
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    outline: 3px solid var(--font-color);
 
     opacity: 0;
-        view-timeline-name: --item-timeline;
-        animation-timeline: --item-timeline;
-        animation-range: 15% 25%; 
-        animation-name: appear_right;  
-        animation-fill-mode: forwards; 
-    
+    animation: appear_right linear both;
+    animation-timeline: view();
+    animation-range: 15% 25%; 
+
+    position: relative;
 }
 
 .textContainer{
     display: flex;
     flex-direction: column;
-    margin: auto 0 0 0;
-    width: 100%
+    position:relative;
+    padding: 1rem;
 }
 
+
+.imageContainer{
+    height: 400px;
+    width: 500px;
+    display: flex;
+    position: relative;
+}
+
+
 .titleContainer{
-    padding: 1rem;
+    display: flex;
+
     text-align: left;
 
     opacity: 0;
-    view-timeline-name: --item-timeline;
-    animation-timeline: --item-timeline;
+    view-timeline-name: view();
     animation-range: 15% 25%; 
     animation-name: appear_left;  
     animation-fill-mode: forwards; 
+
+    position: relative;
+    justify-content: space-between;
 }
 
 .title{
-    color: var(--white)
+    color: var(--inverse-font-color);
 }
+
+.github{
+    width: 40px;
+    height:40px;
+    margin: auto 0;
+}
+
+.deploy{
+    width: 30px;
+    height:30px;
+    margin: auto 0;
+}
+
+.separateLine{
+    width: 70%;
+    margin: 0 0 1.5rem 0;
+    height: 3px;
+    background-color: var(--inverse-font-color);
+}
+
 
 .shortText{
     color: var(--white);
     font-size: 15px;
+    text-align: left;
 }
 
-.github{
-    margin: auto 0;
+.footerCardContainer{
+    display: flex;
+    position: relative;
+    background-color:var(--font-color);
+    justify-content: space-between;
+    outline: 3px solid var(--font-color);
+    
+    padding: 0.5rem 1rem;
+
+    opacity: 0;
+    animation: appear_up linear both;
+    animation-timeline: view();
+    animation-range: 15% 25%; 
 }
+
 
 .technologiesContainer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5rem;
-    background-color:var(--white);
-    padding: 0.5rem 1rem;
+    
     margin: 0;
 
-    opacity: 0;
-    view-timeline-name: --item-timeline;
-    animation-timeline: --item-timeline;
-    animation-range: 15% 25%; 
-    animation-name: appear_up;  
-    animation-fill-mode: forwards; 
+   
 }
 
 
@@ -103,13 +142,13 @@
 @keyframes appear_up {
     0%{
         opacity: 0;
-        background-color:var(--brown);
+        background-color:var(--font-color);
     }
     30%{
         opacity: 1;
     }
     100%{
         opacity: 1;
-        background-color:var(--white);
+        background-color:var(--inverse-font-color);
     }
 }
