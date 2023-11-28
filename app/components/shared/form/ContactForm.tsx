@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser'
 import { useState } from 'react'
 import styles from './ContactForm.module.css'
+import startAnimation from '@/hook/startAnimation'
 
 export default function ContactForm () {
    interface FormInterface {
@@ -9,6 +10,7 @@ export default function ContactForm () {
    const EMPTY_FORM:FormInterface = { user_name: '', user_email: '', user_message: '' }
    const [formData, setFormData] = useState(EMPTY_FORM)
    const [disable, setDisabled] = useState(true)
+   const [showSendedModal, setSendedModal] = useState(false)
 
    const handleChange = (event:any) => {
      const { name, value } = event.target
@@ -23,12 +25,15 @@ export default function ContactForm () {
      const id = 'service_l8afvph'
      const templateId = 'template_pb7xl9l'
      const publicKey = 'PTbPZyQDA6HdARA-H'
+     setDisabled(true)
+     setSendedModal(false)
 
      emailjs.sendForm(id, templateId, event.target, publicKey)
        .then(response => {
          console.log(response)
          setFormData(EMPTY_FORM)
          setDisabled(true)
+         setSendedModal(true)
        })
        .catch(error => console.log(error))
    }
@@ -64,6 +69,10 @@ export default function ContactForm () {
        </label>
 
        <button className={styles.formButton} type='submit' disabled={disable}>Enviar</button>
+
+       <div className={`${styles.modal} ${startAnimation(showSendedModal, styles.modalAnimation)}`}>
+         <span>Enviado correctamente</span>
+       </div>
      </form>
    )
 }
