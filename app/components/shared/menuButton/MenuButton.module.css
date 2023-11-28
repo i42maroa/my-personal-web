@@ -9,6 +9,10 @@
     transform: translate(-50%, -50%);
 }
 
+.menuIconBox:hover .line1, .menuIconBox:hover .line2{
+    scale: 1.1; 
+    background-color: var(--green);
+}
 
 
 .line1, .line2{

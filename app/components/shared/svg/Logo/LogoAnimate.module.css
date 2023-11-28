@@ -1,3 +1,6 @@
+.container{
+    transition: scale 0.2s ease-in;
+}
 
 .line0 , .line1, .line2, .line3 {
     fill:none;
@@ -33,7 +36,11 @@
 
 .color0, .color1{
     fill: transparent;
-    transition: fill 0.1s ease-in;
+    transition: fill 0.2s ease-in;
+}
+
+.container:hover{
+    scale: 1.1;
 }
 
 .container:hover .color0, .container:hover .color1{
