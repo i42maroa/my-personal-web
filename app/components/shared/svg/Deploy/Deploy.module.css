@@ -1,3 +1,8 @@
 .container{
     fill: var(--font-color);
+    transition: fill .2s ease-in-out;
+}
+
+.container:hover{
+    fill: var(--green) !important;
 }

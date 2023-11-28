@@ -8,6 +8,10 @@ export const COUNTRY_MANAGEMENT_BACK_PROJECT: ProjectInterface = {
     SPRING, GRAPHQL, MONGO_DB
   ],
   images: [
+    {
+      alt: '/project/shreilak.jpeg',
+      url: '/project/shreilak.jpeg'
+    }
   ],
   urlGithub: 'https://github.com/i42maroa/country-management',
   status: 'NONE'
@@ -20,6 +24,13 @@ export const COUNTRY_MANAGEMENT_APP_PROJECT: ProjectInterface = {
     ANDROID
   ],
   images: [
+    {
+      alt: 'english',
+      url: '/images/english-training.jpeg'
+    }, {
+      alt: 'shreilak',
+      url: '/project/shreilak.jpeg'
+    }
   ],
   urlGithub: 'https://github.com/i42maroa/country-management-android',
   status: 'NONE'

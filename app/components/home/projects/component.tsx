@@ -11,7 +11,7 @@ export default function ProjectsComponent () {
 
       <div className={styles.projectsContainer}>
         {PROJECTS_DATA.map((project) =>
-          <div key={project.title}>
+          <div key={project.title} className={styles.project}>
             <ProjectCardComponent project={project} />
           </div>)}
       </div>

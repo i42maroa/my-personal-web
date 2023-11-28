@@ -5,14 +5,20 @@
 }
 
 .projectsContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
     width: 100%;
-    gap: 5rem;
-    margin: 5rem auto;
     outline: 0;
+    margin: 5rem auto;
+}
+
+.project{
+    margin: 0rem auto;
+}
+
+.project:nth-child(2n){
+    margin: 7rem auto 2rem auto;
 }
 
 .button{
@@ -26,4 +32,17 @@
 .button:hover{
     transform: scale(1.02);
     transition: 0.5s;
+}
+
+@media (max-width: 1000px) {
+
+    .projectsContainer{
+       display: flex;
+       flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .project:nth-child(n){
+        margin: 3rem auto;
+    }
 }

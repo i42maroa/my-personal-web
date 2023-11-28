@@ -1,3 +1,9 @@
-.st0{fill:var(--font-color);}
 
-.st1{fill: var(--white);}
+.github{
+    fill: var(--white);
+    transition: fill .2s ease-in-out;
+}
+
+.github:hover{
+    fill: var(--green);
+}

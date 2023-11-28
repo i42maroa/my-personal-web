@@ -13,9 +13,9 @@ export const COLOR_STATUS_VALUE:COLOR_INTERFACE = {
   middle: {
     '--background': 'var(--soft-brown)',
     '--section': 'var(--white)',
-    '--font-color': 'var(--hard-brown)',
+    '--font-color': 'var(--white)',
     '--font-color-navbar': 'var(--white)',
-    '--inverse-font-color': 'var(--white)',
+    '--inverse-font-color': 'var(--hard-brown)',
     '--footer-container': 'var(--hard-brown)',
     '--navbar': 'var(--hard-brown)'
   },
