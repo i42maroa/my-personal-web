@@ -33,7 +33,12 @@
 
 .color0, .color1{
     fill: transparent;
-    /* animation: paint 0.2s linear 1.5s forwards ; */
+    transition: fill 0.1s ease-in;
+}
+
+.container:hover .color0, .container:hover .color1{
+    fill: var(--green);
+    
 }
 
 @keyframes fill-line0 {
