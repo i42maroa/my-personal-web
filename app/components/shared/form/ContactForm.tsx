@@ -3,32 +3,67 @@ import { useState } from 'react'
 import styles from './ContactForm.module.css'
 
 export default function ContactForm () {
-  const [formData, setFormData] = useState({ user_name: '', user_email: '', user_message: '' })
-
-  const handleChange = (event:any) => {
-    const { name, value } = event.target
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }))
+   interface FormInterface {
+    user_name:string, user_email:string, user_message:string
   }
+   const EMPTY_FORM:FormInterface = { user_name: '', user_email: '', user_message: '' }
+   const [formData, setFormData] = useState(EMPTY_FORM)
+   const [disable, setDisabled] = useState(true)
 
-  const handleSubmit = (event:any) => {
-    event.preventDefault()
-    const id = 'service_l8afvph'
-    const templateId = 'template_pb7xl9l'
-    const publicKey = 'PTbPZyQDA6HdARA-H'
-    event.preventDefault()
+   const handleChange = (event:any) => {
+     const { name, value } = event.target
 
-    emailjs.sendForm(id, templateId, event.target, publicKey)
-      .then(response => console.log(response))
-      .catch(error => console.log(error))
-  }
+     const newFormValue = { ...formData, [name]: value }
+     setFormData(newFormValue)
+     setValid(newFormValue)
+   }
 
-  return (
-    <form className={styles.formContainer} onSubmit={handleSubmit}>
-      <input className={styles.input} type='text' id='name' name='user_name' placeholder='Nombre contacto' value={formData.user_name} onChange={handleChange} />
-      <input className={styles.input} type='email' id='email' name='user_email' placeholder='Email' value={formData.user_email} onChange={handleChange} />
-      <textarea className={styles.textarea} id='message' name='user_message' placeholder='Mensaje' value={formData.user_message} onChange={handleChange} />
+   const handleSubmit = (event:any) => {
+     event.preventDefault()
+     const id = 'service_l8afvph'
+     const templateId = 'template_pb7xl9l'
+     const publicKey = 'PTbPZyQDA6HdARA-H'
 
-      <button className={styles.formButton} type='submit'>Submit</button>
-    </form>
-  )
+     emailjs.sendForm(id, templateId, event.target, publicKey)
+       .then(response => {
+         console.log(response)
+         setFormData(EMPTY_FORM)
+         setDisabled(true)
+       })
+       .catch(error => console.log(error))
+   }
+
+   const isNotValid = (value:string) => {
+     return !value || value === ''
+   }
+
+   const isEmailNotValid = (email:string) => {
+     const result = isNotValid(email) || !email.includes('@')
+     return result
+   }
+
+   const setValid = (formData:FormInterface) => {
+     const isInvalid = isNotValid(formData.user_name) || isEmailNotValid(formData.user_email) || isNotValid(formData.user_message)
+     setDisabled(isInvalid)
+   }
+
+   return (
+     <form className={styles.formContainer} onSubmit={handleSubmit}>
+       <label>
+         <span>Nombre:</span>
+         <input className={styles.input} type='text' id='name' name='user_name' placeholder='Perico de los palotes' value={formData.user_name} onChange={handleChange} required autoComplete='off' />
+       </label>
+       <label>
+         <span>Email:</span>
+         <input className={styles.input} type='email' id='email' name='user_email' placeholder='pericodelospalotes@gmail.com' value={formData.user_email} onChange={handleChange} required autoComplete='off' />
+       </label>
+       <label>
+         <span>Mensaje:</span>
+         <textarea className={styles.textarea} id='message' name='user_message' placeholder='Me gustaría proponerte...' value={formData.user_message} onChange={handleChange} required />
+
+       </label>
+
+       <button className={styles.formButton} type='submit' disabled={disable}>Enviar</button>
+     </form>
+   )
 }

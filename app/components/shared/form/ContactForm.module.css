@@ -5,6 +5,16 @@
     margin: 2rem auto;
 }
 
+.formContainer label{
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer label span{
+    font-weight: 800;
+    padding: 0.2rem 0;
+}
+
 .input, .textarea{
     outline: 2px solid var(--font-color);
     padding: 0.5rem 1rem;
@@ -15,6 +25,11 @@
     color: var(--font-color);
 }
 
+
+.input::placeholder, .textarea::placeholder{
+    color: var(--soft-brown);
+    font-weight: 400;
+}
 
 .input:focus, .textarea:focus{
     border: none;
@@ -40,11 +55,20 @@
     transition: all .2s ease-in-out ;
 }
 
-.formButton:hover{
+.formButton:enabled:hover{
     scale: 1.1;
     color: var(--green);
     outline: solid 2px var(--green);
 }
+
+.formButton:disabled{
+    scale: 1;
+    color:  var(--dirty-white);
+    background-color: var(--constract-hard-brown);
+    outline: none;
+    cursor: not-allowed;
+}
+
 
 
 @media (max-width: 500px) {
