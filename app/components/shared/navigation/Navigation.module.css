@@ -2,7 +2,7 @@
     border: 1px;
     border-radius: 4px;
     width: 100%;
-    position:  fixed;
+    position:  sticky;
     z-index: 10;
     top: 0;
     transition: transform 0.4s;
@@ -32,7 +32,7 @@
 }
 
 .logoContainer{
-    padding: 1rem;
+    padding: 2rem;
     width: 5rem;
 }
 
@@ -55,39 +55,44 @@
     border: none;
 }
 
+@media (max-width: 1200px) {
+
+    .logoContainer{
+        padding: 10px;
+        width: 80px;
+    }
+
+    .displayButton{
+        width: 90px;
+    }
+}
+
 
 @media (max-width: 1000px) {
 
     .logoContainer{
-        padding: 1rem ;
-        margin: auto 0 ;  
-        width: 4rem;
+        width: 60px;
     }
 
     .displayButton{
-        width: 8rem;
+        width: 70px;
     }
-
 }
 
 @media (max-width: 500px) {
 
     .logoContainer{
-        padding: 0.5rem ;
-        margin: auto 0;  
         width: 3rem;
     }
 
     .headerOpen{
-        background: var(--section);
+        background: var(--navbar);
     }
-
 
      .displayButton{
         height: 70px;
         width: 80px;
     }
-
 }
 
 

@@ -8,12 +8,4 @@
     --constract-hard-brown: #897853;
     --second: #f8f4e1;
     --hard-brown:#4e3620;
-    --background: var(--white);
-    --section:  var(--dirty-white);
-    --navbar: var(--dirty-white);
-    --font-color:  var(--hard-brown);
-    --font-color-navbar: var(--hard-brown);
-    --inverse-font-color:  var(--white);
-    --footer-container: var(--hard-brown);
-    --focus: var(--blue)
 }

@@ -9,8 +9,8 @@ export const COUNTRY_MANAGEMENT_BACK_PROJECT: ProjectInterface = {
   ],
   images: [
     {
-      alt: '/project/shreilak.jpeg',
-      url: '/project/shreilak.jpeg'
+      alt: 'shreilak',
+      url: '/project/shreilak/shreilak.jpeg'
     }
   ],
   urlGithub: 'https://github.com/i42maroa/country-management',
@@ -29,7 +29,7 @@ export const COUNTRY_MANAGEMENT_APP_PROJECT: ProjectInterface = {
       url: '/images/english-training.jpeg'
     }, {
       alt: 'shreilak',
-      url: '/project/shreilak.jpeg'
+      url: '/project/shreilak/shreilak.jpeg'
     }
   ],
   urlGithub: 'https://github.com/i42maroa/country-management-android',

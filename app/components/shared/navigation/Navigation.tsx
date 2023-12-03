@@ -14,7 +14,7 @@ export function Navigation () {
   const [isScrollDown, setIsScrollingDown] = useState(false)
 
   const colorStroke = {
-    stroke: 'var(--font-color-navbar)'
+    stroke: 'var(--logo)'
   }
 
   useEffect(() => {
@@ -23,9 +23,13 @@ export function Navigation () {
   })
 
   const handleScroll = () => {
-    setLastScroll(window.scrollY)
-    setIsScrollingDown(window.scrollY > lastScrol)
-    setShowNav(isScrollDown && showNav ? false : showNav)
+    isMobile() && setLastScroll(window.scrollY)
+    isMobile() && setIsScrollingDown(window.scrollY > lastScrol)
+    isMobile() && setShowNav(isScrollDown && showNav ? false : showNav)
+  }
+
+  const isMobile = () => {
+    return window.innerWidth < 500
   }
 
   return (
@@ -42,7 +46,7 @@ export function Navigation () {
           </div>
         </div>
 
-        {showNav && !isScrollDown &&
+        {showNav &&
           <MenuNavigation />}
       </div>
     </header>

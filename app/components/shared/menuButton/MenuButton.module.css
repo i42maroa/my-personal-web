@@ -1,6 +1,6 @@
 .menuIconBox{
-    height: 3rem;
-    width:  3rem;
+    height: 40px;
+    width: 40px;
     border: none;
     background-color: transparent;
     position: absolute;
@@ -10,7 +10,6 @@
 }
 
 .menuIconBox:hover .line1, .menuIconBox:hover .line2{
-    scale: 1.1; 
     background-color: var(--green);
 }
 
@@ -20,6 +19,10 @@
     background-color: var(--font-color);
     border-radius: 30px;
     transition: 0.2s;
+}
+
+.active1, .active2{
+    background-color: var(--font-color-navbar);
 }
 
 
@@ -41,10 +44,4 @@
     transform: translate(0px, -7px)rotate(-45deg);
     width: 40px;
     margin: 10px 0;
-}
-
-
-@media (max-width: 500px) {
-
-  
 }

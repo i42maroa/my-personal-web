@@ -1,5 +1,4 @@
 .children{
-    margin-top: 0rem;
     padding: 0 5rem;
     
 }
@@ -7,23 +6,21 @@
 @media (max-width: 1200px) {
 
     .children{
-        margin-top: 0rem;
-        padding: 0 4rem;
+        padding: 0 100px;
     }
 }
 
 @media (max-width: 1000px) {
 
     .children{
-        margin-top: 0rem;
-        padding: 0 3rem;
+        padding: 0 80px;
     }
 }
 
 @media (max-width: 700px) {
 
     .children{
-        padding: 0 2rem;
+        padding: 0 50px;
     }
 
 }
@@ -31,7 +28,7 @@
 @media (max-width: 500px) {
 
     .children{
-        padding: 0 1rem;
+        padding: 0 30px;
     }
 
 }
