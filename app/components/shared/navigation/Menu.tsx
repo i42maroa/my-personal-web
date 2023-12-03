@@ -1,14 +1,14 @@
 'use client'
 import Link from 'next/link'
-import { Toggle } from '../toggle/Toggle'
 import styles from './Menu.module.css'
+import { CoffeeMachine2 } from '../svg/CoffeeMachine/CoffeeMachine2'
 
 export function MenuNavigation () {
   return (
     <nav className={styles.navigationContainer}>
-      <h3 className={styles.title}>¿Qué quieres saber?</h3>
 
       <ul className={styles.listContainer}>
+        <h3 className={styles.title}>¿Qué quieres saber?</h3>
         <li>
           <Link className={styles.navigationElement} href='/#quality'>Qué te puedo aportar</Link>
         </li>
@@ -26,9 +26,8 @@ export function MenuNavigation () {
         </li>
       </ul>
 
-      <div className={styles.toggleContainer}>
-        <h4 className={styles.toggleTitle}>¿Cuánto café le echas a la vida?</h4>
-        <Toggle />
+      <div className={styles.machineContainer}>
+        <CoffeeMachine2 />
       </div>
     </nav>
   )

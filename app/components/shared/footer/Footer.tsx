@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import styles from './Footer.module.css'
-import { CoffeeMachine2 } from '../svg/CoffeeMachine/CoffeeMachine2'
 
 export function Footer () {
   return (
@@ -34,9 +33,7 @@ export function Footer () {
 
         </div>
         <div className={styles.rightContainer}>
-          <div className={styles.coffeeMachineContainer}>
-            <CoffeeMachine2 />
-          </div>
+          <div className={styles.coffeeMachineContainer} />
 
         </div>
       </div>

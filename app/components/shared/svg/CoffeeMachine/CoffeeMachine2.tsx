@@ -58,42 +58,46 @@ export function CoffeeMachine2 () {
 
     <div className={styles.container}>
       <div className={styles.titleContainer}>
-        <p>WORK & COFFEE</p>
+        <span>COFFEE MACHINE</span>
       </div>
       <div className={styles.machineContainer}>
-        <div className={styles.panelConatiner}>
+
+        <div className={styles.panelContainer}>
           <div className={` ${showPanel(STATES.DRINK.COFFEE)}`}>
-            <h3 className={styles.textPanel}>COFFEE</h3>
             <div className={styles.imagePanel}>
               <CoffeeSvg panel />
             </div>
+            <span className={styles.textPanel}>COFFEE</span>
           </div>
           <div className={`${showPanel(STATES.DRINK.LATTE)}`}>
-            <h3 className={styles.textPanel}>LATTE</h3>
             <div className={styles.imagePanel}>
               <LatteSvg panel />
             </div>
+            <span className={styles.textPanel}>LATTE</span>
           </div>
           <div className={`${showPanel(STATES.DRINK.MILK)}`}>
-            <h3 className={styles.textPanel}>MILK</h3>
             <div className={styles.imagePanel}>
               <MilkSvg />
             </div>
+            <span className={styles.textPanel}>LECHE</span>
           </div>
           <div className={`${styles.enjoyPanel} ${showComponentOr(state.showEnjoyPanel, styles.disableClass, styles.enabledEnjoyPanel)}`}>
-            <h2 className={styles.enjoyText}>DISFRUTA</h2>
+            <span className={styles.enjoyText}>DISFRUTA</span>
           </div>
         </div>
         <div className={styles.coffeeButtons}>
-          <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_COFFEE_BUTTON)}>
-            <CoffeeSvg panel={false} />
-          </button>
-          <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_LATTE_BUTTON)}>
-            <LatteSvg panel={false} />
-          </button>
-          <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_MILK_BUTTON)}>
-            <MilkSvg />
-          </button>
+          <div className={styles.buttonContainer}>
+            <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_COFFEE_BUTTON)} />
+            <span>EXPRESO</span>
+          </div>
+          <div className={styles.buttonContainer}>
+            <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_LATTE_BUTTON)} />
+            <span>LATTE</span>
+          </div>
+          <div className={styles.buttonContainer}>
+            <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_MILK_BUTTON)} />
+            <span>LECHE</span>
+          </div>
         </div>
         <div className={styles.dispensatorContainer}>
           <div className={styles.coffeExit} />
@@ -104,7 +108,7 @@ export function CoffeeMachine2 () {
           </div>
         </div>
         <div className={styles.buttonReadyContainer}>
-          <button className={`${styles.button} ${styles.buttonOk} ${showComponent(state.showReadyButton, styles.hiddenClass)}`} onClick={() => setMachineState(STATES.PUT_GLASS_EVENT)}>OK</button>
+          <button className={`${styles.buttonOk} ${showComponent(state.showReadyButton, styles.hiddenClass)}`} onClick={() => setMachineState(STATES.PUT_GLASS_EVENT)}>PREPARAR</button>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ export const COLOR_STATUS_VALUE:COLOR_INTERFACE = {
     '--inverse-font-color': 'var(--hard-brown)',
     '--footer-container': 'var(--hard-brown)',
     '--navbar': 'var(--white)',
-    '--logo': 'var(--hard-brown)'
+    '--logo': 'var(--white)'
   },
   dark: {
     '--background': 'var(--hard-brown)',

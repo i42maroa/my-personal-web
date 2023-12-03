@@ -1,5 +1,5 @@
 .sectionContainer{
-    min-height: 100vh;
+    min-height: 80dvh;
 }
 
 .header{
@@ -18,17 +18,14 @@
     position: relative;
     max-width: 600px;
     width: 100%;
-    min-height: 25vh;
+    min-height: 25dvh;
     margin-bottom: 100px;
 }
 
 .avatarBg{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
     width: 100%;
-    z-index: -10;
 }
 
 .pageContent h1{
@@ -43,7 +40,7 @@
 @media (max-width: 1000px) {
 
     .sectionContainer{
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
     }
 
