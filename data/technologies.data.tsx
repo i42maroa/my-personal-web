@@ -20,6 +20,6 @@ export const BACK_TECHNOLOGY: TechnologyInterface[] = [
 
 export const MIXT_TECHNOLOGY: TechnologyInterface[] = [
   TEC.ILLUSTRATOR,
-  TEC.PHOTOSHOP,
-  TEC.SCRUM
+  TEC.PHOTOSHOP
+  // TEC.SCRUM
 ]

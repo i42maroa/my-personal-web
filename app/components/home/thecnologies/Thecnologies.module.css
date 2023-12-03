@@ -7,34 +7,41 @@
 .mainContainer h3{
     text-align: center;
     font-weight: 800;
-    display: none;
-    margin-top: 2rem;
+    opacity: 0;
+
+    
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: 20% 40%; 
+    animation-name: appear;  
+    animation-fill-mode: forwards; 
+}
+
+.technologiesGroupContainer{
+    display: flex;
+    margin: 2rem 0;
+    flex-direction: column;
+}
+
+.technologySingleContainer{
+    margin: 1rem 0;
 }
 
 .technologyContainer{
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
-   justify-content: space-evenly;
-   margin: 3rem auto;
+    gap: 2rem;
+    justify-content: center;
+   margin: 1rem auto;
 }
 
 
 
 @media (max-width: 1000px) {
-    .mainContainer h3{
-        display: block;
-        opacity: 0;
-
-        view-timeline-name: --item-timeline;
-        animation-timeline: --item-timeline;
-        animation-range: 20% 40%; 
-        animation-name: appear;  
-        animation-fill-mode: forwards; 
-    }
 
     .technologyContainer{
-        margin: 1rem auto;
+        margin: 0.5rem auto;
+        justify-content: center;
     }
 }
 

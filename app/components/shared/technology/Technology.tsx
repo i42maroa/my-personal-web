@@ -12,7 +12,6 @@ export function Technology ({ technology }: {
           fill sizes='10vh'
         />
       </div>
-      <h4>{technology.name}</h4>
     </div>
   )
 }

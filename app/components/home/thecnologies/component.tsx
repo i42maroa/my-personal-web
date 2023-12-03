@@ -9,25 +9,34 @@ export default function ThecnologiesComponent () {
 
       <h2>Mis herramientas</h2>
 
-      <h3>FRONT</h3>
-      <div className={styles.technologyContainer}>
-        {FRONT_TECHNOLOGY.map((data) => (
-          <Technology key={data.name} technology={data} />
-        ))}
-      </div>
+      <div className={styles.technologiesGroupContainer}>
 
-      <h3>BACKEND</h3>
-      <div className={styles.technologyContainer}>
-        {BACK_TECHNOLOGY.map((data) => (
-          <Technology key={data.name} technology={data} />
-        ))}
-      </div>
+        <div className={styles.technologySingleContainer}>
+          <h3>FRONTEND</h3>
+          <div className={styles.technologyContainer}>
+            {FRONT_TECHNOLOGY.map((data) => (
+              <Technology key={data.name} technology={data} />
+            ))}
+          </div>
+        </div>
 
-      <h3>EXTRA</h3>
-      <div className={styles.technologyContainer}>
-        {MIXT_TECHNOLOGY.map((data) => (
-          <Technology key={data.name} technology={data} />
-        ))}
+        <div className={styles.technologySingleContainer}>
+          <h3>BACKEND</h3>
+          <div className={styles.technologyContainer}>
+            {BACK_TECHNOLOGY.map((data) => (
+              <Technology key={data.name} technology={data} />
+            ))}
+          </div>
+        </div>
+
+        <div className={styles.technologySingleContainer}>
+          <h3>DISEÑO</h3>
+          <div className={styles.technologyContainer}>
+            {MIXT_TECHNOLOGY.map((data) => (
+              <Technology key={data.name} technology={data} />
+            ))}
+          </div>
+        </div>
       </div>
 
     </section>

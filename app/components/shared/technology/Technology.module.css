@@ -1,22 +1,17 @@
 .container{
     display: flex;
     flex-direction: column;
-    width: 10rem;
     border-radius: 5px;
     color: var(--font-color);
-    background-color: var(--inverse-font-color);
-    border: 4px solid var(--font-color);
-    justify-content: space-between;
-    padding: 1rem 0.5rem;
-    gap: 1rem;
+    background-color: var(--white);
+    border: 3px solid var(--hard-brown);
+    padding: 10px;
 
     opacity: 0;
-
-    view-timeline-name: --item-timeline;
-    animation-timeline: --item-timeline;
-    animation-range: 15% 50%; 
+    animation: appear linear both;
+    animation-timeline: view();
+    animation-range: 15% 30%; 
     animation-name: appear;  
-    animation-fill-mode: forwards; 
 }
 
 .container h4{
@@ -29,8 +24,9 @@
     position: relative;
     display: flex;
     margin: 0 auto;
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
+    margin: 10px;
 }
 
 @keyframes appear {
@@ -50,34 +46,32 @@
 
 
 @media (max-width: 1000px) {
+
     .container{
-        width: 7rem;
+        padding: 5px;
     }
 
     .imageContainer{
-        height: 80px;
-        width: 80px;
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media (max-width: 700px) {
+    .imageContainer{
+        height: 50px;
+        width: 50px;
     }
 }
 
 @media (max-width: 500px) {
-    
-    .container{
-        width: 5rem;
-        gap: 0.5rem;
-        padding: 0.5rem 0.25rem;
-        border: 3px solid var(--font-color);
-    }
-
 
     .imageContainer{
-        height: 60px;
-        width: 60px;
-        
+        height: 40px;
+        width: 40px;
     }
-
-    .container h4{
-        font-size: 15px;
+    .container{
+        padding: 3px;
+        border: 2px solid var(--hard-brown);
     }
-
 }
