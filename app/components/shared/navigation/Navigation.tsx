@@ -13,9 +13,11 @@ export function Navigation () {
   const [lastScrol, setLastScroll] = useState(0)
   const [isScrollDown, setIsScrollingDown] = useState(false)
 
-  const colorStroke = {
-    stroke: 'var(--logo)'
+  const isMobile = () => {
+    return window.innerWidth < 500
   }
+
+  const colorStroke = isMobile() && showNav ? { stroke: 'var(--font-color-navbar)' } : { stroke: 'var(--logo)' }
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -26,10 +28,6 @@ export function Navigation () {
     isMobile() && setLastScroll(window.scrollY)
     isMobile() && setIsScrollingDown(window.scrollY > lastScrol)
     isMobile() && setShowNav(isScrollDown && showNav ? false : showNav)
-  }
-
-  const isMobile = () => {
-    return window.innerWidth < 500
   }
 
   return (

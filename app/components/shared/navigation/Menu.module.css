@@ -59,6 +59,8 @@
         height: 100svh;
         margin: 0;
         padding: 0;
+        outline: none;
+        justify-content: start;
      }
 
 

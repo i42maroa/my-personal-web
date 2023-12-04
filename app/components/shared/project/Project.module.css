@@ -153,7 +153,7 @@
 @media (max-width: 500px) {
 
     .container{
-        width: 300px;
+        width: auto;
     }
 
     .github{
@@ -170,7 +170,8 @@
 @media (max-width: 350px) {
 
     .container{
-        width: 200px;
+        width: auto;
+       max-width: 300px;
     }
 
     .github{
@@ -182,6 +183,8 @@
         width: 15px;
         height:15px;
     }
+
+   
 }
 
 /* KEYFRAMES */

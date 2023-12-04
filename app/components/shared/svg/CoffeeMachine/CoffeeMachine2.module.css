@@ -296,12 +296,14 @@
 
 @media (max-width: 500px) {
 
+  .container{
+    max-width: 250px;
+  }
+
   .machineContainer{
     padding: 5px;
     margin: 0 5px;
   }
-
-
   
 .panelContainer{
   width: 100px;

@@ -28,7 +28,15 @@
 @media (max-width: 500px) {
 
     .children{
-        padding: 0 30px;
+        padding: 0 25px;
+    }
+
+}
+
+@media (max-width: 300px) {
+
+    .children{
+        padding: 0 15px;
     }
 
 }
