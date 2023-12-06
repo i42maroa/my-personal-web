@@ -7,14 +7,6 @@ import Image from 'next/image'
 export function Slider ({ arrayImages }: {arrayImages: ImageInterface[]}) {
   const [posSlide, setPosSlide] = useState(0)
 
-  // const decrementPosition = () => {
-  //   setPosSlide(posSlide < 1 ? arrayImages.length - 1 : posSlide - 1)
-  // }
-
-  // const incrementPosition = () => {
-  //   setPosSlide((posSlide + 1) % arrayImages.length)
-  // }
-
   const changeImage = (pos:number) => {
     setPosSlide(pos)
   }
@@ -26,7 +18,7 @@ export function Slider ({ arrayImages }: {arrayImages: ImageInterface[]}) {
   return (
     <div className={styles.container}>
       <div className={styles.carrousel}>
-        <Image src={arrayImages[posSlide].url} alt={arrayImages[posSlide].alt} fill sizes='1000vh' />
+        <Image className={styles.image} src={arrayImages[posSlide].url} alt={arrayImages[posSlide].alt} fill sizes='1000vh' />
       </div>
       <div className={styles.inputContainer}>
         {

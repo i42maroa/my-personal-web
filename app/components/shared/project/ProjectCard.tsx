@@ -22,10 +22,11 @@ export function ProjectCardComponent ({ project }: {
         <div className={styles.separateLine} />
         <p className={styles.shortText}>{project.shortDescription}</p>
       </div>
-      <div className={styles.imageContainer}>
-        {/* <Image key='image' src='/project/shreilak.jpeg' alt='shreilak' fill sizes='1000vh' /> */}
-        <Slider arrayImages={project.images} />
-      </div>
+
+      {project.images.length > 0 &&
+        <div className={styles.imageContainer}>
+          <Slider arrayImages={project.images} />
+        </div>}
 
       <div className={styles.footerCardContainer}>
         <div className={styles.technologiesContainer}>
@@ -35,9 +36,10 @@ export function ProjectCardComponent ({ project }: {
             </div>
           ))}
         </div>
-        <Link className={styles.deploy} href={project.urlGithub}>
-          <DeploySvg fill={fillStyle} />
-        </Link>
+        {project.status === 'DEPLOY' &&
+          <Link className={styles.deploy} href={project.urlGithub}>
+            <DeploySvg fill={fillStyle} />
+          </Link>}
       </div>
 
     </div>

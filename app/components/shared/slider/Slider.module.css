@@ -39,6 +39,10 @@
     scale: 1.1;
 }
 
+.image{
+    object-fit: cover;
+}
+
 @media (max-width: 1200px) {
     .inputButton{
         width: 20px;

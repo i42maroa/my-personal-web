@@ -8,10 +8,7 @@ export const ENGLISH_TRAINNING_PROJECT: ProjectInterface = {
     ANGULAR, REDUX, FIREBASE
   ],
   images: [
-    {
-      alt: '/images/english-training.jpeg',
-      url: '/images/english-training.jpeg'
-    }
+
   ],
   urlGithub: 'https://github.com/i42maroa/english-training',
   status: 'DEPLOY',

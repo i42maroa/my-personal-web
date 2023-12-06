@@ -9,24 +9,20 @@ export const SHREILAK_PROJECT: ProjectInterface = {
   ],
   images: [
     {
-      alt: 'shreilak',
-      url: '/project/shreilak/shreilak.jpeg'
+      alt: 'title',
+      url: '/project/shreilak/shreilak-title.jpg'
     },
     {
       alt: 'landing',
-      url: '/project/shreilak/landing.jpeg'
+      url: '/project/shreilak/landing.jpg'
     },
     {
       alt: 'book',
-      url: '/project/shreilak/book.jpeg'
+      url: '/project/shreilak/book.jpg'
     },
     {
       alt: 'resource',
-      url: '/project/shreilak/resource.jpeg'
-    },
-    {
-      alt: 'resource2',
-      url: '/project/shreilak/resource2.jpeg'
+      url: '/project/shreilak/resource.jpg'
     }
   ],
   urlGithub: 'https://github.com/i42maroa/sheilaWebpage',
