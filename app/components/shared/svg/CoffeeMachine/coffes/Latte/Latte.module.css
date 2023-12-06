@@ -1,9 +1,10 @@
 
-	.st0{fill:#FAFAFA;}
-	.st1{fill:#63ABA3;}
-	.st2{fill:#F6F2DF;}
-	.st3{fill:#9D836A;}
-	.st4{fill:#070508;}
+	.st0{fill:#f1f1f1;}
+	.st2{fill:var(--soft-brown);}
+	.st3{fill:var(--soft-brown);}
+	.back{
+		fill: var(--blue);
+	}
 	.container{
 		enable-background:new 0 0 400 400;
 			}

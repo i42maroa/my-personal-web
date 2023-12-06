@@ -1,7 +1,7 @@
 
 .footerContainer{
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .leftContainer{
@@ -17,6 +17,11 @@
 
 .listContainer li{
     padding: 1rem 0;
+    transition: all 0.1s ease-in;
+}
+
+.listContainer li:hover{
+    scale: 1.02;
 }
 
 .navigationElement{
@@ -56,6 +61,30 @@
     transition: 0.5s;
 }
 
+.bottomContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomContainer p{
+    margin: auto 0;
+}
+
+.socialMediaContainer{
+    display: flex;
+    gap: 5px;
+}
+
+.socialMedia{
+    width: 40px;
+    height: 40px;
+    margin: 0.5rem;
+    transition: scale 0.3s ease-in;
+}
+
+.socialMedia:hover{
+    scale: 1.1;
+}
 
 @media (max-width: 1000px) {
 
@@ -70,6 +99,12 @@
 
     .navigationElement{
       font-size: 20px;
+    }
+
+    .socialMedia{
+        width: 30px;
+        height: 30px;
+        margin: 0.3rem;
     }
 
 }
@@ -90,4 +125,9 @@
         margin: 1rem auto;
     }
 
+    .socialMedia{
+        width: 20px;
+        height: 20px;
+        margin: 0.2rem;
+    }
 }

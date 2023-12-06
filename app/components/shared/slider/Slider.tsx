@@ -20,7 +20,7 @@ export function Slider ({ arrayImages }: {arrayImages: ImageInterface[]}) {
   }
 
   const selected = (pos:number) => {
-    return posSlide === pos ? { border: '3px solid var(--inverse-font-color)', background: 'var(--green)', transition: 'none' } : { border: '3px solid var(--inverse-font-color)' }
+    return posSlide === pos ? { background: 'var(--green)', transition: 'none' } : { }
   }
 
   return (

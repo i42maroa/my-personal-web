@@ -59,7 +59,7 @@ footer{
     flex-direction: column;
     background-color: var(--footer-container);
     color: var(--inverse-font-color);
-    padding: 6rem 8rem; 
+    padding: 6rem 8rem 2rem 8rem; 
 }
 
 li{

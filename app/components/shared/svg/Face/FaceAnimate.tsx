@@ -19,9 +19,6 @@ export function FaceAnimate () {
       const posCartX = posX - halfInnerWidth
       const posCartY = posY - halfInnerHeight
 
-      // const O = posCartX / halfInnerWidth
-      // const _ = posCartY / halfInnerHeight
-
       let C = posCartX / (halfInnerWidth / 2)
 
       C = C < -1 ? -1 : C
@@ -115,10 +112,10 @@ export function FaceAnimate () {
               id='color' className={styles.st1} d='M242,313c0,0-6.8,40-4.9,44.5S276,435,307,439c0,0,35,9,73-73c1.15-2.48,1.19-5.28,1-8l-3-42 c0,0-36.74,42.25-64.44,38.73c-2.31-0.29-4.61-0.64-6.93-0.83C297.37,353.13,270.34,347.82,242,313z'
             />
             <g>
-              <path className={styles.st2} d='M240.5,306.5c0,0-5,23-8,51c0,0,36,75,72,84s82.04-63.79,80-84c-1.74-17.2-4-48-4-48' />
-              <path style={neckStyle} className={styles.st2} d='M294.5,386c0,0,14.38,11.38,32.5,0' />
-              <path className={styles.st2} d='M384.5,357.5l173,30c0,0,38,7,56,60' />
-              <path className={styles.st2} d='M232.5,357.5L76.02,397.9c0,0-35.64,5.9-54.52,58.6' />
+              <path className={styles.shirtStroke} d='M240.5,306.5c0,0-5,23-8,51c0,0,36,75,72,84s82.04-63.79,80-84c-1.74-17.2-4-48-4-48' />
+              <path style={neckStyle} className={styles.neck} d='M294.5,386c0,0,14.38,11.38,32.5,0' />
+              <path className={styles.shirtStroke} d='M384.5,357.5l173,30c0,0,38,7,56,60' />
+              <path className={styles.shirtStroke} d='M232.5,357.5L76.02,397.9c0,0-35.64,5.9-54.52,58.6' />
             </g>
           </g>
         </svg>

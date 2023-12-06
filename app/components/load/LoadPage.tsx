@@ -10,7 +10,7 @@ export default function LoadPage ({ show } : {show:boolean }) {
       {/* TODO: When change the color show the load page again */}
       <div className={`${styles.container} ${show ? styles.show : ''}`}>
         <div className={styles.logoContainer}>
-          <LogoAnimateSvg colorStroke={colorStroke} />
+          <LogoAnimateSvg colorStroke={colorStroke} isFrontal />
         </div>
       </div>
     </>

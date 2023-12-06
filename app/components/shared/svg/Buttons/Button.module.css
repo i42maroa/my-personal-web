@@ -4,6 +4,15 @@
     transition: fill .2s ease-in-out;
 }
 
+.st0{
+    fill: var(--inverse-font-color);
+    transition: fill .2s ease-in-out;
+}
+
 .github:hover{
+    fill: var(--green);
+}
+
+.container:hover .st0{
     fill: var(--green);
 }

@@ -32,6 +32,8 @@
 .name{
     text-align: center;
     font-weight: 800;
+    margin: 5px 0;
+    color: var(--hard-brown);
 }
 
 @keyframes appear {
@@ -67,6 +69,9 @@
         height: 50px;
         width: 50px;
     }
+    .name{
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -78,5 +83,9 @@
     .container{
         padding: 3px;
         border: 2px solid var(--hard-brown);
+    }
+
+    .name{
+        font-size: 12px;
     }
 }

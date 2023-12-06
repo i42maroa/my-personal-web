@@ -52,20 +52,23 @@ export default function ContactForm () {
      setDisabled(isInvalid)
    }
 
+   const styleIfIsFilled = (field:string) => {
+     return field === '' ? {} : { background: 'var(--form-fill-background)', color: 'var(--form-fill-color)' }
+   }
+
    return (
      <form className={styles.formContainer} onSubmit={handleSubmit}>
        <label>
-         <span>Nombre:</span>
-         <input className={styles.input} type='text' id='name' name='user_name' placeholder='Perico de los palotes' value={formData.user_name} onChange={handleChange} required autoComplete='off' />
+         <span>Tu nombre:</span>
+         <input style={styleIfIsFilled(formData.user_name)} className={styles.input} type='text' id='name' name='user_name' placeholder='Perico de los palotes' value={formData.user_name} onChange={handleChange} required autoComplete='off' />
        </label>
        <label>
-         <span>Email:</span>
-         <input className={styles.input} type='email' id='email' name='user_email' placeholder='pericodelospalotes@gmail.com' value={formData.user_email} onChange={handleChange} required autoComplete='off' />
+         <span>Tu email:</span>
+         <input style={styleIfIsFilled(formData.user_email)} className={styles.input} type='email' id='email' name='user_email' placeholder='pericodelospalotes@gmail.com' value={formData.user_email} onChange={handleChange} required autoComplete='off' />
        </label>
        <label>
-         <span>Mensaje:</span>
-         <textarea className={styles.textarea} id='message' name='user_message' placeholder='Me gustaría proponerte...' value={formData.user_message} onChange={handleChange} required />
-
+         <span>Tu mensaje:</span>
+         <textarea style={styleIfIsFilled(formData.user_message)} className={styles.textarea} id='message' name='user_message' placeholder='Me gustaría proponerte...' value={formData.user_message} onChange={handleChange} required />
        </label>
 
        <button className={styles.formButton} type='submit' disabled={disable}>Enviar</button>

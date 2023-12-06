@@ -13,12 +13,12 @@
     display: flex;
     background-color: var(--font-color);
     color: var(--inverse-font-color);
-    outline: 3px solid var(--font-color);
+    outline: 3px solid var(--hard-brown);
 
     animation: appear_left linear both;
     animation-timeline: view();
     animation-range: 10% 25%; 
-    
+    z-index: 3;
 }
 
 .yearExperience{
@@ -51,8 +51,8 @@
     animation-timeline: view();
     animation-range: 15% 25%; 
      
-    outline: 3px solid var(--font-color);
-    z-index: 1;
+    outline: 3px solid var(--hard-brown);
+    z-index: 3;
 }
 
 
@@ -75,8 +75,8 @@
 
 .descriptionContainerUnity{
     background-color: transparent;  
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    /* display: grid;
+    grid-template-columns: 2fr 1fr; */
     padding: 1rem 0;
     opacity: 0;
     /* outline: 3px solid var(--font-color); */
@@ -97,16 +97,31 @@
 
 .titleDescription{ 
     font-weight: 800;
-    padding: 1rem 0 0 0;
+    margin: 1rem 0 0 0;
+}
+
+.titleDescription::after{
+    content: '';
+    display: flex;
+    height: 3px;
+    width: 0;
+    position: relative;
+    border-radius: 3px;
+    background-color: var(--font-color);
+
+    animation: increase linear both;
+    animation-timeline: view();
+    animation-range: 15% 25%; 
+    margin-top: 0.2rem;
 }
 
 .description{
+    padding-left: 0.5rem;
     opacity: 0;
     animation: appear_right linear both; 
     animation-timeline: view();
     animation-range: 20% 30%; 
 }
-
 
 .contentTechnologies{
     display: flex;
@@ -131,17 +146,6 @@
     margin: 0.2rem 0.5rem;
 }
 
-.separateLine{
-    width: 0;
-    margin: 0 0 1.5rem 0;
-    height: 3px;
-    background-color: var(--font-color);
-    opacity: 0;
-
-    animation: increase linear both;
-    animation-timeline: view();
-    animation-range: 15% 25%; 
-}
 
 @media (max-width: 1200px) {
     .descriptionContainerUnity{
@@ -240,8 +244,11 @@
     .contentTechnologies{
        margin: 1rem 1rem 0 1rem;
     }
-    .separateLine{
-        margin: 0 0 1rem 0;
+    .titleDescription::after{
+        height: 2px;
+        animation: increase-responsive linear both;
+        animation-timeline: view();
+        animation-range: 15% 25%; 
     }
 }
 
@@ -315,6 +322,19 @@
     }
     100%{
         opacity: 1;
-        width: 80%;
+        width: 300px;
+    }
+}
+
+@keyframes increase-responsive {
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        width: 200px;
     }
 }

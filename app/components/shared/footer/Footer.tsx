@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import styles from './Footer.module.css'
+import { LinkedinSvg } from '../svg/Buttons/Linkedin'
+import { InstagramSvg } from '../svg/Buttons/Instagram'
 
 export function Footer () {
   return (
@@ -26,19 +28,27 @@ export function Footer () {
             </li>
           </ul>
 
-          <div className={styles.sumupContainer}>
-            {/* <p>Sigues con dudas?</p> */}
+          {/* <div className={styles.sumupContainer}>
             <button className={styles.button}>Te lo resumo</button>
-          </div>
-
-        </div>
-        <div className={styles.rightContainer}>
-          <div className={styles.coffeeMachineContainer} />
+          </div> */}
 
         </div>
       </div>
       <hr />
-      <p>Antonio Marín Rodríguez 2023</p>
+
+      <div className={styles.bottomContainer}>
+
+        <p>Antonio Marín Rodríguez 2023 &#169;</p>
+
+        <div className={styles.socialMediaContainer}>
+          <Link href='https://www.linkedin.com/in/antonio-mar%C3%ADn-rodr%C3%ADguez-07681b1bb/' className={styles.socialMedia}>
+            <LinkedinSvg />
+          </Link>
+          <Link href='/#contact' className={styles.socialMedia}>
+            <InstagramSvg />
+          </Link>
+        </div>
+      </div>
     </footer>
   )
 }

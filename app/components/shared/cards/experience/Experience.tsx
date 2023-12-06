@@ -19,7 +19,6 @@ export function Experience ({ experience }: { experience: ExperienceInterface })
             <div className={styles.descriptionContainerUnity} key={e.title}>
               <div className={styles.titleDescriptionContainer}>
                 <h4 className={styles.titleDescription}>{e.title}</h4>
-                <div className={styles.separateLine} />
                 <p className={styles.description}>{e.description}</p>
               </div>
               {/* <div className={styles.contentTechnologies}>
@@ -29,7 +28,6 @@ export function Experience ({ experience }: { experience: ExperienceInterface })
                   </div>
                 ))}
               </div> */}
-
             </div>
           ))}
       </div>

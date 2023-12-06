@@ -4,13 +4,14 @@
     flex-direction: column;
     width: 500px;
     height: auto;
-    outline: 3px solid var(--font-color);
+    outline: 3px solid var(--stroke);
     opacity: 0;
     animation: appear_right linear both;
     animation-timeline: view();
     animation-range: 15% 25%; 
 
     position: relative;
+    z-index: 5;
 }
 
 .textContainer{
@@ -25,6 +26,7 @@
     height: 400px;
     display: flex;
     position: relative;
+    outline: 3px solid var(--stroke);
 }
 
 
@@ -84,9 +86,9 @@
 .footerCardContainer{
     display: flex;
     position: relative;
-    background-color:var(--inverse-font-color);
+    background-color:var(--white);
     justify-content: space-between;
-    outline: 3px solid var(--font-color);
+    outline: 3px solid var(--stroke);
     padding: 0.5rem 1rem;
 }
 

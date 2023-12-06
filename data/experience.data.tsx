@@ -3,14 +3,14 @@ import * as TEC from '@/data/technology.data'
 
 export const EXPERIENCE_DATA: ExperienceInterface[] = [
   {
-    title: 'Grado Informática',
+    title: 'Grado Ingeniería Informática',
     subtitle: 'Universidad de Córdoba',
     year: '2020',
     logo: '/images/uco.png',
     descriptions: [
       {
         title: 'Especialidad Software',
-        description: '',
+        description: 'Creación y administración de proyectos usando metodologías ágiles',
         tecnologies: [
           TEC.SCRUM, TEC.JAVA, TEC.ANDROID
         ]

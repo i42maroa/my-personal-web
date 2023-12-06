@@ -24,11 +24,12 @@
     font-weight: 800;
     border: none;
     color: var(--font-color);
+    transition: all 0.2s linear;
 }
 
 
 .input::placeholder, .textarea::placeholder{
-    color: var(--soft-brown);
+    color: var(--form-placeholder);
     font-weight: 400;
 }
 

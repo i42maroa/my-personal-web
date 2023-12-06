@@ -1,12 +1,10 @@
 .st0{fill:#FAFAFA;}
 	.st1{fill:#63ABA3;}
 	.st2{fill:#4D361F;}
-	.st3{fill:#070508;}
 
 	.st4{
-		fill: var(--white);
+		fill:  var(--blue);
 	}
-
     .container{
 enable-background:new 0 0 400 400;
     }

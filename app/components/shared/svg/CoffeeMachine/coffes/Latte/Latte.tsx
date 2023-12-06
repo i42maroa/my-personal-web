@@ -1,5 +1,4 @@
 /* eslint-disable no-tabs */
-import showComponentOr from '@/hook/showComponentOr'
 import styles from './Latte.module.css'
 
 export function LatteSvg ({ panel }: {panel:boolean}) {
@@ -11,7 +10,7 @@ export function LatteSvg ({ panel }: {panel:boolean}) {
       <g id='coffe'>
         <g>
           <circle className={styles.st0} cx='96.05' cy='268.6' r='46.82' />
-          <circle className={showComponentOr(panel, styles.st1, styles.st2)} cx='96.05' cy='268.6' r='29.23' />
+          <circle className={styles.back} cx='96.05' cy='268.6' r='29.23' />
         </g>
         <path
           className={styles.st0} d='M220.23,369.5L220.23,369.5c-65.53,0-118.63-53.1-118.63-118.63v-53.5h237.32v53.5

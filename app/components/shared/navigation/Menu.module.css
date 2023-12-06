@@ -1,12 +1,13 @@
 .navigationContainer{
-    outline: 3px solid var(--font-color-navbar);
+    outline: 3px solid var(--navbar-stroke);
     background-color: var(--navbar);
     display: flex;
     flex-direction: column;
     position: absolute;
     right: 0;
+    top: 0;
     transition: 0.2s;
-    height: 100vh;
+    height: 100svh;
     width: 500px;
     justify-content: center;
  }

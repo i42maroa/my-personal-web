@@ -37,7 +37,7 @@ export function Navigation () {
         <div className={styles.navigationHeader}>
 
           <Link href='/' className={styles.logoContainer}>
-            <LogoAnimateSvg colorStroke={colorStroke} />
+            <LogoAnimateSvg colorStroke={colorStroke} isFrontal={false} />
           </Link>
 
           <div className={styles.displayButton}>

@@ -8,7 +8,7 @@ import { Slider } from '../slider/Slider'
 
 export function ProjectCardComponent ({ project }: {
   project: ProjectInterface}) {
-  const fillStyle = { fill: 'var(--font-color)' }
+  const fillStyle = { fill: 'var(--hard-brown)' }
   return (
     <div className={styles.container}>
 
