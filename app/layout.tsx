@@ -4,7 +4,6 @@ import React from 'react'
 import styles from './Layout.module.css'
 import { Footer } from './components/shared/footer/Footer'
 import { StatusContextProvider } from './StatusContextProvider'
-import LoadPage from './components/load/LoadPage'
 
 export const metadata = {
   title: 'Create Next App',
@@ -23,7 +22,6 @@ export default function RootLayout ({
       </head>
       <body suppressHydrationWarning>
         <StatusContextProvider>
-          <LoadPage />
           <Navigation />
           <div className={styles.children}>
             {children}
