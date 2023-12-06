@@ -12,6 +12,7 @@ export function Technology ({ technology }: {
           fill sizes='10vh'
         />
       </div>
+      <span className={styles.name}>{technology.name}</span>
     </div>
   )
 }
