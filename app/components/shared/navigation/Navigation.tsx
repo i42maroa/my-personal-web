@@ -25,9 +25,10 @@ export function Navigation () {
   })
 
   const handleScroll = () => {
-    isMobile() && setLastScroll(window.scrollY)
-    isMobile() && setIsScrollingDown(window.scrollY > lastScrol)
-    isMobile() && setShowNav(isScrollDown && showNav ? false : showNav)
+    setLastScroll(window.scrollY)
+    setIsScrollingDown(window.scrollY > lastScrol)
+
+    setShowNav(showNav ? false : showNav)
   }
 
   return (
@@ -44,8 +45,9 @@ export function Navigation () {
           </div>
         </div>
 
-        {showNav &&
-          <MenuNavigation />}
+        <div className={`${styles.menu} ${showNav ? styles.appear : styles.disappear}`}>
+          <MenuNavigation />
+        </div>
       </div>
     </header>
   )
