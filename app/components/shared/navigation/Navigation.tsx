@@ -13,11 +13,7 @@ export function Navigation () {
   const [lastScrol, setLastScroll] = useState(0)
   const [isScrollDown, setIsScrollingDown] = useState(false)
 
-  const isMobile = () => {
-    return window.innerWidth < 500
-  }
-
-  const colorStroke = isMobile() && showNav ? { stroke: 'var(--font-color-navbar)' } : { stroke: 'var(--logo)' }
+  const colorStroke = showNav ? { stroke: 'var(--font-color-navbar)' } : { stroke: 'var(--logo)' }
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
