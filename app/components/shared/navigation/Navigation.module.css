@@ -127,6 +127,10 @@
         width: 100%;
         top: 0;
     }  
+
+    .navigationHeader{
+        padding: 8px;
+    }
 }
 
 

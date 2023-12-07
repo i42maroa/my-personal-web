@@ -61,7 +61,7 @@
      }
 
      .listContainer{
-        margin: 4rem 1rem;
+        margin: 4rem 1rem 2rem 1rem;
     }
 
     .title{
@@ -78,7 +78,7 @@
     }
 
     .machineContainer{
-        margin: 1rem;
+        margin: 0 1rem;
     }
 }
 
