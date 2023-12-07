@@ -24,11 +24,9 @@
     position: absolute;
     left: 200px;
     
-    view-timeline-name: --item-timeline;
-    animation-timeline: --item-timeline;
+    animation: showLine linear both;
+    animation-timeline: view();
     animation-range: 20% exit; 
-    animation-name: showLine;  
-    animation-fill-mode: forwards;
     z-index: 6;
 }
 
@@ -50,7 +48,7 @@
 @media (max-width: 700px) {
     .line{
         width: 8px;
-        left: 120px;
+        left: 100px;
     }
 }
 

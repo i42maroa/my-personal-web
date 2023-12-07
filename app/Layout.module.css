@@ -18,11 +18,15 @@
 }
 
 @media (max-width: 700px) {
-
     .children{
         padding: 0 50px;
     }
+}
 
+@media (max-width: 600px) {
+    .children{
+        padding: 0 30px;
+    }
 }
 
 @media (max-width: 500px) {

@@ -15,17 +15,17 @@
     color: var(--inverse-font-color);
     outline: 3px solid var(--hard-brown);
 
-    animation: appear_left linear both;
+    animation: appear_left linear forwards;
     animation-timeline: view();
     animation-range: 10% 25%; 
     z-index: 3;
 }
 
 .yearExperience{
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
     font-weight: 800;
-    padding: 1.5rem 0;
+    font-size: 30px;
 }
 
 .imageContainer{
@@ -41,13 +41,12 @@
     margin: auto 0;
     background-color: var(--font-color);
     height: 100%;
-    width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;
 
     opacity: 0;
 
-    animation: appear_right linear both; 
+    animation: appear_right linear forwards; 
     animation-timeline: view();
     animation-range: 15% 25%; 
      
@@ -58,37 +57,31 @@
 
 .title{
     font-weight: 800;
-    margin: auto 0;
-    padding: 1.5rem;
+    margin: auto 1.5rem;
     color: var(--inverse-font-color);
 }
 
 .subtitle{
     font-style: italic;
     font-weight: 400;
-    margin: auto 0;
-    padding: 1.5rem;
+    margin: auto 1.5rem;
     color: var(--inverse-font-color);
 }
 
 
-
 .descriptionContainerUnity{
     background-color: transparent;  
-    /* display: grid;
-    grid-template-columns: 2fr 1fr; */
-    padding: 1rem 0;
     opacity: 0;
-    /* outline: 3px solid var(--font-color); */
-    animation: appear_right linear both; 
+    animation: appear_right linear forwards; 
     animation-timeline: view();
     animation-range: 15% 25%; 
+    position: relative;
+    margin: 0 1.5rem;
 }
 
 .titleDescriptionContainer{
     display: flex;
     flex-direction: column;  
-    padding: 0 1.5rem;
 }
 
 .titleDescription, .description{
@@ -109,16 +102,15 @@
     border-radius: 3px;
     background-color: var(--font-color);
 
-    animation: increase linear both;
+    animation: increase linear forwards;
     animation-timeline: view();
     animation-range: 15% 25%; 
     margin-top: 0.2rem;
 }
 
 .description{
-    padding-left: 0.5rem;
     opacity: 0;
-    animation: appear_right linear both; 
+    animation: appear_right linear forwards; 
     animation-timeline: view();
     animation-range: 20% 30%; 
 }
@@ -133,7 +125,7 @@
 
     opacity: 0;
 
-    animation: appear_right linear both;
+    animation: appear_right linear forwards;
     animation-timeline: view();
     animation-range: 25% 30%; 
 }
@@ -151,14 +143,10 @@
     .descriptionContainerUnity{
         display: flex;
         flex-direction: column;
-        margin: 0;
     }
     .contentTechnologies{
         display: flex;
-        justify-content: center;
-        margin-top: 1.5rem;
-        padding: 0;
-        
+        justify-content: center;    
     }    
 }
 
@@ -187,15 +175,9 @@
     .title, .subtitle{
         text-align: center;
     }
-    .title{
-        padding: 1.5rem 0.5rem 0.5rem 0.5rem;
-    }
-    .subtitle{
-        padding: 0 0.5rem 1.5rem 0.5rem;
-    }
 
     .contentTechnologies{
-        animation: appear_down linear both;
+        animation: appear_down linear forwards;
         animation-timeline: view();
         animation-range: 15% 30%; 
     }   
@@ -204,11 +186,20 @@
 @media (max-width: 700px) {
 
     .container{
-        grid-template-columns: 122px 1fr;
+        grid-template-columns: 102px 1fr;
     }
 
     .yearContainer{
-        width: 118px;
+        width: 98px;
+    }
+
+    .yearExperience{
+        font-size: 25px;
+    }
+
+    .title, .subtitle{
+        margin: auto 0;      
+        padding: 10px 0;
     }
 
 }
@@ -230,15 +221,8 @@
         width: 65px;
     }
 
-    .title{
-        padding: 1rem 0.2rem 0.5rem 0.2rem;
-    }
-    .subtitle{
-        padding: 0.2rem 0.2rem 1rem 0.2rem;
-    }
-
-    .titleDescriptionContainer{
-        padding: 0 1rem;
+    .yearExperience{
+        font-size: 18px;
     }
 
     .contentTechnologies{
@@ -246,7 +230,7 @@
     }
     .titleDescription::after{
         height: 2px;
-        animation: increase-responsive linear both;
+        animation: increase-responsive linear forwards;
         animation-timeline: view();
         animation-range: 15% 25%; 
     }
@@ -259,42 +243,42 @@
 @keyframes appear_right {
     0%{
         opacity: 0;
-        transform: translateX(5vh);
+        transform: translateX(30px);
     }
     30%{
         opacity: 1;
     }
     100%{
         opacity: 1;
-        transform: translateX(0vh);
+        transform: translateX(0);
     }
 }
 
 @keyframes appear_left {
     0%{
         opacity: 0;
-        transform: translateX(-5vh);
+        transform: translateX(-30px);
     }
     30%{
         opacity: 1;
     }
     100%{
         opacity: 1;
-        transform: translateX(0vh);
+        transform: translateX(0);
     }
 }
 
 @keyframes appear_up {
     0%{
         opacity: 0;
-        transform: translateY(-5vh);
+        transform: translateY(-30px);
     }
     30%{
         opacity: 1;
     }
     100%{
         opacity: 1;
-        transform: translateY(0vh);
+        transform: translateY(0);
     }
 }
 
@@ -302,14 +286,14 @@
 @keyframes appear_down {
     0%{
         opacity: 0;
-        transform: translateY(5vh);
+        transform: translateY(30px);
     }
     30%{
         opacity: 1;
     }
     100%{
         opacity: 1;
-        transform: translateY(0vh);
+        transform: translateY(0);
     }
 }
 

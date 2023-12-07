@@ -6,7 +6,7 @@
 }
 
 .desktopContainer, .engranajeContainer{
-    width: 20rem;
+    width: 200px;
     margin: auto;
     opacity: 0;
     animation: appear_up linear both;
@@ -45,24 +45,23 @@
 @media (max-width: 500px) {
 
     .desktopContainer, .engranajeContainer{
-        width: 15rem;
+        width: 200px;
     }
 }
 
 
 /* KEYFRAME */
-
 @keyframes appear_right {
     0%{
         opacity: 0;
-        transform: translateX(5vh);
+        transform: translateX(20px);
     }
     30%{
         opacity: 1;
     }
     100%{
         opacity: 1;
-        transform: translateX(0vh);
+        transform: translateX(0);
     }
 }
 
@@ -70,7 +69,7 @@
     0%{
         scale: 0.9;
         opacity: 0;
-        transform: translateY(5vh);
+        transform: translateY(20px);
     }
     30%{
         scale: 0.9;
@@ -79,6 +78,6 @@
     100%{
         scale: 1;
         opacity: 1;
-        transform: translateY(0vh);
+        transform: translateY(0);
     }
 }

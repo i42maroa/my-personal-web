@@ -5,6 +5,7 @@
     width: 100%;
     background-color: var(--inverse-font-color);
     border-top: 3px solid var(--hard-brown);
+    overflow: hidden;
 }
 
 .carrousel{

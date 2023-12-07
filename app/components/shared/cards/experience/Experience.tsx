@@ -5,7 +5,7 @@ export function Experience ({ experience }: { experience: ExperienceInterface })
   return (
     <div key={experience.title} className={styles.container}>
       <div className={styles.yearContainer}>
-        <h2 className={styles.yearExperience}>{experience.year}</h2>
+        <span className={styles.yearExperience}>{experience.year}</span>
       </div>
 
       <div className={styles.contentContainer}>

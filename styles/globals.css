@@ -86,8 +86,20 @@ section h2 {
         font-size: 60px;
     }
 
-    p{
+   h2{
+    font-size: 32px;
+   }
+
+    h3{
+        font-size: 25px;
+    }
+
+    h4{
         font-size: 22px;
+    }
+
+    p{
+        font-size: 20px;
     }
 
 
@@ -99,10 +111,22 @@ section h2 {
         font-size: 50px;
     }
 
+    h2{
+        font-size: 30px;
+       }
+
     p{
-        font-size: 20px;
+        font-size: 18px;
     }
 
+
+    h3{
+        font-size: 22px;
+    }
+
+    h4{
+        font-size: 20px;
+    }
 
 
     footer{
@@ -115,12 +139,24 @@ section h2 {
 
 
     p{
-        font-size: 18px;
+        font-size: 16px;
     }
 
 
    footer{
         padding: 3rem ;
+    }
+
+    h2{
+        font-size: 30px;
+       }
+
+    h3{
+        font-size: 20px;
+    }
+
+    h4{
+        font-size: 18px;
     }
 
 }
@@ -136,11 +172,11 @@ section h2 {
     }
     
     h3{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     h4{
-        font-size: 18px;
+        font-size: 16px;
     }
 
     p{
