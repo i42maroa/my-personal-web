@@ -8,7 +8,7 @@ export default function DescriptionComponent () {
     <section id={LINKS[PAGES.HOME].sections[1]} className={styles.mainContainer}>
       <div className={styles.textContainer}>
         <h2>Diseño</h2>
-        <p>Propongo soluciones llamativas siempre garantizando una buena experiencia de usuario. Lo que no entra por los ojos no funciona.</p>
+        <p>Propongo soluciones llamativas siempre garantizando una buena experiencia de usuario y respaldadas por un enfoque profesional.</p>
       </div>
 
       <div className={styles.desktopContainer}>
@@ -21,7 +21,7 @@ export default function DescriptionComponent () {
 
       <div className={styles.textContainer}>
         <h2>Ingeniería</h2>
-        <p>Un bonito diseño no es nada sin una buena maquinaria detrás. Todos los proyectos garantizan una buena optimización.</p>
+        <p>Todos mis proyectos garantizan un buen desempeño y una buena optimización. Un bonito diseño no es nada sin una buena maquinaria detrás.</p>
       </div>
 
     </section>

@@ -10,7 +10,7 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
     descriptions: [
       {
         title: 'Especialidad Software',
-        description: 'Creación y administración de proyectos usando metodologías ágiles',
+        description: 'Creación y administración de proyectos usando metodologías ágiles.',
         tecnologies: [
           TEC.SCRUM, TEC.JAVA, TEC.ANDROID
         ]
@@ -18,14 +18,14 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
     ]
   },
   {
-    title: 'Desarrollador fullstack',
+    title: 'Junior fullstack',
     subtitle: 'SopraSteria',
     year: '2023',
     logo: '/images/sopra.png',
     descriptions: [
       {
         title: 'Frontend',
-        description: 'Desarrollo frontales para el cliente Santander',
+        description: 'Encargado de desarrollar varios proyectos frontales para el cliente Banco Santander.',
         tecnologies: [
           TEC.ANGULAR,
           TEC.HTML,
@@ -35,7 +35,7 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
       },
       {
         title: 'Backend',
-        description: 'Desarrollo microservicios para el cliente PagoNxt',
+        description: 'Desarrollo microservicios para el cliente PagoNxt.',
         tecnologies: [
           TEC.SPRING,
           TEC.GRAPHQL,

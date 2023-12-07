@@ -3,7 +3,7 @@ import { ANGULAR, FIREBASE, REDUX } from '../technology.data'
 
 export const ENGLISH_TRAINNING_PROJECT: ProjectInterface = {
   title: 'English Training',
-  shortDescription: 'Permite almacenar palabras en inglés para llevar un registro y luego su posterior aprendizaje',
+  shortDescription: 'Página web que permite almacenar palabras en inglés de una forma sencilla. Sigue la filosofía de mobile first debido a que está pensada ser usada en móvil.',
   technologies: [
     ANGULAR, REDUX, FIREBASE
   ],

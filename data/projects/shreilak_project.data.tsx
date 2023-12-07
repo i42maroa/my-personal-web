@@ -3,7 +3,7 @@ import { FIREBASE, NEXTJS } from '../technology.data'
 
 export const SHREILAK_PROJECT: ProjectInterface = {
   title: 'SHREILAK',
-  shortDescription: 'Permite almacenar palabras en inglés para llevar un registro y luego su posterior aprendizaje',
+  shortDescription: 'Página web con temática de Shrek en la que se cuenta una historia alternativa. Su protagonista es Shreilak, que se ha convertido en ogra debido a una nueva maldición, que habrá que ayudarla a recuperar su forma natural ayudando a otros personajes de los cuentos.',
   technologies: [
     NEXTJS, FIREBASE
   ],

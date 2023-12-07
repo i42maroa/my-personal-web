@@ -3,7 +3,7 @@ import { ANDROID } from '../technology.data'
 
 export const NUTRICION_PROJECT: ProjectInterface = {
   title: 'Nutrición',
-  shortDescription: 'Permite almacenar palabras en inglés para llevar un registro y luego su posterior aprendizaje',
+  shortDescription: 'Aplicación nativa en Android que permite llevar a cabo una planificación semanal de los platos a comer. También permite crear platos propios y tener el registro de calorias semanales y mensuales.',
   technologies: [
     ANDROID
   ],

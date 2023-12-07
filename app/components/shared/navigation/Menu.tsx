@@ -13,13 +13,13 @@ export function MenuNavigation () {
           <Link className={styles.navigationElement} href='/#quality'>Qué te puedo aportar</Link>
         </li>
         <li>
-          <Link className={styles.navigationElement} href='/#experience'>Mi recorrido</Link>
+          <Link className={styles.navigationElement} href='/#experience'>Mi experiencia</Link>
         </li>
         <li>
           <Link className={styles.navigationElement} href='/#technology'>Mis herramientas</Link>
         </li>
         <li>
-          <Link className={styles.navigationElement} href='/#projects'>Qué he hecho</Link>
+          <Link className={styles.navigationElement} href='/#projects'>Mis proyectos</Link>
         </li>
         <li>
           <Link className={styles.navigationElement} href='/#contact'>Cómo contactarme</Link>

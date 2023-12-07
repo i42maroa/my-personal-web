@@ -9,7 +9,7 @@ export default function ExperienceComponent () {
   return (
     <section id={LINKS[PAGES.ABOUT].sections[2]} className={styles.mainContainer}>
 
-      <h2>Mi camino</h2>
+      <h2>Mi experiencia</h2>
 
       {experience.length > 0 &&
         <div className={styles.experienceContainer}>

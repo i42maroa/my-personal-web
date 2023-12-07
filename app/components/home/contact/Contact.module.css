@@ -125,8 +125,8 @@
         margin: 0 auto;
     }
 
-    .textContainer h1{
-        text-align: center;
+    .textContainer h2{
+        text-align: left;
     }
 
     .avatarBg{
