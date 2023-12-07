@@ -2,14 +2,12 @@
     border: 1px;
     border-radius: 4px;
     width: 100%;
-    position:  sticky;
-    z-index: 10;
+    position: fixed;
+    z-index: 200;
     top: 0;
     transition: transform 0.4s;
     animation: appearNav 0.4s ease-in 2.5s backwards;
 }
-
-
 
 .navigation {
     display: flex; 
@@ -23,7 +21,6 @@
     justify-content: space-between;
     height: auto;
     width: 100%;
-    z-index: 20;
 }
 
 .logoContainer{
@@ -48,7 +45,6 @@
 .button{
     background-color: transparent;
     border: none;
- 
 }
 
 .menu{
@@ -56,10 +52,7 @@
     position: absolute;
     right: 0;
     opacity: 0;
-}
-
-.appear{
-    animation: appear 0.3s ease-in both;
+    animation: appear 0.3s ease-in forwards;
 }
 
 .disappear{

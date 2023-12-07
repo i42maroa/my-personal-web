@@ -36,7 +36,7 @@ export function Navigation () {
             <button className={styles.button} onClick={() => setShowNav(!showNav)}><MenuButton stateValue={showNav} /></button>
           </div>
         </div>
-        <div className={`${styles.menu} ${showNav ? styles.appear : styles.disappear}`}>
+        <div className={`${styles.menu} ${showNav ? '' : styles.disappear}`}>
           <MenuNavigation />
         </div>
       </div>
