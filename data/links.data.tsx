@@ -2,7 +2,8 @@ import { NavigationInterface } from '@/app/interface/navigation.interface'
 
 export const PAGES = {
   HOME: 0,
-  ABOUT: 1
+  ABOUT: 1,
+  PROJECTS: 2
 }
 
 export const LINKS:NavigationInterface[] = [{
@@ -27,7 +28,9 @@ export const LINKS:NavigationInterface[] = [{
 {
   label: 'Projects',
   route: '/projects',
-  sections: []
+  sections: [
+    'projects'
+  ]
 }]
 
 export default function getRouteWithSection (page: number, section: number) {

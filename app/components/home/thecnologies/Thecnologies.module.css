@@ -1,0 +1,67 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mainContainer h3{
+    text-align: center;
+    font-weight: 800;
+    opacity: 0;
+
+    
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: 20% 40%; 
+    animation-name: appear;  
+    animation-fill-mode: forwards; 
+}
+
+.technologiesGroupContainer{
+    display: flex;
+    margin: 2rem 0;
+    flex-direction: column;
+}
+
+.technologySingleContainer{
+    margin: 1rem 0;
+}
+
+.technologyContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+   margin: 1rem auto;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    .technologyContainer{
+        margin: 0.5rem auto;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .technologyContainer{
+        gap: 1rem;
+    }
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+        transform: translateY(-5vh);
+    }
+    30%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}

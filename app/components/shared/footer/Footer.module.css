@@ -1,40 +1,134 @@
 
 .footerContainer{
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fit, minmax(50%, 1fr));
-    padding: 3rem 5rem;
+    display: flex;
+    margin-bottom: 0.5rem;
 }
 
 .leftContainer{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin: auto 0;
 }
 
-.leftContainer button{
-    width: 100px;
+.listContainer{
+    padding: 1rem;
+}
+
+.listContainer li{
+    padding: 1rem 0;
+    transition: all 0.1s ease-in;
+}
+
+.listContainer li:hover{
+    scale: 1.02;
+}
+
+.navigationElement{
+    outline: none;
+    color: var(--font-color-footer);
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.navigationElement:hover{
+    color: var(--green);
 }
 
 .rightContainer{
     display: flex;
+    margin: auto;
     width: 100%;
+}
+
+.coffeeMachineContainer{
+    margin: auto;
+}
+
+.button{
+    display: flex;
+    border: none;
+    color: var(--white);
+    border-radius: 5px;
+    background-color: var(--green);
+    padding: 0.75rem 1rem;
+    font-size: 20px;
+    margin: 1rem;
+}
+
+.button:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.bottomContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomContainer p{
+    margin: auto 0;
+    color: var(--font-color-footer);
+}
+
+.socialMediaContainer{
+    display: flex;
+    gap: 5px;
+}
+
+.socialMedia{
+    width: 40px;
+    height: 40px;
+    margin: 0.5rem;
+    transition: scale 0.3s ease-in;
+}
+
+.socialMedia:hover{
+    scale: 1.1;
 }
 
 @media (max-width: 1000px) {
 
     .footerContainer{
-        display: flex;
         flex-direction: column;
-        padding: 2.5rem 0;
+        gap: 3rem;
+    }
+
+    .button{
+        margin: 2rem auto;
+    }   
+
+    .navigationElement{
+      font-size: 20px;
+    }
+
+    .socialMedia{
+        width: 30px;
+        height: 30px;
+        margin: 0.3rem;
     }
 
 }
 
 @media (max-width: 500px) {
+    
+    .navigationElement{
+        font-size: 16px;
+      }
 
-    .footerContainer{
-        padding: 2rem 0;
+    .listContainer li{
+        padding: 0.5rem 0;
     }
 
+    .button{
+        padding: 0.5rem 0.75rem;
+        font-size: 16px;
+        margin: 1rem auto;
+    }
+
+    .socialMedia{
+        width: 20px;
+        height: 20px;
+        margin: 0.2rem;
+    }
 }

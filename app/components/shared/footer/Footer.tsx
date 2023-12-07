@@ -1,32 +1,54 @@
 import Link from 'next/link'
 import styles from './Footer.module.css'
-import { LINKS } from '@/data/links.data'
-
-const links = LINKS
+import { LinkedinSvg } from '../svg/Buttons/Linkedin'
+import { InstagramSvg } from '../svg/Buttons/Instagram'
 
 export function Footer () {
   return (
     <footer>
       <div className={styles.footerContainer}>
         <div className={styles.leftContainer}>
-          <h4>SAY HELLO</h4>
-          <ul>
-            <li>asfdasd@gmail.com</li>
-            <li>asfdasd@gmail.com</li>
+          <h3>¿Sigues con dudas?</h3>
+
+          <ul className={styles.listContainer}>
+            <li>
+              <Link className={styles.navigationElement} href='/#quality'>Qué te puedo aportar</Link>
+            </li>
+            <li>
+              <Link className={styles.navigationElement} href='/#experience'>Mi experiencia</Link>
+            </li>
+            <li>
+              <Link className={styles.navigationElement} href='/#technology'>Mis herramientas</Link>
+            </li>
+            <li>
+              <Link className={styles.navigationElement} href='/#projects'>Mis proyectos</Link>
+            </li>
+            <li>
+              <Link className={styles.navigationElement} href='/#contact'>Cómo contactarme</Link>
+            </li>
           </ul>
-        </div>
-        <div className={styles.rightContainer}>
-          <ul>
-            {links.map(({ label, route }) => (
-              <li className={styles.navigationElement} key={route}>
-                <Link href={route}>{label}</Link>
-              </li>
-            ))}
-          </ul>
+
+          {/* <div className={styles.sumupContainer}>
+            <button className={styles.button}>Te lo resumo</button>
+          </div> */}
+
         </div>
       </div>
       <hr />
-      <p>Antonio Marín Rodríguez 2023</p>
+
+      <div className={styles.bottomContainer}>
+
+        <p>Antonio Marín Rodríguez 2023 &#169;</p>
+
+        <div className={styles.socialMediaContainer}>
+          <Link href='https://www.linkedin.com/in/antonio-mar%C3%ADn-rodr%C3%ADguez-07681b1bb/' className={styles.socialMedia}>
+            <LinkedinSvg />
+          </Link>
+          <Link href='/#contact' className={styles.socialMedia}>
+            <InstagramSvg />
+          </Link>
+        </div>
+      </div>
     </footer>
   )
 }

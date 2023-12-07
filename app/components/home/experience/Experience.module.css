@@ -1,0 +1,60 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.experienceContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.experienceContentContainer{
+    display: grid;
+    margin: 8rem 0;   
+}
+
+.line{
+    background-color: var(--green);
+    height: 0%;
+    width: 10px;
+
+    position: absolute;
+    left: 200px;
+    
+    animation: showLine linear both;
+    animation-timeline: view();
+    animation-range: 20% 60%; 
+    z-index: 6;
+}
+
+@keyframes showLine {
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .line{
+        left: 150px;
+    }
+}
+
+@media (max-width: 700px) {
+    .line{
+        width: 8px;
+        left: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    .line{
+        width: 5px;
+        left: 65px;
+    }
+}

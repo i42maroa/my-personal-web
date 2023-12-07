@@ -1,10 +1,30 @@
-import FirstComponent from './components/home/first/component'
-import FourthComponent from './components/home/fourth/component'
-import SecondComponent from './components/home/second/component'
-import ThirdComponent from './components/home/third/component'
+'use client'
+import ExperienceComponent from './components/home/experience/component'
+import PresentationComponent from './components/home/presentation/component'
+import ContactComponent from './components/home/contact/component'
+import DescriptionComponent from './components/home/description/component'
+import ThecnologiesComponent from './components/home/thecnologies/component'
+import ProjectsComponent from './components/home/projects/component'
+import { Delimiter } from './components/shared/delimiter/Delimiter'
+import { useEffect } from 'react'
+import { STATE_TOGGLE } from '@/data/state-toggle.data'
+import changeRootColors from '@/hook/changeColor'
 
 export default function Home () {
+  useEffect(() => changeRootColors(STATE_TOGGLE[0].color))
   return (
-    <><FirstComponent /><SecondComponent /><ThirdComponent /><FourthComponent /></>
+    <><PresentationComponent />
+      <Delimiter />
+      <DescriptionComponent />
+      <Delimiter />
+      <ExperienceComponent />
+      <Delimiter />
+      <ThecnologiesComponent />
+      <Delimiter />
+      <ProjectsComponent />
+      <Delimiter />
+      <ContactComponent />
+      <Delimiter />
+    </>
   )
 }

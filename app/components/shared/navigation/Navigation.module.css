@@ -5,49 +5,32 @@
     position: fixed;
     z-index: 10;
     top: 0;
+    transition: transform 0.4s;
+    animation: appearNav 0.4s ease-in 2.5s backwards;
 }
 
 .navigation {
     display: flex; 
     flex-direction: column;
+    position: relative;
 }
 
 .navigationHeader{
     overflow:hidden;  
     display: flex;
     justify-content: space-between;
-    height: 10rem;
-    width: 100%;
-    z-index: 20;
+    height: auto;
+    padding: 0.8rem;
 }
 
-.navigationContainer{
-    display: flex;
-    width:  350px;
-    height: 450px;
-    flex-direction: column;
-    padding: 6rem 4rem 3rem 4rem;
-    background-color: white;
-    margin: 1.5rem 2.5rem auto auto;
-    position: absolute;
-    right: 0;
-    transition: 0.2s;
- }
-
-.logo{
-    width: 10rem;
-    position: relative;
-}
-.logo img{
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
+.logoContainer{
+    width: 4.5rem;
 }
 
 .displayButton{
-    width: 10rem;
+    width: 5rem;
     position: relative;
+    z-index: 10;
 }
 
 .navigationElement{
@@ -59,49 +42,139 @@
     font-size: 20px;
 }
 
-@media (max-width: 1000px) {
+.button{
+    background-color: transparent;
+    border: none;
+}
+
+.menu{
+    display: flex;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+    animation: appear 0.3s ease-in forwards;
+}
+
+.disappear{
+    animation: disappear 0.3s ease-out forwards;
+}
+
+@media (max-width: 1200px) {
+
+    .logoContainer{
+        width: 70px;
+    }
+    .displayButton{
+        width: 90px;
+    }
 
     .navigationHeader{
-        height: 8rem;
+        padding: 10px 10px 0 10px;
+    }
+}
+
+
+@media (max-width: 1000px) {
+
+    .logoContainer{
+        width: 60px;
     }
 
-    .displayButton, .logo{
-        width: 8rem;
+    .displayButton{
+        width: 70px;
     }
 
-    .navigationContainer{
-        width:  300px;
-        height: 400px;
-        padding: 5rem 4rem 2rem 3rem;
-        margin: 1rem 1.5rem auto auto;
+    .navigationHeader{
+        padding: 10px 10px 0 10px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .logoContainer{
+        width: 50px;
+    }
+
+    .displayButton{
+        width: 50px;
+    }
+
+    .navigationHeader{
+        padding: 8px 8px 0 8px;
+    }
+
+    .scrollDown  {
+        transform: translateY(-100%);
+    }
+    
+    .scrollUp  {
+        transform: translateY(0);
     }
 }
 
 @media (max-width: 500px) {
 
-    .header{
-        background: linear-gradient( #e1e1e1, transparent);
+    .logoContainer{
+        width: 50px;
     }
 
-    .headerOpen{
-        background: #fff;
+     .displayButton{
+        height: 60px;
+        width: 70px;
     }
+
+    .menu{
+        width: 100%;
+        top: 0;
+    }  
 
     .navigationHeader{
-        height: 70px;
+        padding: 8px;
     }
-
-    .navigationContainer{
-        height: 100vh;
-        background-color: white;
-        margin: 0;
-        position: relative;
-     }
-
-     .displayButton, .logo{
-        height: 70px;
-        width: 80px;
-    }
-
 }
 
+
+@keyframes appearNav{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes appear {
+    0%{
+        display: none;
+        transform: translate(5vh, 0);
+        opacity: 0;
+    }
+    10%{
+        display: flex;
+    }
+    30%{    
+        opacity: 1;
+    }
+    100%{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    0%{
+        transform: translate(0, 0);
+        display: flex;
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+    }
+    90%{
+        transform: translate(5vh, 0);
+        opacity: 0;
+    }
+    100%{  
+        display: none;
+    }
+}

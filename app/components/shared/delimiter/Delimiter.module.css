@@ -1,0 +1,10 @@
+.delimiter{
+    width: 100%;
+    height: 15rem;
+}
+
+@media (max-width: 500px) {
+    .delimiter{
+        height: 10rem;
+    }
+}

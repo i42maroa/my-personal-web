@@ -1,0 +1,92 @@
+.navigationContainer{
+    outline: 3px solid var(--navbar-stroke);
+    background-color: var(--navbar);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.2s;
+    height: 100svh;
+    width: 500px;
+    justify-content: center;
+ }
+
+ .listContainer{
+    margin: 0 2rem;
+}
+
+.listContainer li{
+    margin: 1.5rem 1rem;
+    transition: all 0.1s ease-in;
+}
+
+.listContainer li:hover{
+    scale: 1.05;
+}
+
+.navigationElement{
+    outline: none;
+    color: var(--font-color-navbar);
+    font-size: 22px;
+    text-decoration: none;
+    transition: all 0.1s linear;
+}
+
+.toggleTitle, .title{
+    color: var(--font-color-navbar);
+}
+
+.navigationElement:hover{
+    color: var(--green);
+    font-weight: 600;
+}
+
+.toggleContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.machineContainer{
+    margin: 2rem 0;
+}
+
+@media (max-width: 500px) {
+    .navigationContainer{
+        border: none;
+        position: relative;
+        margin: 0;
+        outline: none;
+        justify-content: flex-start;
+     }
+
+     .listContainer{
+        margin: 4rem 1rem 2rem 1rem;
+    }
+
+    .title{
+        padding: 1rem 0;
+        text-align: left;
+     }
+
+    .listContainer li{
+        margin: 0.5rem ;
+    }
+
+    .navigationElement{
+        font-size: 16px;
+    }
+
+    .machineContainer{
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 300px) {
+
+    .machineContainer{
+        margin: 0.2rem;
+    }
+}
+
+

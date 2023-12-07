@@ -1,0 +1,46 @@
+.e1{
+    animation: rotate-1 linear both;
+}
+.e2{
+    animation: rotate-3 reverse linear both;  
+}
+
+.e3{
+    animation: rotate-2 linear both;
+}
+
+.e4{
+    animation: rotate-4 reverse linear both;
+}
+
+.e1, .e2, .e3, .e4{
+    animation-timeline: view();
+    animation-range: 0 exit;
+    fill: var(--font-color);
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+@keyframes rotate-1 {
+    100% {
+        transform: rotate(240deg);
+    }
+}
+
+@keyframes rotate-2 {
+    100% {
+        transform: rotate(200deg);
+    }
+}
+
+@keyframes rotate-3 {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotate-4 {
+    100% {
+        transform: rotate(120deg);
+    }
+}

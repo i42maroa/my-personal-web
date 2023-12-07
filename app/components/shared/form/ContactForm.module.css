@@ -1,0 +1,145 @@
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.formContainer label{
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer label span{
+    font-weight: 800;
+    padding: 0.2rem 0;
+}
+
+.input, .textarea{
+    outline: 2px solid var(--stroke);
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 800;
+    border: none;
+    color: var(--font-color);
+    transition: all 0.2s linear;
+}
+
+
+.input::placeholder, .textarea::placeholder{
+    color: var(--form-placeholder);
+    font-weight: 400;
+}
+
+.input:focus, .textarea:focus{
+    border: none;
+    outline: 5px solid var(--green);
+}
+
+.textarea{
+    height: 200px;
+    resize: none;
+}
+
+.formButton{
+    background-color: var(--font-color);
+    color: var(--inverse-font-color);
+    border: none;
+    padding: 0.5rem 0;
+    border-radius: 2px;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 1rem auto;
+    width: 200px;
+
+    transition: all .2s ease-in-out ;
+}
+
+.formButton:enabled:hover{
+    scale: 1.1;
+    color: var(--green);
+    outline: solid 2px var(--green);
+}
+
+.formButton:disabled{
+    scale: 1;
+    color:  var(--dirty-white);
+    background-color: var(--constract-hard-brown);
+    outline: none;
+    cursor: not-allowed;
+}
+
+.modal{
+    background-color: var(--green);
+    position: absolute;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+    margin: 3rem;
+    text-align: center;
+    color: var(--white);
+    border-radius: 3px;
+    font-weight: 800;
+    padding: 1rem;
+    opacity: 0;
+    display: block;
+}
+
+.modalAnimation{
+    animation: 
+        appear_up 0.3s ease-in both, 
+        appear_down 0.5s ease-out 3s forwards;
+}
+
+@media (max-width: 500px) {
+
+    .input, .textarea{
+        font-size: 14px;
+        padding: 0.5rem 0.7rem;
+    }
+
+    .textarea{
+        height: 150px;
+    }
+
+    .formButton{
+        font-size: 20px;
+        width: 150px;
+        margin: 0.5rem auto;
+    }
+}
+
+@keyframes appear_up {
+    0%{
+        display: block;
+        transform: translateY(5vh);
+    }
+    30%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+
+
+@keyframes appear_down {
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(5vh);
+        opacity: 0;
+        display: none;
+    }
+}

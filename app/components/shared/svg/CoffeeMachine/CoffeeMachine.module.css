@@ -1,0 +1,511 @@
+.container{
+  max-width: 400px;
+  margin: auto;
+}
+.machineContainer{
+  background-color: var(--dirty-white);
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 10px;
+  outline: 3px solid var(--machine-panel);
+  border-radius: 0 0 3px 3px;
+}
+
+.titleContainer{
+    display: flex;
+    padding: 0.5rem;
+    background-color: var(--hard-brown);
+    outline: 3px solid var(--machine-panel);
+    border-radius: 5px;
+}
+
+.titleContainer span{
+    text-align: center;
+    padding: 5px 10px;
+    background-color: var(--white);
+    margin: auto;
+    font-weight: 800;
+    border-radius: 3px;
+    color: var(--hard-brown);
+}
+
+
+.panelContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    background-color: var(--blue);
+    margin: 30px auto;
+    outline: 2px solid var(--hard-brown);
+    position: relative;
+}
+
+.panelContainer::before{
+  content: 'Seleccionado:';
+  display: block;
+  position: absolute;
+  font-weight: 800;
+  background-color: var(--hard-brown);
+  outline: 2px solid var(--hard-brown);
+  color: var(--white);
+  width: 140px;
+  padding: 5px;
+  top: -20px;
+}
+
+
+.textPanel{
+    text-align: center;
+    font-weight: 800;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    color: var(--white);
+}
+
+.enjoyPanel{
+    display: flex;
+    margin: auto;
+}
+
+.enjoyPanel span{
+  font-weight: 800;
+  font-size: 25px;
+  margin: auto;
+  color: var(--white);
+}
+
+.enjoyText{
+    text-align: center;
+    margin: auto;
+    color: var(--hard-brown);
+}
+
+
+.coffeePanel{
+  background-color: var(--soft-brown);
+}
+
+.lattePanel{
+  background-color: var(--hard-brown);
+}
+
+.milkPanel{ 
+  background-color: var(--soft-brown);
+}
+
+.enabledEnjoyPanel{
+  opacity: 0;
+  animation: appear 0.1s 4s 1 both;
+}
+
+.imagePanel{
+  width: 70px;
+  height: 70px;
+  margin: 10px auto;
+}
+
+.coffeeButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: left;
+}
+
+.buttonContainer span{
+  background-color: var(--white);
+  color: var(--hard-brown);
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid var(--hard-brown);
+  min-width: 80px;
+  font-weight: 800;
+}
+
+.button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--hard-brown);
+    margin: auto 0;
+    transition: scale 0.2s ease-in;
+}
+
+.button:hover{
+    scale: 1.05;
+    background-color: var(--green);
+}
+
+.dispensatorContainer{
+    background-color: grey;
+    border-radius: 10px 10px 0 0;
+    margin: 20px 10px;
+    border-bottom: 4px solid var(--hard-brown);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 200px;
+}
+
+.coffeExit {
+    width: 60px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 30px);
+    background-color: #231f20;
+  }
+  
+.coffeExit::before {
+    content: "";
+    width: 50px;
+    height: 15px;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 25px);
+    background-color: #231f20;
+  }
+  
+.coffeExit::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -25px;
+  left: calc(50% - 5px);
+  background-color: #231f20;
+}
+  
+.chorro{
+  width: 6px;
+  height: 63px;
+  opacity: 0;
+  position: absolute;
+  top: 35px;
+  left: calc(50% - 3px);
+}
+
+.glassContainer{
+    cursor: pointer;
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: calc(50% - 50px); 
+
+    transition: scale 0.3s ease-in;
+}
+
+.glassContainer:hover{
+  scale: 1.1;
+}
+
+.showGlassContainer{
+  animation: resalt 0.5s linear 4s 1 both,
+   resalt 0.5s linear 7s infinite forwards;
+}
+
+.buttonReadyContainer{
+    display: flex;
+}
+
+.buttonOk{
+    background-color: var(--hard-brown);
+    transition: all 0.2s ease-in;
+    border: none;
+    animation: resalt 0.8s ease-in 5s infinite;
+    margin: 1rem auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;  
+    fill: var(--green);
+}
+
+.buttonOk:hover{
+  scale: 1.1;
+  background-color: var(--green);
+  fill: var(--hard-brown);
+}
+
+.disableClass{
+	display: none;
+} 
+
+.hiddenClass{
+  display: none;
+} 
+
+.showCoffeLiquid,
+.showMilkLiquid,
+.showLatteLiquid
+{
+  animation: liquid 3s 1s 1 backwards;
+}
+
+.showCoffeLiquid{
+  background-color: var(--hard-brown);
+}
+
+.showMilkLiquid{
+  background-color: var(--white);
+}
+
+.showLatteLiquid{
+  background-color: var(--soft-brown);
+}
+
+@keyframes liquid {
+    0% {
+      height: 0px;  
+      opacity: 1;
+    }
+    5% {
+      height: 0px;  
+      opacity: 1;
+    }
+    20% {
+      height: 70px;  
+      opacity: 1;
+    }
+    95% {
+      height: 70px;
+      opacity: 1;
+    }
+    100% {
+      height: 70px;
+      opacity: 0;
+    }
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes resalt{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 500px) {
+
+  .container{
+    max-width: 350px;
+  }
+
+  .machineContainer{
+    padding: 0;
+    margin: 0 5px;
+  }
+  
+.panelContainer{
+  width: 120px;
+  height: 120px;
+  margin: 30px auto;
+}
+
+.panelContainer::before{
+  width: 110px;
+  top: -20px;
+  font-size: 10px;
+}
+
+.textPanel{
+  font-size: 18px;
+}
+
+.enjoyPanel span{
+  font-size: 18px;
+}
+
+.imagePanel{
+  width: 70px;
+  height: 70px;
+  margin: 5px auto;
+}
+
+.coffeeButtons{
+  margin: 0 0.5rem;
+}
+
+.buttonContainer span{
+  margin: 7px 5px;
+  padding: 3px;
+  min-width: 70px;
+  font-size: 14px;
+}
+
+.button{
+    width: 30px;
+    height: 30px;
+}
+
+.dispensatorContainer{
+  border-radius: 5px 5px 0 0;
+  margin: 10px auto;
+  height: 140px;
+  width: 120px;
+}
+
+.coffeExit {
+  width: 40px;
+  height: 10px;
+  left: calc(50% - 20px);
+}
+
+.coffeExit::before {
+  width: 30px;
+  height: 10px;
+  bottom: -10px;
+  left: calc(50% - 15px);
+}
+
+.coffeExit::after {
+width: 8px;
+height: 8px;
+bottom: -18px;
+left: calc(50% - 4px);
+}
+
+.chorro{
+width: 6px;
+height: 30px;
+top: 28px;
+left: calc(50% - 3px);
+}
+
+.glassContainer{
+  width: 70px;
+  left: calc(50% - 35px); 
+}
+
+.buttonOk{
+  margin: 1rem auto;
+  width: 60px;
+  height: 60px;
+}
+
+}
+
+@media (max-width: 280px) {
+
+  .container{
+    max-width: 250px;
+  }
+
+  .machineContainer{
+    padding: 5px;
+    margin: 0 5px;
+  }
+  
+.panelContainer{
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+}
+
+.panelContainer::before{
+  width: 90px;
+  padding: 5px;
+  top: -20px;
+  font-size: 10px;
+}
+
+.textPanel{
+  font-size: 10px;
+}
+
+.enjoyPanel span{
+  font-size: 15px;
+}
+
+.imagePanel{
+  width: 40px;
+  height: 40px;
+  margin: 5px auto;
+}
+
+.coffeeButtons{
+  margin: 0 0.5rem;
+}
+
+.buttonContainer span{
+  margin: 3px;
+  padding: 2.5px;
+  min-width: 60px;
+  font-size: 12px;
+}
+
+.button{
+    width: 20px;
+    height: 20px;
+}
+
+.dispensatorContainer{
+  border-radius: 5px 5px 0 0;
+  margin: 10px 5px;
+  height: 100px;
+  width: 100px;
+  margin: auto;
+}
+
+.coffeExit {
+  width: 30px;
+  height: 5px;
+  left: calc(50% - 15px);
+}
+
+.coffeExit::before {
+  width: 25px;
+  height: 7.5px;
+  bottom: -7.5px;
+  left: calc(50% - 12.5px);
+}
+
+.coffeExit::after {
+width: 5px;
+height: 5px;
+bottom: -12.5px;
+left: calc(50% - 2.5px);
+}
+
+.chorro{
+width: 3px;
+height: 31.5px;
+top: 17.5px;
+left: calc(50% - 1.5px);
+}
+
+.glassContainer{
+  width: 50px;
+  left: calc(50% - 25px); 
+}
+
+.buttonOk{
+  margin:  0.5rem auto;
+  width: 40px;
+  height: 40px;
+}
+
+}

@@ -1,0 +1,325 @@
+.container{
+    display: grid;
+    grid-template-columns: 212px 1fr;
+    width: 100%;
+    margin-bottom: 5rem;
+    padding: 2rem 0;
+}
+
+
+.yearContainer{
+    width: 198px;
+    height: 100%;
+    display: flex;
+    background-color: var(--font-color);
+    color: var(--inverse-font-color);
+    outline: 3px solid var(--hard-brown);
+    
+    animation: appear_left linear forwards;
+    animation-timeline: view();
+    animation-range: 10% 25%; 
+    z-index: 3;
+    opacity: 0;
+}
+
+.yearExperience{
+    margin: auto;
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.imageContainer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: var(--font-color);
+}
+
+.contentContainer{
+    display: flex;
+    margin: auto 0;
+    background-color: var(--font-color);
+    height: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    opacity: 0;
+
+    animation: appear_right linear forwards; 
+    animation-timeline: view();
+    animation-range: 15% 25%; 
+     
+    outline: 3px solid var(--hard-brown);
+    z-index: 3;
+}
+
+
+.title{
+    font-weight: 800;
+    margin: auto 1.5rem;
+    color: var(--inverse-font-color);
+}
+
+.subtitle{
+    font-style: italic;
+    font-weight: 400;
+    margin: auto 1.5rem;
+    color: var(--inverse-font-color);
+}
+
+
+.descriptionContainerUnity{
+    background-color: transparent;  
+    opacity: 0;
+    animation: appear_right linear forwards; 
+    animation-timeline: view();
+    animation-range: 15% 25%; 
+    position: relative;
+    margin: 0 1.5rem;
+}
+
+.titleDescriptionContainer{
+    display: flex;
+    flex-direction: column;  
+}
+
+.titleDescription, .description{
+    margin: auto 0;
+}
+
+.titleDescription{ 
+    font-weight: 800;
+    margin: 1rem 0 0 0;
+}
+
+.titleDescription::after{
+    content: '';
+    display: flex;
+    height: 3px;
+    width: 0;
+    position: relative;
+    border-radius: 3px;
+    background-color: var(--font-color);
+
+    animation: increase linear forwards;
+    animation-timeline: view();
+    animation-range: 15% 25%; 
+    margin-top: 0.2rem;
+}
+
+.description{
+    opacity: 0;
+    animation: appear_right linear forwards; 
+    animation-timeline: view();
+    animation-range: 20% 30%; 
+}
+
+.contentTechnologies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+    padding: 0 0.5rem;
+    position: relative;
+
+    opacity: 0;
+
+    animation: appear_right linear forwards;
+    animation-timeline: view();
+    animation-range: 25% 30%; 
+}
+
+.imageContainer{
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    margin: 0.2rem 0.5rem;
+}
+
+
+@media (max-width: 1200px) {
+    .descriptionContainerUnity{
+        display: flex;
+        flex-direction: column;
+    }
+    .contentTechnologies{
+        display: flex;
+        justify-content: center;    
+    }    
+}
+
+
+@media (max-width: 1000px) {
+    .container{
+        grid-template-columns: 162px 1fr;
+    }
+
+    .yearContainer{
+        width: 148px;
+        justify-content: center;
+    }
+
+    .yearExperience{
+        padding: 0;
+        margin: auto;
+    }
+
+    .contentContainer{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        justify-content: center;
+    } 
+    .title, .subtitle{
+        text-align: center;
+    }
+
+    .contentTechnologies{
+        animation: appear_down linear forwards;
+        animation-timeline: view();
+        animation-range: 15% 30%; 
+    }   
+}
+
+@media (max-width: 700px) {
+
+    .container{
+        grid-template-columns: 102px 1fr;
+    }
+
+    .yearContainer{
+        width: 98px;
+    }
+
+    .yearExperience{
+        font-size: 25px;
+    }
+
+    .title, .subtitle{
+        margin: auto 0;      
+        padding: 10px 0;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .container{
+        grid-template-columns: 70px 1fr;
+    }
+
+    .imageContainer{
+        width: 2rem;
+        height: 2rem;
+        margin: 0.1rem 0.3rem;
+    }
+
+    .yearContainer{
+        width: 65px;
+    }
+
+    .yearExperience{
+        font-size: 18px;
+    }
+
+    .contentTechnologies{
+       margin: 1rem 1rem 0 1rem;
+    }
+    .titleDescription::after{
+        height: 2px;
+        animation: increase-responsive linear forwards;
+        animation-timeline: view();
+        animation-range: 15% 25%; 
+    }
+}
+
+
+
+/* KEYFRAMES */
+
+@keyframes appear_right {
+    0%{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear_left {
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes appear_up {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes appear_down {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes increase {
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        width: 300px;
+    }
+}
+
+@keyframes increase-responsive {
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        width: 200px;
+    }
+}

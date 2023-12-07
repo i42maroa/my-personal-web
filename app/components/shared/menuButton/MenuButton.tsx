@@ -1,19 +1,11 @@
-'use client'
-import { useState } from 'react'
+import startAnimation from '@/hook/startAnimation'
 import styles from './MenuButton.module.css'
 
-export function MenuButton ({ emitClickEvent }:{emitClickEvent: any}) {
-  const [showNav, setShowNav] = useState(false)
-
-  function handleClick () {
-    setShowNav(!showNav)
-    emitClickEvent(showNav)
-  }
-
+export function MenuButton ({ stateValue } : {stateValue:boolean}) {
   return (
-    <button className={styles.menuIconBox} onClick={handleClick}>
-      <div className={`${styles.line1} ${showNav ? styles.active1 : ''}`} />
-      <div className={`${styles.line2} ${showNav ? styles.active2 : ''}`} />
-    </button>
+    <div className={styles.menuIconBox}>
+      <div className={`${styles.line1} ${startAnimation(stateValue, styles.active1)}`} />
+      <div className={`${styles.line2} ${startAnimation(stateValue, styles.active2)}`} />
+    </div>
   )
 }

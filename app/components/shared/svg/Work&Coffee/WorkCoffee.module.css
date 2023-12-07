@@ -1,0 +1,138 @@
+.st0{fill:none;}
+	.st1{fill:#4E3620;}
+	.st2{fill:#F8F4E1;}
+	.st3{fill:#EAE6D6;}
+	.st4{fill:#77756F;}
+	.st5{fill:#A09E98;}
+	.st6{fill:#66BAAF;}
+	.st7{fill:none;stroke:#4E3620;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+	.st8{fill:#4E3620;stroke:#4E3620;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+
+    .container{
+        enable-background:new 0 0 866 834;
+    }
+
+	
+	
+	.avatar{
+		width: 70vw;
+		height: auto;
+		margin: auto;
+		max-width: 600px;
+	}
+	
+
+
+.smoke1, .smoke2, .smoke3, .smoke4, .smoke5{
+	fill: #A09E98;
+	opacity: 0;
+}
+
+.smoke1{
+	animation: animationSmoke1 1s infinite ;
+}
+
+.smoke2{
+	animation: animationSmoke2 1s infinite ;
+}
+
+.smoke3{
+	animation: animationSmoke3 1s infinite ;
+}
+
+.smoke4{
+	animation: animationSmoke4 1s infinite;
+}
+
+.smoke5{
+	animation: animationSmoke5 1s infinite;
+}
+
+
+@keyframes animationSmoke1 {
+	0%{
+		opacity: 1;
+	}
+	20%{
+		opacity: 1;
+	}
+	21%{
+		opacity: 0;
+	}
+}
+
+@keyframes animationSmoke2 {
+	19%{
+		opacity: 0;
+	}
+	20%{
+		opacity: 1;
+	}
+	40%{
+		opacity: 1;
+	}
+	41%{
+		opacity: 0;
+	}
+}
+
+@keyframes animationSmoke3 {
+	39%{
+		opacity: 0;
+	}
+	40%{
+		opacity: 1;
+	}
+	60%{
+		opacity: 1;
+	}
+	61%{
+		opacity: 0;
+	}
+}
+
+@keyframes animationSmoke4 {
+	59%{
+		opacity: 0;
+	}
+	60%{
+		opacity: 1;
+	}
+	80%{
+		opacity: 1;
+	}
+	81%{
+		opacity: 0;
+	}
+}
+
+@keyframes animationSmoke5 {
+	79%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+
+@media (max-width: 1200px) {
+	.avatar{
+		max-width: 500px;
+		width: 60vw;
+	}
+}
+
+
+@media (max-width: 1000px) {
+	.avatar{
+		top: 0;
+		width: 75vw;
+		height: auto;
+		min-height: 350px;
+		max-width: 450px;
+	}
+}

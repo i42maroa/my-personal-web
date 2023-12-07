@@ -1,0 +1,53 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-color: var(--inverse-font-color);
+    border-top: 3px solid var(--hard-brown);
+    overflow: hidden;
+}
+
+.carrousel{
+    display: flex;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.inputContainer{
+    display: flex;
+    width: 100%;
+    justify-content:  center;
+    background-color: var(--hard-brown);
+    padding: 0.5rem 0;
+    outline: 3px solid var(--stroke);
+    z-index: 1;
+}
+
+.inputButton{
+    width: 25px;
+    height: 25px;
+    margin: auto 0.5rem;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    transition: scale .2s ease-in-out;
+    background-color: var(--hard-brown);
+    
+}
+
+.inputButton:hover{
+    scale: 1.1;
+}
+
+.image{
+    object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+    .inputButton{
+        width: 20px;
+        height: 20px;
+        margin: auto 0.3rem;
+    }
+}

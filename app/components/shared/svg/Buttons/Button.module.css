@@ -1,0 +1,31 @@
+
+.github{
+    fill: var(--white);
+    transition: fill .2s ease-in-out;
+}
+
+.st0{
+    fill: var(--font-color-footer);
+    transition: fill .2s ease-in-out;
+}
+
+.github:hover{
+    fill: var(--green);
+}
+
+.container:hover .st0{
+    fill: var(--green);
+}
+
+ .turnOn{  
+    transform-box: fill-box;
+    transform-origin: center;
+    scale: 2;
+} 
+
+
+@media (max-width: 500px) {
+    .turnOn{
+        scale: 1.5;
+    } 
+}

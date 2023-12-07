@@ -1,0 +1,27 @@
+
+.st0{fill:var(--green)}
+.st0{fill:transparent}
+
+.st1{fill:var(--font-color)}
+
+.container{
+    width: 5rem;
+}
+
+.prueba{
+    background-color:var(--green) ;
+}
+
+
+@media (max-width: 1000px) {
+    .container{
+        width: 4rem;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .container{
+        width: 3rem;
+    }
+}
