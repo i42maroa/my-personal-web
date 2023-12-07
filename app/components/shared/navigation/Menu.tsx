@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import styles from './Menu.module.css'
-import { CoffeeMachine2 } from '../svg/CoffeeMachine/CoffeeMachine2'
+import { CoffeeMachine } from '../svg/CoffeeMachine/CoffeeMachine'
 
 export function MenuNavigation () {
   return (
@@ -27,7 +27,7 @@ export function MenuNavigation () {
       </ul>
 
       <div className={styles.machineContainer}>
-        <CoffeeMachine2 />
+        <CoffeeMachine />
       </div>
     </nav>
   )

@@ -75,7 +75,7 @@
   font-weight: 800;
   font-size: 25px;
   margin: auto;
-  color: var(--hard-brown);
+  color: var(--white);
 }
 
 .enjoyText{
@@ -220,21 +220,21 @@
 }
 
 .buttonOk{
-    padding: 5px 10px;
-    height: fit-content;
-    background-color: var(--green);
-    color: var(--hard-brown);
-    font-weight: 800;
-    font-size: 18px;
-    margin: 1rem auto;
-    border-radius: 2px;
-    transition: scale 0.2s ease-in;
-    border: 3px solid var(--hard-brown);
+    background-color: var(--hard-brown);
+    transition: all 0.2s ease-in;
+    border: none;
     animation: resalt 0.8s ease-in 5s infinite;
+    margin: 1rem auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;  
+    fill: var(--green);
 }
 
 .buttonOk:hover{
   scale: 1.1;
+  background-color: var(--green);
+  fill: var(--hard-brown);
 }
 
 .disableClass{
@@ -242,7 +242,7 @@
 } 
 
 .hiddenClass{
-	opacity: 0;
+  display: none;
 } 
 
 .showCoffeLiquid,
@@ -309,6 +309,106 @@
 }
 
 @media (max-width: 500px) {
+
+  .container{
+    max-width: 350px;
+  }
+
+  .machineContainer{
+    padding: 0;
+    margin: 0 5px;
+  }
+  
+.panelContainer{
+  width: 120px;
+  height: 120px;
+  margin: 30px auto;
+}
+
+.panelContainer::before{
+  width: 110px;
+  top: -20px;
+  font-size: 10px;
+}
+
+.textPanel{
+  font-size: 18px;
+}
+
+.enjoyPanel span{
+  font-size: 18px;
+}
+
+.imagePanel{
+  width: 70px;
+  height: 70px;
+  margin: 5px auto;
+}
+
+.coffeeButtons{
+  margin: 0 0.5rem;
+}
+
+.buttonContainer span{
+  margin: 7px 5px;
+  padding: 3px;
+  min-width: 70px;
+  font-size: 14px;
+}
+
+.button{
+    width: 30px;
+    height: 30px;
+}
+
+.dispensatorContainer{
+  border-radius: 5px 5px 0 0;
+  margin: 10px auto;
+  height: 140px;
+  width: 120px;
+}
+
+.coffeExit {
+  width: 40px;
+  height: 10px;
+  left: calc(50% - 20px);
+}
+
+.coffeExit::before {
+  width: 30px;
+  height: 10px;
+  bottom: -10px;
+  left: calc(50% - 15px);
+}
+
+.coffeExit::after {
+width: 8px;
+height: 8px;
+bottom: -18px;
+left: calc(50% - 4px);
+}
+
+.chorro{
+width: 6px;
+height: 30px;
+top: 28px;
+left: calc(50% - 3px);
+}
+
+.glassContainer{
+  width: 70px;
+  left: calc(50% - 35px); 
+}
+
+.buttonOk{
+  margin: 1rem auto;
+  width: 60px;
+  height: 60px;
+}
+
+}
+
+@media (max-width: 280px) {
 
   .container{
     max-width: 250px;
@@ -403,12 +503,9 @@ left: calc(50% - 1.5px);
 }
 
 .buttonOk{
-  padding: 2.5px 5px;
-  font-size: 10px;
-  margin: 0 2.5px;
+  margin:  0.5rem auto;
+  width: 40px;
+  height: 40px;
 }
 
 }
-
-
-

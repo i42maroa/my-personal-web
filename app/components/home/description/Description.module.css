@@ -6,7 +6,7 @@
 }
 
 .desktopContainer, .engranajeContainer{
-    width: 200px;
+    width: 300px;
     margin: auto;
     opacity: 0;
     animation: appear_up linear both;

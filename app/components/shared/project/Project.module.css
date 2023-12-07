@@ -6,7 +6,7 @@
     height: auto;
     outline: 3px solid var(--stroke);
     opacity: 0;
-    animation: appear_right linear both;
+    animation: appear_right linear forwards;
     animation-timeline: view();
     animation-range: 15% 25%; 
 

@@ -1,6 +1,6 @@
 'use client'
 import * as STATES from '@/app/interface/machineCoffeeState.interface'
-import styles from './CoffeeMachine2.module.css'
+import styles from './CoffeeMachine.module.css'
 import { useState } from 'react'
 import { CoffeeSvg } from './coffes/Coffee/Coffee'
 import { MilkSvg } from './coffes/Milk/Milk'
@@ -9,8 +9,9 @@ import { GlassSvg } from './coffes/Glass/Glass'
 import showComponent from '@/hook/showComponent'
 import showComponentOr from '@/hook/showComponentOr'
 import { useStateDispatch } from '@/app/StatusContextProvider'
+import { TurnOnButton } from '../Buttons/TurnOn'
 
-export function CoffeeMachine2 () {
+export function CoffeeMachine () {
   const [state, setMachineState] = useState(STATES.INITIAL_STATE)
   const [drink, setDrinkChoice] = useState(STATES.DRINK.NONE)
 
@@ -108,7 +109,9 @@ export function CoffeeMachine2 () {
           </div>
         </div>
         <div className={styles.buttonReadyContainer}>
-          <button className={`${styles.buttonOk} ${showComponent(state.showReadyButton, styles.hiddenClass)}`} onClick={() => setMachineState(STATES.PUT_GLASS_EVENT)}>PREPARAR</button>
+          <button className={`${styles.buttonOk} ${showComponent(state.showReadyButton, styles.hiddenClass)}`} onClick={() => setMachineState(STATES.PUT_GLASS_EVENT)}>
+            <TurnOnButton />
+          </button>
         </div>
       </div>
     </div>

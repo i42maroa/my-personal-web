@@ -16,3 +16,16 @@
 .container:hover .st0{
     fill: var(--green);
 }
+
+ .turnOn{  
+    transform-box: fill-box;
+    transform-origin: center;
+    scale: 2;
+} 
+
+
+@media (max-width: 500px) {
+    .turnOn{
+        scale: 1.5;
+    } 
+}

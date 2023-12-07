@@ -13,7 +13,7 @@
  }
 
  .listContainer{
-    padding: 0 2rem;
+    margin: 0 2rem;
 }
 
 .listContainer li{
@@ -58,11 +58,9 @@
         border: none;
         position: relative;
         margin: 0;
-        padding: 0;
         outline: none;
         justify-content: start;
      }
-
 
      .title{
         padding: 1rem;
@@ -70,7 +68,7 @@
      }
 
      .listContainer{
-        padding: 4rem 1rem 0 1rem;
+        margin: 4rem 1rem;
     }
 
     .listContainer li{
@@ -82,7 +80,7 @@
     }
 
     .machineContainer{
-        padding: 1rem;
+        margin: 1rem;
     }
 }
 
