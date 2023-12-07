@@ -1,6 +1,6 @@
 .container{
-    width: 100vw;
-    height: 100vh;
+    width: 100svw;
+    height: 100svh;
     z-index: 100;
     background-color: var(--hard-brown);
     position: fixed;   
@@ -10,7 +10,6 @@
     right: 0;
     top: 0;
     bottom: 0;
-
 }
 
 .logoContainer{
@@ -23,11 +22,9 @@
 }
 
 @keyframes fade-up {
-
     0%{
         display: flex;
     }
-
 
     100%{
          transform: translate3d(0, -120%, 0);  

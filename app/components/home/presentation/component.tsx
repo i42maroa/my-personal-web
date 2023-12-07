@@ -6,11 +6,9 @@ import { FaceAnimate } from '../../shared/svg/Face/FaceAnimate'
 export default function PresentationComponent () {
   return (
     <section id={LINKS[PAGES.HOME].sections[0]} className={styles.sectionContainer}>
-
       <div className={styles.avatarBg}>
         <FaceAnimate />
       </div>
-
       <header className={styles.header}>
         <div className={styles.pageHeaderInr}>
           <div className={styles.pageContent}>

@@ -29,7 +29,7 @@
     animation-range: 20% exit; 
     animation-name: showLine;  
     animation-fill-mode: forwards;
-    z-index: 2;
+    z-index: 6;
 }
 
 @keyframes showLine {

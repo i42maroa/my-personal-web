@@ -5,7 +5,7 @@
 }
 
 .st0{
-    fill: var(--inverse-font-color);
+    fill: var(--font-color-footer);
     transition: fill .2s ease-in-out;
 }
 

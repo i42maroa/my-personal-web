@@ -89,6 +89,7 @@
     background-color:var(--white);
     justify-content: space-between;
     outline: 3px solid var(--stroke);
+    border-top: 2px solid var(--hard-brown);
     padding: 0.5rem 1rem;
 }
 

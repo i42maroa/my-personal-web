@@ -17,7 +17,7 @@
 }
 
 .input, .textarea{
-    outline: 2px solid var(--font-color);
+    outline: 2px solid var(--stroke);
     padding: 0.5rem 1rem;
     background-color: transparent;
     font-size: 18px;
