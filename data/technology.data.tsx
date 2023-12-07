@@ -144,11 +144,10 @@ export const REDUX: TechnologyInterface = {
   name: 'Redux'
 }
 
-
 export const ANDROID: TechnologyInterface = {
   description: '',
   image: {
-    url: '/images/mongodb.png',
+    url: '/images/android.png',
     alt: 'android'
   },
   name: 'Android'

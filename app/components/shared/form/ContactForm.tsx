@@ -43,8 +43,11 @@ export default function ContactForm () {
    }
 
    const isEmailNotValid = (email:string) => {
-     const result = isNotValid(email) || !email.includes('@')
-     return result
+     return isNotValid(email) || !email.includes('@')
+   }
+
+   const markInputEmailStrokeBad = () => {
+     return isEmailNotValid(formData.user_email) && formData.user_email !== '' ? { outline: '3px solid #f00' } : styleIfIsFilled(formData.user_email)
    }
 
    const setValid = (formData:FormInterface) => {
@@ -64,7 +67,7 @@ export default function ContactForm () {
        </label>
        <label>
          <span>Tu email:</span>
-         <input style={styleIfIsFilled(formData.user_email)} className={styles.input} type='email' id='email' name='user_email' placeholder='pericodelospalotes@gmail.com' value={formData.user_email} onChange={handleChange} required autoComplete='off' />
+         <input style={markInputEmailStrokeBad()} className={styles.input} type='email' id='email' name='user_email' placeholder='pericodelospalotes@gmail.com' value={formData.user_email} onChange={handleChange} required autoComplete='off' />
        </label>
        <label>
          <span>Tu mensaje:</span>

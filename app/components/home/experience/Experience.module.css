@@ -26,7 +26,7 @@
     
     animation: showLine linear both;
     animation-timeline: view();
-    animation-range: 20% exit; 
+    animation-range: 20% 60%; 
     z-index: 6;
 }
 

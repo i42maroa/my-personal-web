@@ -3,7 +3,7 @@
     border-radius: 4px;
     width: 100%;
     position: fixed;
-    z-index: 200;
+    z-index: 10;
     top: 0;
     transition: transform 0.4s;
     animation: appearNav 0.4s ease-in 2.5s backwards;
@@ -24,13 +24,14 @@
 }
 
 .logoContainer{
-    padding: 2rem;
-    width: 5rem;
+    padding: 1rem;
+    width: 4.5rem;
 }
 
 .displayButton{
-    width: 10rem;
+    width: 7rem;
     position: relative;
+    z-index: 10;
 }
 
 .navigationElement{
@@ -79,18 +80,32 @@
 
     .displayButton{
         width: 70px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .logoContainer{
+        width: 50px;
+    }
+
+    .displayButton{
+        width: 50px;
+        
+        margin: auto 0;
     }
 }
 
 @media (max-width: 500px) {
 
     .logoContainer{
-        width: 3rem;
+        width: 50px;
     }
 
      .displayButton{
-        height: 70px;
-        width: 80px;
+        height: 60px;
+        width: 70px;
     }
 
     .menu{

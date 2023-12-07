@@ -14,11 +14,12 @@
     background-color: var(--font-color);
     color: var(--inverse-font-color);
     outline: 3px solid var(--hard-brown);
-
+    
     animation: appear_left linear forwards;
     animation-timeline: view();
     animation-range: 10% 25%; 
     z-index: 3;
+    opacity: 0;
 }
 
 .yearExperience{

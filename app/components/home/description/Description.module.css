@@ -31,10 +31,17 @@
     .mainContainer{
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        gap: 4rem;
     }
 
     .textContainer{
-        padding: 3rem 0;
+        margin: 0;
+    }
+
+    .desktopContainer, .engranajeContainer{
+        margin: 0 auto;
+        width: 250px;
     }
 
     .engranajeContainer{
