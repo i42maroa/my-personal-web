@@ -37,7 +37,7 @@ export function Navigation () {
           </div>
         </div>
         <div className={`${styles.menu} ${showNav ? '' : styles.disappear}`}>
-          <MenuNavigation />
+          <MenuNavigation setShowNav={setShowNav} />
         </div>
       </div>
     </header>

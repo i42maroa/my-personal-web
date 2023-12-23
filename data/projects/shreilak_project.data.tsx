@@ -26,6 +26,6 @@ export const SHREILAK_PROJECT: ProjectInterface = {
     }
   ],
   urlGithub: 'https://github.com/i42maroa/sheilaWebpage',
-  status: 'DEPLOY',
+  status: 'NONE',
   url: 'https://github.com/i42maroa/english-training'
 }

@@ -12,8 +12,19 @@
     justify-content: center;
  }
 
+ .navigationWrapper{
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+ }
+
  .listContainer{
     margin: 0 2rem;
+    position: absolute;
+    top: 100px;
 }
 
 .listContainer li{
@@ -48,7 +59,32 @@
 }
 
 .machineContainer{
-    margin: 2rem 0;
+    position: absolute;
+    position: absolute;
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    top: 30px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.backButton{
+    display: flex;
+    width: 25px;
+    background-color: transparent;
+    border: none;
+    margin: 0 1rem;
+}
+
+.appear{
+    animation: appear 0.3s ease-out forwards;
+}
+
+.disappear{
+    animation: disappear 0.3s ease-out forwards;
 }
 
 @media (max-width: 500px) {
@@ -90,3 +126,37 @@
 }
 
 
+@keyframes appear {
+    0%{
+        transform: translate(5vh, 0);
+        opacity: 0;
+    }
+    10%{
+        /* display: flex; */
+    }
+    30%{    
+        opacity: 1;
+    }
+    100%{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+@keyframes disappear {
+    0%{
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+    }
+    90%{
+        transform: translate(5vh, 0);
+    }
+    100%{  
+        display: none;
+        opacity: 0;
+    }
+}

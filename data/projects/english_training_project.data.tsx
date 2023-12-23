@@ -11,6 +11,6 @@ export const ENGLISH_TRAINNING_PROJECT: ProjectInterface = {
 
   ],
   urlGithub: 'https://github.com/i42maroa/english-training',
-  status: 'DEPLOY',
+  status: 'NONE',
   url: 'https://github.com/i42maroa/english-training'
 }
