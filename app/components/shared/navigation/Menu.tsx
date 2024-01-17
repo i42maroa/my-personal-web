@@ -30,15 +30,14 @@ export function MenuNavigation ({ setShowNav }:{setShowNav:Dispatch<SetStateActi
             <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#contact'>Cómo contactarme</Link>
           </li>
           <h3 className={styles.title}>¿Quieres un café?</h3>
-          <button onClick={() => setShowCoffeeMachine(true)}>Yo te invito</button>
+          <button className={styles.buttonShowCoffee} onClick={() => setShowCoffeeMachine(true)}>Yo te invito</button>
         </ul>
 
         <div className={`${styles.machineContainer} ${showCoffeeMachine ? styles.appear : styles.disappear}`}>
           <button className={styles.backButton} onClick={() => setShowCoffeeMachine(false)}><LeftArrowSvg /></button>
-          <h3 className={styles.title}>A este invito yo</h3>
-          <CoffeeMachine setShowNav={setShowNav} />
+          <h3 className={styles.title} />
+          <CoffeeMachine setShowNav={setShowNav} setShowCoffeMachine={setShowCoffeeMachine} />
         </div>
-
       </div>
     </nav>
   )

@@ -217,6 +217,7 @@
 
 .buttonReadyContainer{
     display: flex;
+    justify-content: center;
 }
 
 .buttonOk{
@@ -229,6 +230,7 @@
     height: 80px;
     border-radius: 50%;  
     fill: var(--green);
+    display: flex;
 }
 
 .buttonOk:hover{

@@ -13,7 +13,8 @@ import changeRootColors from '@/hook/changeColor'
 export default function Home () {
   useEffect(() => changeRootColors(STATE_TOGGLE[0].color))
   return (
-    <><PresentationComponent fill />
+    <>
+      <PresentationComponent />
       <Delimiter />
       <DescriptionComponent />
       <Delimiter />
