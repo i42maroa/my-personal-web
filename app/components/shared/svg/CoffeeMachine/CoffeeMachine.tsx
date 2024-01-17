@@ -1,20 +1,21 @@
 'use client'
 import * as STATES from '@/app/interface/machineCoffeeState.interface'
 import styles from './CoffeeMachine.module.css'
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useContext, useState } from 'react'
 import { CoffeeSvg } from './coffes/Coffee/Coffee'
 import { MilkSvg } from './coffes/Milk/Milk'
 import { LatteSvg } from './coffes/Latte/Latte'
 import { GlassSvg } from './coffes/Glass/Glass'
 import showComponent from '@/hook/showComponent'
 import showComponentOr from '@/hook/showComponentOr'
-import { useStateDispatch } from '@/app/StatusContextProvider'
+import { StatusColorContext, useStateDispatch } from '@/app/StatusContextProvider'
 import { TurnOnButton } from '../Buttons/TurnOn'
+import Link from 'next/link'
 
-export function CoffeeMachine () {
+export function CoffeeMachine ({ setShowNav, setShowCoffeMachine }:{setShowNav:Dispatch<SetStateAction<boolean>>, setShowCoffeMachine:Dispatch<SetStateAction<boolean>>}) {
   const [state, setMachineState] = useState(STATES.INITIAL_STATE)
   const [drink, setDrinkChoice] = useState(STATES.DRINK.NONE)
-
+  const context = useContext(StatusColorContext)
   const dispatchNewStateContext = useStateDispatch()
 
   const showLiquidDependOfChoice = () => {
@@ -38,13 +39,13 @@ export function CoffeeMachine () {
   const changeColor = () => {
     switch (drink) {
       case STATES.DRINK.COFFEE:
-        dispatchNewStateContext(2)
+        dispatchNewStateContext({ num: 2, show: true })
         break
       case STATES.DRINK.LATTE:
-        dispatchNewStateContext(1)
+        dispatchNewStateContext({ num: 1, show: true })
         break
       case STATES.DRINK.MILK:
-        dispatchNewStateContext(0)
+        dispatchNewStateContext({ num: 0, show: true })
     }
 
     setMachineState(STATES.INITIAL_STATE)
@@ -55,8 +56,14 @@ export function CoffeeMachine () {
     setDrinkChoice(state.drinkPress)
   }
 
-  return (
+  const handleOnButton = () => {
+    setShowNav(false)
+    setShowCoffeMachine(false)
+    setMachineState(STATES.PUT_GLASS_EVENT)
+    changeColor()
+  }
 
+  return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
         <span>COFFEE MACHINE</span>
@@ -87,18 +94,27 @@ export function CoffeeMachine () {
           </div>
         </div>
         <div className={styles.coffeeButtons}>
-          <div className={styles.buttonContainer}>
-            <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_COFFEE_BUTTON)} />
-            <span>EXPRESO</span>
-          </div>
-          <div className={styles.buttonContainer}>
-            <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_LATTE_BUTTON)} />
-            <span>LATTE</span>
-          </div>
-          <div className={styles.buttonContainer}>
-            <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_MILK_BUTTON)} />
-            <span>LECHE</span>
-          </div>
+          {
+            context.num !== STATES.DRINK.COFFEE &&
+              <div className={styles.buttonContainer}>
+                <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_COFFEE_BUTTON)} />
+                <span>EXPRESO</span>
+              </div>
+          }
+          {
+            context.num !== STATES.DRINK.LATTE &&
+              <div className={styles.buttonContainer}>
+                <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_LATTE_BUTTON)} />
+                <span>LATTE</span>
+              </div>
+          }
+          {
+            context.num !== STATES.DRINK.MILK &&
+              <div className={styles.buttonContainer}>
+                <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_MILK_BUTTON)} />
+                <span>LECHE</span>
+              </div>
+          }
         </div>
         <div className={styles.dispensatorContainer}>
           <div className={styles.coffeExit} />
@@ -109,9 +125,9 @@ export function CoffeeMachine () {
           </div>
         </div>
         <div className={styles.buttonReadyContainer}>
-          <button className={`${styles.buttonOk} ${showComponent(state.showReadyButton, styles.hiddenClass)}`} onClick={() => setMachineState(STATES.PUT_GLASS_EVENT)}>
+          <Link href='/' className={`${styles.buttonOk} ${showComponent(state.showReadyButton, styles.hiddenClass)}`} onClick={() => handleOnButton()}>
             <TurnOnButton />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

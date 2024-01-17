@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 export enum DRINK{
-  COFFEE, LATTE, MILK, NONE
+  MILK, LATTE, COFFEE, NONE
 }
 
 export interface CoffeeMachineStateInterface {
