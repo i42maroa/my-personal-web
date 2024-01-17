@@ -3,7 +3,7 @@
 import { COLOR_STATUS_VALUE } from '@/data/color.data'
 import { STATE_TOGGLE } from '@/data/state-toggle.data'
 import changeRootColors from '@/hook/changeColor'
-import { playCoffeeMachine as playCoffeeMachineSound } from '@/hook/playCoffeeMachineSound'
+import { playCoffeeMachineSound } from '@/hook/playCoffeeMachineSound'
 import React, { createContext, useContext, useReducer } from 'react'
 
 export interface CONTEXT_STATE {num:number, show:boolean};
