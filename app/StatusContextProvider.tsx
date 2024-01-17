@@ -3,6 +3,7 @@
 import { COLOR_STATUS_VALUE } from '@/data/color.data'
 import { STATE_TOGGLE } from '@/data/state-toggle.data'
 import changeRootColors from '@/hook/changeColor'
+import { playCoffeeMachine as playCoffeeMachineSound } from '@/hook/playCoffeeMachineSound'
 import React, { createContext, useContext, useReducer } from 'react'
 
 export interface CONTEXT_STATE {num:number, show:boolean};
@@ -27,6 +28,7 @@ function reducer (state:CONTEXT_STATE, newState: CONTEXT_STATE) {
 
     document.documentElement.style.setProperty('--last-background', color)
     changeRootColors(type)
+    playCoffeeMachineSound()
     return newState
   }
   return { num: state.num, show: false }
