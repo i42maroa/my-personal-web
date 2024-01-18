@@ -16,7 +16,7 @@ export default function changeContextState (state:CONTEXT_STATE, newState: CONTE
     const color = keyValue['--background']
 
     document.documentElement.style.setProperty('--last-background', color)
-    changeRootColors(type, 'change')
+    changeRootColors(type)
     playCoffeeMachineSound()
     return newState
   }
