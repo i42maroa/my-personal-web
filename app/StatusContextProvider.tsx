@@ -19,6 +19,7 @@ export function useStateDispatch () {
 }
 
 function reducer (state:CONTEXT_STATE, newState: CONTEXT_STATE) {
+  console.log(state, 'state', newState, 'newState')
   if (state.num !== newState.num) {
     const type = STATE_TOGGLE[newState.num].color
     const lastType = STATE_TOGGLE[state.num].color
