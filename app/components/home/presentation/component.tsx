@@ -9,7 +9,7 @@ export default function PresentationComponent () {
 
   return (
     <div className={styles.sectionWrapper}>
-      <div className={`${styles.fillColor} ${context.show ? styles.fill : styles.unfill}`} />
+      <div className={`${styles.fillColor} ${context.state.show ? styles.fill : styles.unfill}`} />
       <section id={LINKS[PAGES.HOME].sections[0]} className={styles.sectionContainer}>
         <div className={styles.avatarBg}>
           <FaceAnimate />
