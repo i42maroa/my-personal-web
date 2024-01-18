@@ -9,9 +9,11 @@ import { Delimiter } from './components/shared/delimiter/Delimiter'
 import { useEffect } from 'react'
 import { STATE_TOGGLE } from '@/data/state-toggle.data'
 import changeRootColors from '@/hook/changeColor'
+import { useStateDispatch } from './StatusContextProvider'
 
 export default function Home () {
-  useEffect(() => { changeRootColors(STATE_TOGGLE[0].color); document.documentElement.style.setProperty('--last-background', 'var(--white)') })
+  const dispatchNewStateContext = useStateDispatch()
+  useEffect(() => { changeRootColors(STATE_TOGGLE[0].color); dispatchNewStateContext({ num: 0, show: false }) })
   return (
     <>
       <PresentationComponent />
