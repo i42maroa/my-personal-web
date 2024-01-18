@@ -13,7 +13,7 @@ import { useStateDispatch } from './StatusContextProvider'
 
 export default function Home () {
   const dispatchNewStateContext = useStateDispatch()
-  useEffect(() => { changeRootColors(STATE_TOGGLE[0].color); dispatchNewStateContext({ num: 0, show: false }) })
+  useEffect(() => { changeRootColors(STATE_TOGGLE[0].color); dispatchNewStateContext({ num: 0, show: true }) })
   return (
     <>
       <PresentationComponent />
