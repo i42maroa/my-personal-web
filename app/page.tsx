@@ -11,7 +11,7 @@ import { STATE_TOGGLE } from '@/data/state-toggle.data'
 import changeRootColors from '@/hook/changeColor'
 
 export default function Home () {
-  useEffect(() => { changeRootColors(STATE_TOGGLE[0].color) })
+  useEffect(() => { changeRootColors(STATE_TOGGLE[0].color, 'home') })
   return (
     <>
       <PresentationComponent />
