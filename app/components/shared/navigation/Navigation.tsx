@@ -6,14 +6,14 @@ import { MenuButton } from '../menuButton/MenuButton'
 import { showNavbarDependOfScroll } from '@/hook/scrollHandler'
 import { MenuNavigation } from './Menu'
 import { LogoAnimateSvg } from '../svg/Logo/LogoAnimate'
-import { StatusColorContext, useStateDispatch } from '@/app/StatusContextProvider'
+import { StatusColorContext } from '@/app/StatusContextProvider'
+import changeContextState from '@/hook/changeContext'
 
 export function Navigation () {
   const [showNav, setShowNav] = useState(false)
   const [lastScrol, setLastScroll] = useState(0)
   const [isScrollDown, setIsScrollingDown] = useState(false)
   const context = useContext(StatusColorContext)
-  const dispatchNewStateContext = useStateDispatch()
 
   const colorStroke = showNav ? { stroke: 'var(--font-color-navbar)' } : { stroke: 'var(--logo)' }
 
@@ -30,7 +30,8 @@ export function Navigation () {
 
   const pressOpenMenuButton = () => {
     setShowNav(!showNav)
-    dispatchNewStateContext({ num: context.num, show: false })
+    const newContext = changeContextState(context.state, { num: context.state.num, show: false })
+    context.dispatch(newContext)
   }
 
   return (

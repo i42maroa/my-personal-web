@@ -8,15 +8,15 @@ import { LatteSvg } from './coffes/Latte/Latte'
 import { GlassSvg } from './coffes/Glass/Glass'
 import showComponent from '@/hook/showComponent'
 import showComponentOr from '@/hook/showComponentOr'
-import { StatusColorContext, useStateDispatch } from '@/app/StatusContextProvider'
+import { StatusColorContext } from '@/app/StatusContextProvider'
 import { TurnOnButton } from '../Buttons/TurnOn'
 import Link from 'next/link'
+import changeContextState from '@/hook/changeContext'
 
 export function CoffeeMachine ({ setShowNav, setShowCoffeMachine }:{setShowNav:Dispatch<SetStateAction<boolean>>, setShowCoffeMachine:Dispatch<SetStateAction<boolean>>}) {
   const [state, setMachineState] = useState(STATES.INITIAL_STATE)
   const [drink, setDrinkChoice] = useState(STATES.DRINK.NONE)
   const context = useContext(StatusColorContext)
-  const dispatchNewStateContext = useStateDispatch()
 
   const showLiquidDependOfChoice = () => {
     switch (drink) {
@@ -39,13 +39,13 @@ export function CoffeeMachine ({ setShowNav, setShowCoffeMachine }:{setShowNav:D
   const changeColor = () => {
     switch (drink) {
       case STATES.DRINK.COFFEE:
-        dispatchNewStateContext({ num: 2, show: true })
+        context.dispatch(changeContextState(context.state, { num: 2, show: true }))
         break
       case STATES.DRINK.LATTE:
-        dispatchNewStateContext({ num: 1, show: true })
+        context.dispatch(changeContextState(context.state, { num: 1, show: true }))
         break
       case STATES.DRINK.MILK:
-        dispatchNewStateContext({ num: 0, show: true })
+        context.dispatch(changeContextState(context.state, { num: 0, show: true }))
     }
 
     setMachineState(STATES.INITIAL_STATE)
@@ -95,21 +95,21 @@ export function CoffeeMachine ({ setShowNav, setShowCoffeMachine }:{setShowNav:D
         </div>
         <div className={styles.coffeeButtons}>
           {
-            context.num !== STATES.DRINK.COFFEE &&
+            context.state.num !== STATES.DRINK.COFFEE &&
               <div className={styles.buttonContainer}>
                 <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_COFFEE_BUTTON)} />
                 <span>EXPRESO</span>
               </div>
           }
           {
-            context.num !== STATES.DRINK.LATTE &&
+            context.state.num !== STATES.DRINK.LATTE &&
               <div className={styles.buttonContainer}>
                 <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_LATTE_BUTTON)} />
                 <span>LATTE</span>
               </div>
           }
           {
-            context.num !== STATES.DRINK.MILK &&
+            context.state.num !== STATES.DRINK.MILK &&
               <div className={styles.buttonContainer}>
                 <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_MILK_BUTTON)} />
                 <span>LECHE</span>
