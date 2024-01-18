@@ -39,7 +39,7 @@ function reducer (state:CONTEXT_STATE, newState: CONTEXT_STATE) {
 export function StatusContextProvider ({ children }: {
     children: React.ReactNode
   }) {
-  const [status, dispatch] = useReducer(reducer, { num: 2, show: false })
+  const [status, dispatch] = useReducer(reducer, { num: 0, show: false })
 
   return (
     <StatusColorContext.Provider value={status}>
