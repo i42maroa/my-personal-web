@@ -19,17 +19,17 @@
 .input, .textarea{
     outline: 2px solid var(--stroke);
     padding: 0.5rem 1rem;
-    background-color: transparent;
+    background-color: var(--white);
     font-size: 18px;
     font-weight: 800;
     border: none;
-    color: var(--font-color);
+    color: var(--hard-brown);
     transition: all 0.2s linear;
 }
 
 
 .input::placeholder, .textarea::placeholder{
-    color: var(--form-placeholder);
+    color: var(--hard-brown);
     font-weight: 400;
 }
 
