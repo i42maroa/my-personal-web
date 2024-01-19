@@ -19,7 +19,11 @@ export function Experience ({ experience }: { experience: ExperienceInterface })
             <div className={styles.descriptionContainerUnity} key={e.title}>
               <div className={styles.titleDescriptionContainer}>
                 <h4 className={styles.titleDescription}>{e.title}</h4>
-                <p className={styles.description}>{e.description}</p>
+                {
+                  e.description && e.description.map((d, index) => (
+                    <p key={index} className={styles.description}>{d}</p>
+                  ))
+                }
               </div>
               {/* <div className={styles.contentTechnologies}>
                 {e.tecnologies.length > 0 && e.tecnologies.map((t) => (

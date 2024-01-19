@@ -125,7 +125,7 @@ export function CoffeeMachine ({ setShowNav, setShowCoffeMachine }:{setShowNav:D
           </div>
         </div>
         <div className={styles.buttonReadyContainer}>
-          <Link href='/' className={`${styles.buttonOk} ${showComponent(state.showReadyButton, styles.hiddenClass)}`} onClick={() => handleOnButton()}>
+          <Link href='/#frontal' className={`${styles.buttonOk} ${showComponent(state.showReadyButton, styles.hiddenClass)}`} onClick={() => handleOnButton()}>
             <TurnOnButton />
           </Link>
         </div>

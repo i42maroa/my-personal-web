@@ -37,7 +37,7 @@
     justify-content: center;
     width: 150px;
     height: 150px;
-    background-color: var(--blue);
+    background-color: var(--white);
     margin: 30px auto;
     outline: 2px solid var(--hard-brown);
     position: relative;
@@ -63,7 +63,7 @@
     font-size: 20px;
     display: block;
     margin: auto;
-    color: var(--white);
+    color: var(--hard-brown);
 }
 
 .enjoyPanel{

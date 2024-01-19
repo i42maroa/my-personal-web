@@ -47,7 +47,7 @@ export default function ContactForm () {
    }
 
    const markInputEmailStrokeBad = () => {
-     return isEmailNotValid(formData.user_email) && formData.user_email !== '' ? { outline: '3px solid #f00' } : styleIfIsFilled(formData.user_email)
+     return isEmailNotValid(formData.user_email) && formData.user_email !== '' ? { outline: '3px solid #f00', background: 'var(--form-fill-background)', color: 'var(--form-fill-color)' } : styleIfIsFilled(formData.user_email)
    }
 
    const setValid = (formData:FormInterface) => {

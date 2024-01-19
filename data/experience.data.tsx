@@ -5,12 +5,16 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
   {
     title: 'Grado Ingeniería Informática',
     subtitle: 'Universidad de Córdoba',
-    year: '2020',
+    year: '2017',
     logo: '/images/uco.png',
     descriptions: [
       {
         title: 'Especialidad Software',
-        description: 'Creación y administración de proyectos usando metodologías ágiles.',
+        description: [
+          'Creación y administración de proyectos usando metodologías ágiles.',
+          'Desarrollo microservicios para el cliente PagoNxt.',
+          'Desarrollo microservicios para el cliente PagoNxt.'
+        ],
         tecnologies: [
           TEC.SCRUM, TEC.JAVA, TEC.ANDROID
         ]
@@ -18,14 +22,19 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
     ]
   },
   {
-    title: 'Junior fullstack',
+    title: 'FullStack Engineer',
     subtitle: 'SopraSteria',
-    year: '2023',
+    year: '2021',
     logo: '/images/sopra.png',
     descriptions: [
       {
-        title: 'Frontend',
-        description: 'Encargado de desarrollar varios proyectos frontales para el cliente Banco Santander.',
+        title: 'Desarrollo Frontend',
+        description: [
+          'Encargado de desarrollar varios proyectos frontales para el cliente Banco Santander.',
+          'Desarrollo microservicios para el cliente PagoNxt.',
+          'Desarrollo microservicios para el cliente PagoNxt.',
+          'Desarrollo microservicios para el cliente PagoNxt.'
+        ],
         tecnologies: [
           TEC.ANGULAR,
           TEC.HTML,
@@ -34,8 +43,13 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
         ]
       },
       {
-        title: 'Backend',
-        description: 'Desarrollo microservicios para el cliente PagoNxt.',
+        title: 'Desarrollo Backend',
+        description: [
+          'Desarrollo microservicios para el cliente PagoNxt.',
+          'Desarrollo microservicios para el cliente PagoNxt.',
+          'Desarrollo microservicios para el cliente PagoNxt.',
+          'Desarrollo microservicios para el cliente PagoNxt.'
+        ],
         tecnologies: [
           TEC.SPRING,
           TEC.GRAPHQL,

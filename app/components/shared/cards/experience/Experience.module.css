@@ -114,6 +114,7 @@
     animation: appear_right linear forwards; 
     animation-timeline: view();
     animation-range: 20% 30%; 
+    margin-left: 5px;
 }
 
 .contentTechnologies{

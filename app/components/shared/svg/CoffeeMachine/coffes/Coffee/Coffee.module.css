@@ -1,9 +1,11 @@
-.st0{fill:#FAFAFA;}
+.st0{fill:var(--hard-brown);}
 	.st1{fill:#63ABA3;}
-	.st2{fill:#4D361F;}
+	.st2{fill:#4D361F;
+	stroke: var(--white);
+	stroke-width: 10px;}
 
 	.st4{
-		fill:  var(--blue);
+		fill:  var(--white);
 	}
     .container{
 enable-background:new 0 0 400 400;
