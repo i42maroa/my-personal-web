@@ -87,6 +87,13 @@
     animation: disappear 0.3s ease-out forwards;
 }
 
+.appearMachine{
+    animation: appear-machine 0.3s ease-out both;
+}
+.disappearMachine{
+    display: none;
+}
+
 .buttonShowCoffee{
     border: none;
     padding: 0.5rem 1rem ;
@@ -153,6 +160,27 @@
         margin: 0.2rem;
     }
 }
+
+@keyframes appear-machine {
+    0%{
+        transform: translate(5vh, 0);
+        opacity: 0;
+        display: none;
+    }
+    10%{
+        display: flex;  
+    }
+    30%{   
+        
+        opacity: 1;
+    }
+    100%{
+        transform: translate(0, 0);
+        opacity: 1;
+        display: flex; 
+    }
+}
+
 
 
 @keyframes appear {

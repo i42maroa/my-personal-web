@@ -33,7 +33,7 @@ export function MenuNavigation ({ setShowNav }:{setShowNav:Dispatch<SetStateActi
           <button className={styles.buttonShowCoffee} onClick={() => setShowCoffeeMachine(true)}>Yo te invito</button>
         </ul>
 
-        <div className={`${styles.machineContainer} ${showCoffeeMachine ? styles.appear : styles.disappear}`}>
+        <div className={`${styles.machineContainer} ${showCoffeeMachine ? styles.appearMachine : styles.disappearMachine}`}>
           <button className={styles.backButton} onClick={() => setShowCoffeeMachine(false)}><LeftArrowSvg /></button>
           <h3 className={styles.title} />
           <CoffeeMachine setShowNav={setShowNav} setShowCoffeMachine={setShowCoffeeMachine} />
