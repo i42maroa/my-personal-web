@@ -38,7 +38,7 @@ export function Navigation () {
     <header className={`${styles.header} ${showNavbarDependOfScroll(isScrollDown, styles.scrollDown, styles.scrollUp)} `}>
       <div className={styles.navigation}>
         <div className={styles.navigationHeader}>
-          <Link href='/' className={styles.logoContainer}>
+          <Link href='/#frontal' className={styles.logoContainer}>
             <LogoAnimateSvg colorStroke={colorStroke} isFrontal={false} />
           </Link>
           <div className={styles.displayButton}>

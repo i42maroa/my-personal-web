@@ -44,7 +44,7 @@ export function Footer () {
           <Link href='https://www.linkedin.com/in/antonio-mar%C3%ADn-rodr%C3%ADguez-07681b1bb/' className={styles.socialMedia}>
             <LinkedinSvg />
           </Link>
-          <Link href='/#contact' className={styles.socialMedia}>
+          <Link href='https://www.instagram.com/antonito_marin/' className={styles.socialMedia}>
             <InstagramSvg />
           </Link>
         </div>
