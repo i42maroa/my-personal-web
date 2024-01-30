@@ -11,9 +11,7 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
       {
         title: 'Especialidad Software',
         description: [
-          'Creación y administración de proyectos usando metodologías ágiles.',
-          'Desarrollo microservicios para el cliente PagoNxt.',
-          'Desarrollo microservicios para el cliente PagoNxt.'
+
         ],
         tecnologies: [
           TEC.SCRUM, TEC.JAVA, TEC.ANDROID
@@ -30,10 +28,8 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
       {
         title: 'Desarrollo Frontend',
         description: [
-          'Encargado de desarrollar varios proyectos frontales para el cliente Banco Santander.',
-          'Desarrollo microservicios para el cliente PagoNxt.',
-          'Desarrollo microservicios para el cliente PagoNxt.',
-          'Desarrollo microservicios para el cliente PagoNxt.'
+          'Desarrollo frontal para consultas de pagos para el cliente Banco Santander',
+          'Migración de antiguos frontales para el cliente Banco Santander'
         ],
         tecnologies: [
           TEC.ANGULAR,
@@ -45,10 +41,7 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
       {
         title: 'Desarrollo Backend',
         description: [
-          'Desarrollo microservicios para el cliente PagoNxt.',
-          'Desarrollo microservicios para el cliente PagoNxt.',
-          'Desarrollo microservicios para el cliente PagoNxt.',
-          'Desarrollo microservicios para el cliente PagoNxt.'
+          'Creación de varios microservicios para el cliente PagoNxt'
         ],
         tecnologies: [
           TEC.SPRING,
