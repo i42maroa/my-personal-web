@@ -98,21 +98,21 @@ export function CoffeeMachine ({ setShowNav, setShowCoffeMachine }:{setShowNav:D
             context.state.num !== STATES.DRINK.COFFEE &&
               <div className={styles.buttonContainer}>
                 <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_COFFEE_BUTTON)} />
-                <span>EXPRESO</span>
+                <span onClick={() => clickDrinkButton(STATES.CLICK_COFFEE_BUTTON)}>EXPRESO</span>
               </div>
           }
           {
             context.state.num !== STATES.DRINK.LATTE &&
               <div className={styles.buttonContainer}>
                 <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_LATTE_BUTTON)} />
-                <span>LATTE</span>
+                <span onClick={() => clickDrinkButton(STATES.CLICK_LATTE_BUTTON)}>LATTE</span>
               </div>
           }
           {
             context.state.num !== STATES.DRINK.MILK &&
               <div className={styles.buttonContainer}>
                 <button className={styles.button} onClick={() => clickDrinkButton(STATES.CLICK_MILK_BUTTON)} />
-                <span>LECHE</span>
+                <span onClick={() => clickDrinkButton(STATES.CLICK_MILK_BUTTON)}>LECHE</span>
               </div>
           }
         </div>
