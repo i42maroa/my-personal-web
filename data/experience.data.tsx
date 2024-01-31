@@ -11,7 +11,8 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
       {
         title: 'Especialidad Software',
         description: [
-
+          '- Gestión y administración de proyectos',
+          '- Metodologías ágiles'
         ],
         tecnologies: [
           TEC.SCRUM, TEC.JAVA, TEC.ANDROID
@@ -26,10 +27,10 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
     logo: '/images/sopra.png',
     descriptions: [
       {
-        title: 'Desarrollo Frontend',
+        title: 'Banco Santander',
         description: [
-          'Desarrollo frontal para consultas de pagos para el cliente Banco Santander',
-          'Migración de antiguos frontales para el cliente Banco Santander'
+          '- Frontal que muestra los pagos',
+          '- Migración de antiguos frontales'
         ],
         tecnologies: [
           TEC.ANGULAR,
@@ -39,9 +40,12 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
         ]
       },
       {
-        title: 'Desarrollo Backend',
+        title: 'PagonNxt',
         description: [
-          'Creación de varios microservicios para el cliente PagoNxt'
+          '- Librería que genera los eventos que se van a usar para comunicar los diferentes microservicios a través de tópicos Kafka',
+          '- Microservicio que adminstra la base de datos Mongo para recoger los eventos generados por cada uno de losmicroservicios',
+          '- Api Graphql para consulta de pagos',
+          '- Microservicio encargado de generar los eventos Bizum'
         ],
         tecnologies: [
           TEC.SPRING,

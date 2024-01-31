@@ -29,8 +29,17 @@ export function MenuNavigation ({ setShowNav }:{setShowNav:Dispatch<SetStateActi
           <li>
             <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#contact'>Cómo contactarme</Link>
           </li>
+          <h3 className={styles.title}>¿Sigues con dudas?</h3>
+          <li>
+
+            <button className={styles.buttonShowCoffee}>
+              <a href='/pdf/CV.pdf' target='_blank' rel='noopener noreferrer' download>Te lo resumo</a>
+            </button>
+          </li>
           <h3 className={styles.title}>¿Quieres un café?</h3>
-          <button className={styles.buttonShowCoffee} onClick={() => setShowCoffeeMachine(true)}>Yo te invito</button>
+          <li>
+            <button className={styles.buttonShowCoffee} onClick={() => setShowCoffeeMachine(true)}>Yo te invito</button>
+          </li>
         </ul>
 
         <div className={`${styles.machineContainer} ${showCoffeeMachine ? styles.appearMachine : styles.disappearMachine}`}>
