@@ -154,6 +154,12 @@
         width: 150px;
         margin: 0.5rem auto;
     }
+    
+    .buttonShowCoffee{
+        font-size: 18px;
+        width: 150px;
+        margin: 0;
+    }
 }
 
 @media (max-width: 300px) {
