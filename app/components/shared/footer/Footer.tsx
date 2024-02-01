@@ -26,11 +26,12 @@ export function Footer () {
             <li>
               <Link className={styles.navigationElement} href='/#contact'>Cómo contactarme</Link>
             </li>
+            <li>
+              <button className={styles.buttonShowCoffee}>
+                <a href='/pdf/CV.pdf' target='_blank' rel='noopener noreferrer' download>Te lo resumo</a>
+              </button>
+            </li>
           </ul>
-
-          {/* <div className={styles.sumupContainer}>
-            <button className={styles.button}>Te lo resumo</button>
-          </div> */}
 
         </div>
       </div>
