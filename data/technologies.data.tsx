@@ -12,6 +12,7 @@ export const FRONT_TECHNOLOGY: TechnologyInterface[] = [
 ]
 
 export const BACK_TECHNOLOGY: TechnologyInterface[] = [
+  TEC.JAVA,
   TEC.SPRING,
   TEC.GRAPHQL,
   TEC.MONGO_DB,
@@ -21,5 +22,4 @@ export const BACK_TECHNOLOGY: TechnologyInterface[] = [
 export const MIXT_TECHNOLOGY: TechnologyInterface[] = [
   TEC.ILLUSTRATOR,
   TEC.PHOTOSHOP
-  // TEC.SCRUM
 ]

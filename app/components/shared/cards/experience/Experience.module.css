@@ -115,6 +115,7 @@
     animation-timeline: view();
     animation-range: 20% 30%; 
     margin-left: 5px;
+    margin-bottom: 5px;
 }
 
 .contentTechnologies{
