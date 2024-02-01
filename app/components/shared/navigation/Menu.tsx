@@ -31,7 +31,6 @@ export function MenuNavigation ({ setShowNav }:{setShowNav:Dispatch<SetStateActi
           </li>
           <h3 className={styles.title}>¿Sigues con dudas?</h3>
           <li>
-
             <button className={styles.buttonShowCoffee}>
               <a href='/pdf/CV.pdf' target='_blank' rel='noopener noreferrer' download>Te lo resumo</a>
             </button>
