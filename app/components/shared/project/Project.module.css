@@ -156,7 +156,7 @@
 @media (max-width: 500px) {
 
     .container{
-        width: auto;
+        width: 350px;
     }
 
     .github{
@@ -168,13 +168,28 @@
         width: 20px;
         height:20px;
     }
+
+    .imageContainer{
+        height: 300px;
+    }
 }
+
+@media (max-width: 400px) {
+
+    .container{
+        width: 300px;
+    }
+
+    .imageContainer{
+        height: 250px;
+    }
+}
+
 
 @media (max-width: 350px) {
 
     .container{
-        width: auto;
-       max-width: 300px;
+       max-width: 280px;
     }
 
     .github{
@@ -187,8 +202,12 @@
         height:15px;
     }
 
-   
+    .imageContainer{
+        height: 250px;
+    }
 }
+
+
 
 /* KEYFRAMES */
 @keyframes appear_left {
