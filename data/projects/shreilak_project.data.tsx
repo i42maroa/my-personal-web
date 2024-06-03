@@ -1,31 +1,31 @@
 import { ProjectInterface } from '@/app/interface/project.interface'
-import { FIREBASE, NEXTJS } from '../technology.data'
+import { ANGULAR } from '../technology.data'
 
 export const SHREILAK_PROJECT: ProjectInterface = {
   title: 'SHREILAK',
-  shortDescription: 'Página web con temática de Shrek en la que se cuenta una historia alternativa. Su protagonista es Shreilak, que se ha convertido en ogra debido a una nueva maldición, que habrá que ayudarla a recuperar su forma natural ayudando a otros personajes de los cuentos.',
+  shortDescription: 'Página web con temática de Shrek en la que se cuenta una historia alternativa. Su protagonista es Shreilak, una princesa que se ha convertido en ogra debido a una nueva maldición. Tendrá que hacer frente una serie de capitulos para volver a su forma original.',
   technologies: [
-    NEXTJS, FIREBASE
+    ANGULAR
   ],
   images: [
     {
       alt: 'title',
-      url: '/project/shreilak/shreilak-title.jpg'
+      url: '/project/shreilak/shreilak-1.jpg'
     },
     {
       alt: 'landing',
-      url: '/project/shreilak/landing.jpg'
+      url: '/project/shreilak/shreilak-2.png'
     },
     {
       alt: 'book',
-      url: '/project/shreilak/book.jpg'
+      url: '/project/shreilak/shreilak-3.png'
     },
     {
       alt: 'resource',
-      url: '/project/shreilak/resource.jpg'
+      url: '/project/shreilak/shreilak-4.png'
     }
   ],
   urlGithub: 'https://github.com/i42maroa/sheilaWebpage',
-  status: 'NONE',
-  url: 'https://github.com/i42maroa/english-training'
+  status: 'DEPLOY',
+  url: 'https://shreilak.com'
 }
