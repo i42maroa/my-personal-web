@@ -25,7 +25,7 @@ export function ProjectCardComponent ({ project }: {
 
       {project.images.length > 0 &&
         <div className={styles.imageContainer}>
-          <Slider arrayImages={project.images} />
+          {project.images.length > 0 && <Slider arrayImages={project.images} />}
         </div>}
 
       <div className={styles.footerCardContainer}>
