@@ -15,7 +15,7 @@ export function ProjectCardComponent ({ project }: {
       <div className={styles.textContainer}>
         <div className={styles.titleContainer}>
           <h4 className={styles.title}>{project.title}</h4>
-          <Link className={styles.github} href={project.urlGithub}>
+          <Link className={styles.github} href={project.urlGithub} target='_blank'>
             <GithubSvg />
           </Link>
         </div>
@@ -32,12 +32,12 @@ export function ProjectCardComponent ({ project }: {
         <div className={styles.technologiesContainer}>
           {project.technologies && project.technologies.map((data) => (
             <div key={data.image.alt} className={styles.technology}>
-              <Image alt={data.image.alt} src={data.image.url} fill sizes='500vh' />
+              <Image alt={data.image.alt} src={data.image.url} fill sizes='1000vh' />
             </div>
           ))}
         </div>
         {project.status === 'DEPLOY' &&
-          <Link className={styles.deploy} href={project.urlGithub}>
+          <Link className={styles.deploy} href={project.url!} target='_blank'>
             <DeploySvg fill={fillStyle} />
           </Link>}
       </div>
