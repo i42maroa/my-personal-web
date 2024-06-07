@@ -26,6 +26,9 @@
 .logoContainer{
     width: 4.5rem;
 }
+.logoContainer svg{
+    fill: red;
+}
 
 .displayButton{
     width: 5rem;

@@ -1,7 +1,7 @@
 /* eslint-disable no-tabs */
 import styles from './LogoAnimate.module.css'
 
-export function LogoAnimateSvg ({ colorStroke, isFrontal }:{colorStroke:{stroke:string}, isFrontal:boolean}) {
+export function LogoAnimateSvg ({ isFrontal }:{isFrontal:boolean}) {
   return (
     <svg
       version='1.1' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
@@ -20,7 +20,7 @@ export function LogoAnimateSvg ({ colorStroke, isFrontal }:{colorStroke:{stroke:
 		c0.6,4,1.2,8,1.5,12c0.5,5,0.9,10,1.1,15.1C312.2,380.1,312.2,383.1,312.2,386z'
           />
         </g>}
-      <g id='contornos' style={colorStroke}>
+      <g id='contornos' className={`${isFrontal ? styles.strokeLoad : styles.stroke}`}>
         <path className={styles.line0} d='M56.2,142c267.4-10.8,270.7,247.5,270.7,247.5' />
         <line className={styles.line1} x1='326.9' y1='389.5' x2='281' y2='4.9' />
         <line className={styles.line2} x1='279.3' y1='13.9' x2='137' y2='278' />

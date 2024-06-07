@@ -1,5 +1,6 @@
 .container{
     transition: scale 0.2s ease-in;
+    
 }
 
 .line0 , .line1, .line2, .line3 {
@@ -46,6 +47,14 @@
 .container:hover .color0, .container:hover .color1{
     fill: var(--green);
     
+}
+
+.strokeLoad{
+    stroke: var(--white);
+}
+
+.stroke{
+    stroke: var(--logo);
 }
 
 @keyframes fill-line0 {
