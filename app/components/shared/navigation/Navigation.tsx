@@ -15,8 +15,6 @@ export function Navigation () {
   const [isScrollDown, setIsScrollingDown] = useState(false)
   const context = useContext(StatusColorContext)
 
-  const colorStroke = showNav ? { stroke: 'var(--font-color-navbar)' } : { stroke: 'var(--logo)' }
-
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -39,7 +37,7 @@ export function Navigation () {
       <div className={styles.navigation}>
         <div className={styles.navigationHeader}>
           <Link href='/#frontal' className={styles.logoContainer}>
-            <LogoAnimateSvg colorStroke={colorStroke} isFrontal={false} />
+            <LogoAnimateSvg isFrontal={false} />
           </Link>
           <div className={styles.displayButton}>
             <button className={styles.button} onClick={() => pressOpenMenuButton()}><MenuButton stateValue={showNav} /></button>

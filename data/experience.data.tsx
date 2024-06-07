@@ -29,7 +29,7 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
       {
         title: 'Banco Santander',
         description: [
-          '- Frontal que muestra los pagos',
+          '- Frontal para servicio de consulta de pagos',
           '- Migración de antiguos frontales'
         ],
         tecnologies: [

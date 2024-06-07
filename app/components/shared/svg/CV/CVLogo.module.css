@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    fill: var(--hard-brown);
+    margin: auto;
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 500px) {
+
+    .container{
+        width: 18px;
+        height: 18px;
+    }
+}
