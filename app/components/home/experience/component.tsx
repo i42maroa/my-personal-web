@@ -8,7 +8,6 @@ const experience = EXPERIENCE_DATA
 export default function ExperienceComponent () {
   return (
     <section id={LINKS[PAGES.ABOUT].sections[2]} className={styles.mainContainer}>
-
       <h2>Mi experiencia</h2>
 
       {experience.length > 0 &&
@@ -19,7 +18,6 @@ export default function ExperienceComponent () {
               <Experience key={experience.title} experience={experience} />
             ))}
           </div>
-
         </div>}
     </section>
   )

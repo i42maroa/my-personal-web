@@ -17,17 +17,19 @@ export default function RootLayout ({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
+    <html lang='es'>
       <head>
+        <meta charSet='UTF-8' />
+        <meta name='description' content='This web provides an information about my worksheet and all my tecnology knowledge' />
         <title>My personal web</title>
       </head>
       <body suppressHydrationWarning>
         <StatusContextProvider>
           <Navigation />
           <LoadPage />
-          <div className={styles.children}>
+          <article className={styles.children}>
             {children}
-          </div>
+          </article>
           <Footer />
         </StatusContextProvider>
       </body>

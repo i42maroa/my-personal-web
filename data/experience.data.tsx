@@ -3,24 +3,6 @@ import * as TEC from '@/data/technology.data'
 
 export const EXPERIENCE_DATA: ExperienceInterface[] = [
   {
-    title: 'Grado Ingeniería Informática',
-    subtitle: 'Universidad de Córdoba',
-    year: '2017',
-    logo: '/images/uco.png',
-    descriptions: [
-      {
-        title: 'Especialidad Software',
-        description: [
-          '- Gestión y administración de proyectos',
-          '- Metodologías ágiles'
-        ],
-        tecnologies: [
-          TEC.SCRUM, TEC.JAVA, TEC.ANDROID
-        ]
-      }
-    ]
-  },
-  {
     title: 'FullStack Engineer',
     subtitle: 'SopraSteria',
     year: '2021',
@@ -52,6 +34,24 @@ export const EXPERIENCE_DATA: ExperienceInterface[] = [
           TEC.GRAPHQL,
           TEC.MONGO_DB,
           TEC.KAFKA
+        ]
+      }
+    ]
+  },
+  {
+    title: 'Grado Ingeniería Informática',
+    subtitle: 'Universidad de Córdoba',
+    year: '2017',
+    logo: '/images/uco.png',
+    descriptions: [
+      {
+        title: 'Especialidad Software',
+        description: [
+          '- Gestión y administración de proyectos',
+          '- Metodologías ágiles'
+        ],
+        tecnologies: [
+          TEC.SCRUM, TEC.JAVA, TEC.ANDROID
         ]
       }
     ]

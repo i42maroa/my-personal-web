@@ -6,11 +6,9 @@ import { LINKS, PAGES } from '@/data/links.data'
 export default function ThecnologiesComponent () {
   return (
     <section id={LINKS[PAGES.ABOUT].sections[1]} className={styles.mainContainer}>
-
       <h2>Mis herramientas</h2>
 
       <div className={styles.technologiesGroupContainer}>
-
         <div className={styles.technologySingleContainer}>
           <h3>FRONTEND</h3>
           <div className={styles.technologyContainer}>

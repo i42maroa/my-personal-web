@@ -4,62 +4,34 @@
     margin-bottom: 0.5rem;
 }
 
-.leftContainer{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: auto 0;
-}
-
 .listContainer{
     padding: 1rem;
 }
 
-.listContainer li{
-    padding: 1rem 0;
+.navigationElement{
+    margin: 1.5rem 1rem;
     transition: all 0.1s ease-in;
 }
 
-.listContainer li:hover{
+.navigationElement:hover{
     scale: 1.02;
 }
 
-.navigationElement{
+.navigationElementText{
     outline: none;
     color: var(--font-color-footer);
     font-size: 22px;
     text-decoration: none;
 }
 
-.navigationElement:hover{
+.navigationElementText:hover{
     color: var(--green);
 }
 
-.rightContainer{
-    display: flex;
-    margin: auto;
-    width: 100%;
+.navbarButton{
+    margin: 2rem 1rem 1rem 1rem;
 }
 
-.coffeeMachineContainer{
-    margin: auto;
-}
-
-.button{
-    display: flex;
-    border: none;
-    color: var(--white);
-    border-radius: 5px;
-    background-color: var(--green);
-    padding: 0.75rem 1rem;
-    font-size: 20px;
-    margin: 1rem;
-}
-
-.button:hover{
-    transform: scale(1.05);
-    transition: 0.5s;
-}
 
 .bottomContainer{
     display: flex;
@@ -87,70 +59,40 @@
     scale: 1.1;
 }
 
-.buttonShowCoffee{
-    background-color: var(--green);
-    color: var(--white);
-    border: none;
-    padding: 0.5rem 0;
-    border-radius: 2px;
-    font-size: 22px;
-    font-weight: 800;
-    width: 200px;
-    transition: all .2s ease-in-out ;
-}
-
-.buttonShowCoffee a{
-    color: var(--white);
-    text-decoration: none;
-}
-
 @media (max-width: 1000px) {
 
     .footerContainer{
         flex-direction: column;
-        gap: 3rem;
+        gap: 1rem;
     }
-
-    .button{
-        margin: 2rem auto;
-    }   
-
-    .navigationElement{
+    .navigationElementText{
       font-size: 20px;
     }
-
     .socialMedia{
         width: 30px;
         height: 30px;
         margin: 0.3rem;
     }
-
 }
 
 @media (max-width: 500px) {
-    
-    .navigationElement{
+  
+    .navigationElementText{
         font-size: 16px;
-      }
+    }
 
-    .listContainer li{
+    .navigationElement{
+        margin: 0.5rem ;
         padding: 0.5rem 0;
     }
-
-    .button{
-        padding: 0.5rem 0.75rem;
-        font-size: 16px;
-        margin: 1rem auto;
+    
+    .navbarButton{
+        margin:1.5rem 0.5rem 1rem 0.5rem;
     }
-
+    
     .socialMedia{
         width: 20px;
         height: 20px;
         margin: 0.2rem;
-    }
-
-    .buttonShowCoffee{
-        font-size: 18px;
-        width: 150px;
     }
 }

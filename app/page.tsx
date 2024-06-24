@@ -22,9 +22,9 @@ export default function Home () {
       <Delimiter />
       <ExperienceComponent />
       <Delimiter />
-      <ThecnologiesComponent />
-      <Delimiter />
       <ProjectsComponent />
+      <Delimiter />
+      <ThecnologiesComponent />
       <Delimiter />
       <ContactComponent />
       <Delimiter />
