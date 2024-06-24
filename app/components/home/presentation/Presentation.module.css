@@ -60,6 +60,23 @@
     display: none;
 }
 
+.socialMediaContainer{
+    display: flex;
+    margin-top: 1rem;
+    gap: 5px;
+    animation: reveal .8s cubic-bezier(.215,.61,.355,1) 3.9s backwards;
+}
+
+.socialMedia{
+    width: 40px;
+    height: 40px;
+    margin: 0.5rem;
+    transition: scale 0.3s ease-in;
+}
+
+.socialMedia:hover{
+    scale: 1.1;
+}
 
 @media (max-width: 1000px) {
 
@@ -82,6 +99,12 @@
         text-align: center;
     }
 
+    .socialMedia{
+        width: 30px;
+        height: 30px;
+        margin: 0.3rem;
+    }
+
 }
 
 
@@ -94,8 +117,30 @@
         height: 25vh;
         min-height: 200px;
     }
-  
+
+    .socialMedia{
+        width: 20px;
+        height: 20px;
+        margin: 0.2rem;
+    }
+
+    .socialMediaContainer{
+        margin: 0.5rem auto;
+        justify-content: center;
+    }
 }
+
+@media (max-width: 300px) {
+
+    .socialMedia{
+        width: 20px;
+        height: 20px;
+        margin: 0.2rem;
+    }
+
+}
+
+
 @keyframes reveal {
     0% {
         opacity: 0;

@@ -1,15 +1,15 @@
-
+.container{
+    transition: fill .2s ease-in-out;
+}
 .github{
     fill: var(--white);
-    transition: fill .2s ease-in-out;
 }
 
 .st0{
     fill: var(--font-color-footer);
-    transition: fill .2s ease-in-out;
 }
 
-.github:hover{
+.container:hover{
     fill: var(--green);
 }
 
@@ -24,6 +24,13 @@
     margin: auto;
 } 
 
+.presentation{
+    fill: var(--font-color);
+}
+
+.footer{
+    fill: var(--font-color-footer);
+}
 
 @media (max-width: 500px) {
     .turnOn{

@@ -43,10 +43,10 @@ export function Footer () {
 
         <div className={styles.socialMediaContainer}>
           <Link href='https://www.linkedin.com/in/antonio-mar%C3%ADn-rodr%C3%ADguez-07681b1bb/' className={styles.socialMedia}>
-            <LinkedinSvg />
+            <LinkedinSvg isPresentation={false} />
           </Link>
           <Link href='https://www.instagram.com/antonito_marin/' className={styles.socialMedia}>
-            <InstagramSvg />
+            <InstagramSvg isPresentation={false} />
           </Link>
         </div>
       </div>
