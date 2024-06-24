@@ -25,13 +25,6 @@ export function Experience ({ experience }: { experience: ExperienceInterface })
                   ))
                 }
               </div>
-              {/* <div className={styles.contentTechnologies}>
-                {e.tecnologies.length > 0 && e.tecnologies.map((t) => (
-                  <div key={t.name} className={styles.imageContainer}>
-                    <Image className={styles.image} src={t.image.url} alt={t.image.alt} fill sizes='10vh' />
-                  </div>
-                ))}
-              </div> */}
             </div>
           ))}
       </div>

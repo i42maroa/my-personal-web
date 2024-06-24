@@ -9,7 +9,6 @@
     font-weight: 800;
     opacity: 0;
 
-    
     view-timeline-name: --item-timeline;
     animation-timeline: --item-timeline;
     animation-range: 20% 40%; 
@@ -32,9 +31,8 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: center;
-   margin: 1rem auto;
+    margin: 1rem auto;
 }
-
 
 
 @media (max-width: 1000px) {

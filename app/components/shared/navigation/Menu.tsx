@@ -4,8 +4,8 @@ import styles from './Menu.module.css'
 import { CoffeeMachine } from '../svg/CoffeeMachine/CoffeeMachine'
 import { Dispatch, SetStateAction, useState } from 'react'
 import { LeftArrowSvg } from '../svg/LeftArrow/LeftArrow'
-import { CVLogoSVG } from '../svg/CV/CVLogo'
 import { CoffeeSvg } from '../svg/CoffeeMachine/coffes/Coffee/Coffee'
+import { ButtonCV } from '../buttonCV/ButtonCV'
 
 export function MenuNavigation ({ setShowNav }:{setShowNav:Dispatch<SetStateAction<boolean>>}) {
   const [showCoffeeMachine, setShowCoffeeMachine] = useState(false)
@@ -32,10 +32,7 @@ export function MenuNavigation ({ setShowNav }:{setShowNav:Dispatch<SetStateActi
             <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#contact'>Cómo contactarme</Link>
           </li>
           <li className={styles.navbarButton}>
-            <button className={styles.buttonShowCoffee}>
-              <span className={styles.buttonShowCoffeeLogo}><CVLogoSVG /></span>
-              <a href='/pdf/CV.pdf' target='_blank' rel='noopener noreferrer' download>Te lo resumo</a>
-            </button>
+            <ButtonCV />
           </li>
           <li className={styles.navbarButton}>
             <button className={styles.buttonShowCoffee} onClick={() => setShowCoffeeMachine(true)}>
