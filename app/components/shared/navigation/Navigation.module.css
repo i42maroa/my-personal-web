@@ -1,39 +1,23 @@
 .header{
-    border: 1px;
-    border-radius: 4px;
-    width: 100%;
-    position: fixed;
-    z-index: 10;
+    position: sticky;
+    z-index: 1000;
     top: 0;
-    transition: transform 0.4s;
-    animation: appearNav 0.4s ease-in 2.5s backwards;
-}
-
-.navigation {
-    display: flex; 
-    flex-direction: column;
-    position: relative;
-}
-
-.navigationHeader{
-    overflow:hidden;  
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    height: auto;
     padding: 0.8rem;
+    transition: transform 0.4s;
+    animation: appearHeader 0.4s ease-in 0.1s backwards;
 }
 
 .logoContainer{
     width: 4.5rem;
 }
-.logoContainer svg{
-    fill: red;
-}
+
 
 .displayButton{
     width: 5rem;
     position: relative;
-    z-index: 10;
 }
 
 .navigationElement{
@@ -52,14 +36,17 @@
 
 .menu{
     display: flex;
-    position: absolute;
+    position: fixed;
+    top: 0;
     right: 0;
     opacity: 0;
-    animation: appear 0.3s ease-in forwards;
+    animation: appearMenu 0.3s ease-in forwards;
+    z-index: 100;
 }
 
 .disappear{
-    animation: disappear 0.3s ease-out forwards;
+   
+     display: none;
 }
 
 @media (max-width: 1200px) {
@@ -71,7 +58,7 @@
         width: 90px;
     }
 
-    .navigationHeader{
+    .header{
         padding: 10px 10px 0 10px;
     }
 }
@@ -87,7 +74,7 @@
         width: 70px;
     }
 
-    .navigationHeader{
+    .header{
         padding: 10px 10px 0 10px;
     }
 }
@@ -102,7 +89,7 @@
         width: 50px;
     }
 
-    .navigationHeader{
+    .header{
         padding: 8px 8px 0 8px;
     }
 
@@ -126,18 +113,13 @@
         width: 70px;
     }
 
-    .menu{
-        width: 100%;
-        top: 0;
-    }  
-
-    .navigationHeader{
+    .header{
         padding: 8px;
     }
 }
 
 
-@keyframes appearNav{
+@keyframes appearHeader{
     0%{
         transform: translateY(-100%);
     }
@@ -146,7 +128,7 @@
     }
 }
 
-@keyframes appear {
+@keyframes appearMenu {
     0%{
         display: none;
         transform: translate(5vh, 0);
@@ -161,23 +143,5 @@
     100%{
         transform: translate(0, 0);
         opacity: 1;
-    }
-}
-
-@keyframes disappear {
-    0%{
-        transform: translate(0, 0);
-        display: flex;
-        opacity: 1;
-    }
-    80%{
-        opacity: 0;
-    }
-    90%{
-        transform: translate(5vh, 0);
-        opacity: 0;
-    }
-    100%{  
-        display: none;
     }
 }

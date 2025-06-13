@@ -8,46 +8,46 @@ import { CoffeeSvg } from '../svg/CoffeeMachine/coffes/Coffee/Coffee'
 import { ButtonCV } from '../buttonCV/ButtonCV'
 
 export function MenuNavigation ({ setShowNav }:{setShowNav:Dispatch<SetStateAction<boolean>>}) {
-  const [showCoffeeMachine, setShowCoffeeMachine] = useState(false)
+  // const [showCoffeeMachine, setShowCoffeeMachine] = useState(false)
 
   return (
     <nav className={styles.navigationContainer}>
-      <div className={styles.navigationWrapper}>
+      {/* <div className={styles.navigationWrapper}> */}
 
-        <ul className={`${styles.listContainer} ${showCoffeeMachine ? styles.disappear : styles.appear}`}>
-          <h3 className={styles.title}>¿Qué quieres saber?</h3>
-          <li className={styles.navbarOption}>
-            <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#quality'>Qué te puedo aportar</Link>
-          </li>
-          <li className={styles.navbarOption}>
-            <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#experience'>Mi experiencia</Link>
-          </li>
-          <li className={styles.navbarOption}>
-            <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#technology'>Mis herramientas</Link>
-          </li>
-          <li className={styles.navbarOption}>
-            <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#projects'>Mis proyectos</Link>
-          </li>
-          <li className={styles.navbarOption}>
-            <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#contact'>Cómo contactarme</Link>
-          </li>
-          <li className={styles.navbarButton}>
-            <ButtonCV />
-          </li>
-          <li className={styles.navbarButton}>
+      <ul className={`${styles.listContainer} `}>
+        <h3 className={styles.title}>¿Qué quieres saber?</h3>
+        <li className={styles.navbarOption}>
+          <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#quality'>Qué te puedo aportar</Link>
+        </li>
+        <li className={styles.navbarOption}>
+          <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#experience'>Mi experiencia</Link>
+        </li>
+        <li className={styles.navbarOption}>
+          <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#technology'>Mis herramientas</Link>
+        </li>
+        <li className={styles.navbarOption}>
+          <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#projects'>Mis proyectos</Link>
+        </li>
+        <li className={styles.navbarOption}>
+          <Link onClick={() => setShowNav(false)} className={styles.navigationElement} href='/#contact'>Cómo contactarme</Link>
+        </li>
+        <li className={styles.navbarButton}>
+          <ButtonCV />
+        </li>
+        {/* <li className={styles.navbarButton}>
             <button className={styles.buttonShowCoffee} onClick={() => setShowCoffeeMachine(true)}>
               <span className={styles.buttonShowCoffeeLogoCoffee}><CoffeeSvg panel /></span>
               <span className={styles.buttonShowCoffeeText}> Te invito</span>
             </button>
-          </li>
-        </ul>
+          </li> */}
+      </ul>
 
-        <div className={`${styles.machineContainer} ${showCoffeeMachine ? styles.appearMachine : styles.disappearMachine}`}>
+      {/* <div className={`${styles.machineContainer} ${showCoffeeMachine ? styles.appearMachine : styles.disappearMachine}`}>
           <button className={styles.backButton} onClick={() => setShowCoffeeMachine(false)}><LeftArrowSvg /></button>
           <h3 className={styles.title} />
           <CoffeeMachine setShowNav={setShowNav} setShowCoffeMachine={setShowCoffeeMachine} />
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </nav>
   )
 }

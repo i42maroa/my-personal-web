@@ -1,10 +1,9 @@
 import { Navigation } from './components/shared/navigation/Navigation'
 import '../styles/globals.css'
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './Layout.module.css'
 import { Footer } from './components/shared/footer/Footer'
-import { StatusContextProvider } from './StatusContextProvider'
-import LoadPage from './components/load/LoadPage'
+import { StatusColorContext, StatusContextProvider } from './StatusContextProvider'
 
 export const metadata = {
   title: 'Create Next App',
@@ -16,6 +15,7 @@ export default function RootLayout ({
 }: {
   children: React.ReactNode
 }) {
+  // const context = useContext(StatusColorContext)
   return (
     <html lang='es'>
       <head>
@@ -25,8 +25,11 @@ export default function RootLayout ({
       </head>
       <body suppressHydrationWarning>
         <StatusContextProvider>
+          {/* // TODO add animation fill here */}
+
+          {/* <div className={`${styles.fillColor} ${context.state.show ? styles.fill : styles.unfill}`} /> */}
+
           <Navigation />
-          <LoadPage />
           <article className={styles.children}>
             {children}
           </article>

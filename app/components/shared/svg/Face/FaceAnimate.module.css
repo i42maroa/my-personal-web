@@ -55,17 +55,19 @@
 .avatarWrap{
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 
 .avatar{
     display: flex;
+    justify-content: center;
     position: relative;
     height: 40vh;
     margin: auto;
 	width: 60vw;
 	max-width: 575px;
-	animation: backed 1s ease-in 3s both;
+	animation: backed 1s ease-in 0.1s both;
 }
 
 

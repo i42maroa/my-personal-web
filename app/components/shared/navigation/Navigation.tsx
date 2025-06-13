@@ -33,20 +33,18 @@ export function Navigation () {
   }
 
   return (
-    <header className={`${styles.header} ${showNavbarDependOfScroll(isScrollDown, styles.scrollDown, styles.scrollUp)} `}>
-      <div className={styles.navigation}>
-        <div className={styles.navigationHeader}>
-          <Link href='/#frontal' className={styles.logoContainer}>
-            <LogoAnimateSvg isFrontal={false} />
-          </Link>
-          <div className={styles.displayButton}>
-            <button className={styles.button} onClick={() => pressOpenMenuButton()}><MenuButton stateValue={showNav} /></button>
-          </div>
+    <>
+      <header className={`${styles.header} ${showNavbarDependOfScroll(isScrollDown, styles.scrollDown, styles.scrollUp)} `}>
+        <Link href='/#frontal' className={styles.logoContainer}>
+          <LogoAnimateSvg isFrontal={false} />
+        </Link>
+        <div className={styles.displayButton}>
+          <button className={styles.button} onClick={() => pressOpenMenuButton()}><MenuButton stateValue={showNav} /></button>
         </div>
-        <div className={`${styles.menu} ${showNav ? '' : styles.disappear}`}>
-          <MenuNavigation setShowNav={setShowNav} />
-        </div>
+      </header>
+      <div className={`${styles.menu} ${showNav ? '' : styles.disappear}`}>
+        <MenuNavigation setShowNav={setShowNav} />
       </div>
-    </header>
+    </>
   )
 }
