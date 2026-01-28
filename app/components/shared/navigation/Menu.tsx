@@ -4,7 +4,7 @@ import styles from './Menu.module.css'
 import { Dispatch, SetStateAction } from 'react'
 import { ButtonCV } from '../buttons/cv/ButtonCV'
 
-export function MenuNavigation ({ setShowNav }:{setShowNav:Dispatch<SetStateAction<boolean>>}) {
+export function MenuNavigation ({ setShowNav }:{setShowNav:Dispatch<SetStateAction<boolean>>}){
 
   return (
     <nav className={styles.navigationContainer}>

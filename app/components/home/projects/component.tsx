@@ -6,7 +6,7 @@ import { ProjectCardComponent } from '../../shared/project/ProjectCard'
 
 export default function ProjectsComponent () {
   return (
-    <section id="projects" className={styles.mainContainer}>
+    <section id='projects' className={styles.mainContainer}>
       <h2>Mis proyectos personales</h2>
 
       <div className={styles.projectsContainer}>

@@ -6,7 +6,7 @@ import { InstagramSvg } from '../../shared/svg/Buttons/Instagram'
 
 export default function PresentationComponent () {
   return (
-      <section id="frontal" className={styles.sectionContainer}>
+      <section id='frontal' className={styles.sectionContainer}>
         <FaceAnimate />
         <header className={styles.header}>
           <h1 className={styles.title}>Hola, mi nombre es <b>Antonio</b></h1>
