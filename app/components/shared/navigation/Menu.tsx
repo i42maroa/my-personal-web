@@ -1,19 +1,13 @@
 'use client'
 import Link from 'next/link'
 import styles from './Menu.module.css'
-import { CoffeeMachine } from '../svg/CoffeeMachine/CoffeeMachine'
-import { Dispatch, SetStateAction, useState } from 'react'
-import { LeftArrowSvg } from '../svg/LeftArrow/LeftArrow'
-import { CoffeeSvg } from '../svg/CoffeeMachine/coffes/Coffee/Coffee'
-import { ButtonCV } from '../buttonCV/ButtonCV'
+import { Dispatch, SetStateAction } from 'react'
+import { ButtonCV } from '../buttons/cv/ButtonCV'
 
 export function MenuNavigation ({ setShowNav }:{setShowNav:Dispatch<SetStateAction<boolean>>}) {
-  // const [showCoffeeMachine, setShowCoffeeMachine] = useState(false)
 
   return (
     <nav className={styles.navigationContainer}>
-      {/* <div className={styles.navigationWrapper}> */}
-
       <ul className={`${styles.listContainer} `}>
         <h3 className={styles.title}>¿Qué quieres saber?</h3>
         <li className={styles.navbarOption}>
@@ -34,20 +28,7 @@ export function MenuNavigation ({ setShowNav }:{setShowNav:Dispatch<SetStateActi
         <li className={styles.navbarButton}>
           <ButtonCV />
         </li>
-        {/* <li className={styles.navbarButton}>
-            <button className={styles.buttonShowCoffee} onClick={() => setShowCoffeeMachine(true)}>
-              <span className={styles.buttonShowCoffeeLogoCoffee}><CoffeeSvg panel /></span>
-              <span className={styles.buttonShowCoffeeText}> Te invito</span>
-            </button>
-          </li> */}
       </ul>
-
-      {/* <div className={`${styles.machineContainer} ${showCoffeeMachine ? styles.appearMachine : styles.disappearMachine}`}>
-          <button className={styles.backButton} onClick={() => setShowCoffeeMachine(false)}><LeftArrowSvg /></button>
-          <h3 className={styles.title} />
-          <CoffeeMachine setShowNav={setShowNav} setShowCoffeMachine={setShowCoffeeMachine} />
-        </div> */}
-      {/* </div> */}
     </nav>
   )
 }

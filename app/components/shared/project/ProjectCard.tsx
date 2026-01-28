@@ -11,7 +11,6 @@ export function ProjectCardComponent ({ project }: {
   const fillStyle = { fill: 'var(--hard-brown)' }
   return (
     <div className={styles.container}>
-
       <div className={styles.textContainer}>
         <div className={styles.titleContainer}>
           <h4 className={styles.title}>{project.title}</h4>

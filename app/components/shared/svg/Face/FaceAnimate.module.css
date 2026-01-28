@@ -81,10 +81,18 @@
         left: 50%;
         transform: translate(-50%);
         width: 75vw;
-        height: 45vh;
+        height: 30vh;
         min-height: 300px;
     }
 }
+
+@media (max-width: 750px) {
+    .avatarWrap {
+        margin: auto;
+        margin-bottom: 0;
+    }
+}
+
 
 /* === Animation === */
 @keyframes backed {

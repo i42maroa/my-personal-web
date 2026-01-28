@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Bitter', serif;
+    box-sizing: border-box; /*asegura que el padding y el borde se incluyan dentro del ancho total, evitando que el input se desborde.*/
 }
 
 html{
@@ -20,8 +21,21 @@ body{
 
 section{
     display: flex;
-    margin: 0 auto;
+    flex-direction: column;
+    width: 100%;
     max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 10vh; /* for navbar */
+}
+
+section h2 {
+    opacity: 0;
+    view-timeline-name: --item-timeline;
+    animation-timeline: --item-timeline;
+    animation-range: 15% 25%; 
+    animation-name: appear_left;  
+    animation-fill-mode: forwards; 
 }
 
 h1{
@@ -68,15 +82,6 @@ li{
 
 button{
     cursor: pointer;
-}
-
-section h2 {
-    opacity: 0;
-    view-timeline-name: --item-timeline;
-    animation-timeline: --item-timeline;
-    animation-range: 15% 25%; 
-    animation-name: appear_left;  
-    animation-fill-mode: forwards; 
 }
 
 
@@ -159,6 +164,10 @@ section h2 {
         font-size: 18px;
     }
 
+    section{
+        margin: 7rem 0;
+        padding-top: 7vh; /* for navbar */
+    }
 }
 
 @media (max-width: 500px) {
@@ -185,6 +194,10 @@ section h2 {
 
      footer{
         padding: 2rem 1.5rem;
+    }
+
+    section{
+        margin: 5rem 0;  
     }
 }
 

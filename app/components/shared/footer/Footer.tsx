@@ -2,7 +2,7 @@ import Link from 'next/link'
 import styles from './Footer.module.css'
 import { LinkedinSvg } from '../svg/Buttons/Linkedin'
 import { InstagramSvg } from '../svg/Buttons/Instagram'
-import { ButtonCV } from '../buttonCV/ButtonCV'
+import { ButtonCV } from '../buttons/cv/ButtonCV'
 
 export function Footer () {
   return (

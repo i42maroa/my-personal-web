@@ -6,8 +6,6 @@ import styles from './FaceAnimate.module.css'
 
 export function FaceAnimate () {
   const [coords, setCoords] = useState({ C: 0, L: 0 })
-  // const [C, setC] = useState(0)
-  // const [L, setL] = useState(0)
 
   useEffect(() => {
     const handleMouseMove = (event: { clientX: number; clientY: number }) => {

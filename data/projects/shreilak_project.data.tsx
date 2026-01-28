@@ -27,5 +27,5 @@ export const SHREILAK_PROJECT: ProjectInterface = {
   ],
   urlGithub: 'https://github.com/i42maroa/sheilaWebpage',
   status: 'DEPLOY',
-  url: 'https://shreilak.com'
+  url: 'https://shreilak.es'
 }

@@ -1,15 +1,12 @@
 .mainContainer{
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-    position: relative;
+    flex-direction: row;
 }
 
 .avatarContainer{
     height: 100vh;
     width: 100%;
     display: flex;
-        margin: auto;
+    margin: auto;
 }
 
 .textContainer{
@@ -18,6 +15,7 @@
     margin: auto;
     position: relative;
 }
+
 .text{
     opacity: 0;
     view-timeline-name: --item-timeline;

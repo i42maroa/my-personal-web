@@ -1,0 +1,47 @@
+
+.hamburgerButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+  margin: auto 10px;
+}
+
+.hamburgerButton:hover span{
+  background-color: var(--green);
+}
+
+.hamburgerButton span {
+  display: block;
+  height: 3px;
+  background: var(--navbar);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburgerButton.open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburgerButton.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerButton.open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+.open span  {
+    background-color: var(--font-color-navbar);
+}
+
+@media (max-width: 768px) {
+  .hamburgerButton {
+    display: flex;
+  }}

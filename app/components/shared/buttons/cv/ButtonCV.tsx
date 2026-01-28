@@ -1,4 +1,4 @@
-import { CVLogoSVG } from '../svg/CV/CVLogo'
+import { CVLogoSVG } from '../../svg/CV/CVLogo'
 import styles from './ButtonCV.module.css'
 
 export function ButtonCV () {

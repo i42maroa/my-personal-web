@@ -11,4 +11,23 @@
     --hard-brown:#4e3620;
     --swiper-pagination-color: #66BAAF;
     --background: #f8f4e1;
+
+    --background: var(--white);
+    --section: var(--soft-brown);
+    --font-color: var(--hard-brown);
+    --font-color-navbar: var(--white);
+    --font-color-footer: var(--white);
+    --inverse-font-color: var(--white);
+    --footer-container: var(--hard-brown);
+    --navbar: var(--hard-brown);
+    --navbar-stroke: var(--soft-brown);
+    --machine-panel: var(--white);
+    --logo: var(--hard-brown);
+    --logo-oposite: var(--white);
+    --image-stroke: var(--hard-brown);
+    --stroke: var(--hard-brown);
+    --inverse-stroke: var(--white);
+    --form-fill-background: var(--soft-brown);
+    --form-fill-color: var(--white);
+    --form-placeholder: var(--soft-brown)
 }

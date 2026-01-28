@@ -1,7 +1,7 @@
 
 .footerContainer{
     display: flex;
-    margin-bottom: 0.5rem;
+    margin-top: 5rem;
 }
 
 .listContainer{
@@ -11,6 +11,7 @@
 .navigationElement{
     margin: 1.5rem 1rem;
     transition: all 0.1s ease-in;
+    width: fit-content;
 }
 
 .navigationElement:hover{
