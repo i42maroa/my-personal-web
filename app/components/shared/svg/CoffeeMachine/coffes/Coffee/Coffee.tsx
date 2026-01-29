@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs */
 import showComponentOr from '@/hook/showComponentOr'
 import styles from './Coffee.module.css'
 

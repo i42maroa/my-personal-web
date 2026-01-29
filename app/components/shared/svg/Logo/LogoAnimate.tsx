@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs */
 import styles from './LogoAnimate.module.css'
 
 export function LogoAnimateSvg () {

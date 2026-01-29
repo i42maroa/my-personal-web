@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs */
 import styles from './Milk.module.css'
 
 export function MilkSvg () {

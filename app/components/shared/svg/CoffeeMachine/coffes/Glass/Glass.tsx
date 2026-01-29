@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs */
 import styles from './Glass.module.css'
 
 export function GlassSvg () {

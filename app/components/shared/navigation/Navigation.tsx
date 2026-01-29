@@ -12,16 +12,16 @@ export function Navigation () {
   const [lastScrol, setLastScroll] = useState(0)
   const [isScrollDown, setIsScrollingDown] = useState(false)
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  })
-
   const handleScroll = () => {
     setLastScroll(window.scrollY)
     setIsScrollingDown(window.scrollY > lastScrol)
     setShowNav(showNav ? false : showNav)
   }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  })
 
   return (
     <>

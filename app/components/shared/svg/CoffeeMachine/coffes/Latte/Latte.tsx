@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs */
 import styles from './Latte.module.css'
 
 export function LatteSvg ({ panel }: {panel:boolean}) {

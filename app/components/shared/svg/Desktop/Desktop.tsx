@@ -1,5 +1,3 @@
-/* eslint-disable no-tabs */
-
 import styles from './Desktop.module.css'
 
 export function DesktopSvg () {

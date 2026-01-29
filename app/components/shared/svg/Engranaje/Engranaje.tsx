@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs */
 import styles from './Engranaje.module.css'
 
 export function EngranajeSvg () {

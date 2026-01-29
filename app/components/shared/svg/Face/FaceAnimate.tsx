@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs */
 'use client'
 
 import { useEffect, useState } from 'react'
