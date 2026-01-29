@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs */
 import styles from './Logo.module.css'
 
 export function LogoSvg () {

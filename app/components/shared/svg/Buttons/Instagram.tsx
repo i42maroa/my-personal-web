@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs */
 import styles from './Button.module.css'
 
 export function InstagramSvg ({ isPresentation }:{isPresentation:boolean}) {

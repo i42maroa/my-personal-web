@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs */
 import styles from './WorkCoffee.module.css'
 
 export function WorkCoffee () {

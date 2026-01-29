@@ -6,7 +6,6 @@
     padding: 2rem 0;
 }
 
-
 .yearContainer{
     width: 198px;
     height: 100%;
@@ -26,7 +25,8 @@
     margin: auto;
     text-align: center;
     font-weight: 800;
-    font-size: 30px;
+    font-size: 24px;
+    width: 100%;
 }
 
 .imageContainer{
@@ -167,6 +167,7 @@
     .yearExperience{
         padding: 0;
         margin: auto;
+        font-size: 20px;
     }
 
     .contentContainer{
@@ -197,21 +198,19 @@
     }
 
     .yearExperience{
-        font-size: 25px;
+        font-size: 16px;
     }
 
     .title, .subtitle{
         margin: auto 0;      
         padding: 10px 0;
     }
-
 }
-
 
 @media (max-width: 500px) {
 
     .container{
-        grid-template-columns: 70px 1fr;
+        grid-template-columns: 80px 1fr;
     }
 
     .imageContainer{
@@ -221,11 +220,11 @@
     }
 
     .yearContainer{
-        width: 65px;
+        width: 75px;
     }
 
     .yearExperience{
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .contentTechnologies{
@@ -238,10 +237,6 @@
         animation-range: 15% 25%; 
     }
 }
-
-
-
-/* KEYFRAMES */
 
 @keyframes appear_right {
     0%{

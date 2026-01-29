@@ -1,77 +1,40 @@
-.sectionWrapper{
-    min-height: 100svh;
-    position: relative;
-}
-
-.fillColor{
-    position: absolute;
-    top: -5rem;
-    left: -5rem;
-    width: 100svw;
-    height: 100svh;
-    background-color: var(--last-background);
-}
-
-
 .sectionContainer{
-    min-height: 80svh;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+    min-height: 80vh;
+    padding: 0;
+    margin: 0 auto;
 }
 
 .header{
     position: relative;
     display: flex;
-}
-
-.pageHeaderInr{
-    display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: auto;
-    justify-content: center;
 }
 
-.pageContent{
-    position: relative;
-    max-width: 600px;
-    width: 100%;
-    min-height: 25dvh;
-    margin-bottom: 100px;
+.title{
+    animation: reveal .8s cubic-bezier(.215,.61,.355,1) 0.5s backwards;
+    
 }
 
-.avatarBg{
-    display: flex;
-    justify-content: center;
-    margin-right: 3rem;
-}
-
-.pageContent h1{
-    animation: reveal .8s cubic-bezier(.215,.61,.355,1) 3.5s backwards;
-}
-
-.pageContent p{
-    animation: reveal .8s cubic-bezier(.215,.61,.355,1) 3.7s backwards;
+.text{
+    animation: reveal .8s cubic-bezier(.215,.61,.355,1) 0.7s backwards;
     margin-top: 20px;
-}
-
-.fill{
-    animation: fill 3.8s ease-out 0.3s forwards reverse;
-}
-
-.unfill{
-    display: none;
 }
 
 .socialMediaContainer{
     display: flex;
     margin-top: 1rem;
-    gap: 5px;
-    animation: reveal .8s cubic-bezier(.215,.61,.355,1) 3.9s backwards;
+    gap: 10px; 
+    animation: reveal .8s cubic-bezier(.215,.61,.355,1) 0.9s backwards;
 }
 
 .socialMedia{
     width: 40px;
     height: 40px;
-    margin: 0.5rem;
-    transition: scale 0.3s ease-in;
 }
 
 .socialMedia:hover{
@@ -83,125 +46,36 @@
     .sectionContainer{
         flex-direction: column;
         justify-content: center;
+        gap: 0;
     }
-
-    
-    .avatarBg{
-        position: relative;
-        left: 0;
-        height: 35vh;
-        margin: 100px 0 50px 0;
-    }
-
-    .pageHeaderInr{
-        margin: auto;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .socialMediaContainer{
-        margin: 0.5rem auto;
-        justify-content: center;
-    }
-
+   
     .socialMedia{
         width: 30px;
         height: 30px;
-        margin: 0.3rem;
     }
-
     
+    .title, .text{
+        text-align: center;
+    }
+    .socialMediaContainer{
+        justify-content: center;
+    }
 }
-
 
 @media (max-width: 500px) {
-
-    .avatarBg{
-        position: relative;
-        margin-top: 100px;
-        left: 0;
-        height: 25vh;
-        min-height: 200px;
-    }
-
     .socialMedia{
         width: 20px;
         height: 20px;
-        margin: 0.2rem;
+    }
+
+    .sectionContainer{
+        min-height: 70vh;  
     }
 }
-
-@media (max-width: 300px) {
-
-    .socialMedia{
-        width: 20px;
-        height: 20px;
-        margin: 0.2rem;
-    }
-}
-
 
 @keyframes reveal {
     0% {
         opacity: 0;
         transform: translateY(8px);
-    }
-}
-
-
-@keyframes fill{
-
-    0%{
-        height: 0;
-    }
-
-    100%{
-        height: 100%;
-    }
-}
-
-
-@media (max-width: 1200px) {
-
-    .fillColor{
-        top: -100px;
-        left: -100px;
-    }
-}
-
-@media (max-width: 1000px) {
-
-    .fillColor{
-        top: -80px;
-        left: -80px;
-    }
-}
-
-@media (max-width: 700px) {
-    .fillColor{
-        top: -60px;
-        left: -60px;
-    }
-}
-
-@media (max-width: 600px) {
-    .fillColor{
-        top: -30px;
-        left: -30px;
-    }
-}
-
-@media (max-width: 500px) {
-    .fillColor{
-        top: -25px;
-        left: -25px;
-    }
-}
-
-@media (max-width: 300px) {
-
-    .fillColor{
-        top: -15px;
-        left: -15px;
     }
 }

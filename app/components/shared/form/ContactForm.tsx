@@ -22,15 +22,14 @@ export default function ContactForm () {
 
    const handleSubmit = (event:any) => {
      event.preventDefault()
-     const id = 'service_l8afvph'
-     const templateId = 'template_pb7xl9l'
-     const publicKey = 'PTbPZyQDA6HdARA-H'
+     const id = process.env.NEXT_PUBLIC_EMAILJS_ID
+     const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID
+     const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY
      setDisabled(true)
      setSendedModal(false)
 
-     emailjs.sendForm(id, templateId, event.target, publicKey)
+     emailjs.sendForm(id!, templateId!, event.target, publicKey)
        .then(response => {
-         console.log(response)
          setFormData(EMPTY_FORM)
          setDisabled(true)
          setSendedModal(true)

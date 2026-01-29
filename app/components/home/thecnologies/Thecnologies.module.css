@@ -4,7 +4,17 @@
     min-height: 100vh;
 }
 
-.mainContainer h3{
+.technologiesGroupContainer{
+    display: flex;
+    margin: 2rem 0;
+    flex-direction: column;
+}
+
+.technologySingleContainer{
+    margin: 1rem 0;
+}
+
+.technologySingleContainer h3{
     text-align: center;
     font-weight: 800;
     opacity: 0;
@@ -14,16 +24,6 @@
     animation-range: 20% 40%; 
     animation-name: appear;  
     animation-fill-mode: forwards; 
-}
-
-.technologiesGroupContainer{
-    display: flex;
-    margin: 2rem 0;
-    flex-direction: column;
-}
-
-.technologySingleContainer{
-    margin: 1rem 0;
 }
 
 .technologyContainer{

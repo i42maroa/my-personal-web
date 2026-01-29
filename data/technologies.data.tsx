@@ -7,8 +7,7 @@ export const FRONT_TECHNOLOGY: TechnologyInterface[] = [
   TEC.NEXTJS,
   TEC.HTML,
   TEC.CSS,
-  TEC.JAVASCRIPT,
-  TEC.ANDROID
+  TEC.JAVASCRIPT
 ]
 
 export const BACK_TECHNOLOGY: TechnologyInterface[] = [
@@ -16,7 +15,8 @@ export const BACK_TECHNOLOGY: TechnologyInterface[] = [
   TEC.SPRING,
   TEC.GRAPHQL,
   TEC.MONGO_DB,
-  TEC.KAFKA
+  TEC.KAFKA,
+  TEC.AWS
 ]
 
 export const MIXT_TECHNOLOGY: TechnologyInterface[] = [

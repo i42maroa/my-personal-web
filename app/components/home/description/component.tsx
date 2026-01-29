@@ -1,11 +1,10 @@
-import { LINKS, PAGES } from '@/data/links.data'
 import styles from './Description.module.css'
 import { EngranajeSvg } from '../../shared/svg/Engranaje/Engranaje'
 import { DesktopSvg } from '../../shared/svg/Desktop/Desktop'
 
 export default function DescriptionComponent () {
   return (
-    <section id={LINKS[PAGES.HOME].sections[1]} className={styles.mainContainer}>
+    <section id='technology' className={styles.mainContainer}>
       <div className={styles.textContainer}>
         <h2>Diseño</h2>
         <p>Propongo soluciones llamativas siempre garantizando una buena experiencia de usuario y respaldadas por un enfoque profesional.</p>

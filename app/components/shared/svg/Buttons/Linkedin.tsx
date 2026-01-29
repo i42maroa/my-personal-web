@@ -1,4 +1,3 @@
-/* eslint-disable no-tabs */
 import styles from './Button.module.css'
 
 export function LinkedinSvg ({ isPresentation }:{isPresentation:boolean}) {

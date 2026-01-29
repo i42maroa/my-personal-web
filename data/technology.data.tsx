@@ -99,6 +99,15 @@ export const KAFKA: TechnologyInterface = {
   name: 'Kafka'
 }
 
+export const AWS: TechnologyInterface = {
+  description: '',
+  image: {
+    url: '/images/kafka.png',
+    alt: 'aws'
+  },
+  name: 'AWS'
+}
+
 export const ILLUSTRATOR: TechnologyInterface = {
   description: '',
   image: {

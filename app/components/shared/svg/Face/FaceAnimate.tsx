@@ -1,105 +1,53 @@
-/* eslint-disable no-tabs */
 'use client'
 
 import { useEffect, useState } from 'react'
 import styles from './FaceAnimate.module.css'
 
 export function FaceAnimate () {
-  const [C, setC] = useState(0)
-  const [L, setL] = useState(0)
+  const [coords, setCoords] = useState({ C: 0, L: 0 })
 
   useEffect(() => {
-    document.body.addEventListener('mousemove', (event) => {
-      const halfInnerWidth = window.innerWidth / 2
-      const halfInnerHeight = window.innerHeight / 2
+    const handleMouseMove = (event: { clientX: number; clientY: number }) => {
+      const halfW = window.innerWidth / 2
+      const halfH = window.innerHeight / 2
 
-      const posX = event.clientX
-      const posY = event.clientY
+      let C = (event.clientX - halfW) / (halfW / 2)
+      let L = (event.clientY - halfH) / (halfH / 2)
 
-      const posCartX = posX - halfInnerWidth
-      const posCartY = posY - halfInnerHeight
+      C = Math.max(-1, Math.min(1, C))
+      L = Math.max(-1, Math.min(1, L))
 
-      let C = posCartX / (halfInnerWidth / 2)
+      setCoords({ C, L })
+    }
 
-      C = C < -1 ? -1 : C
-      C = C > 1 ? 1 : C
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
 
-      let L = posCartY / (halfInnerHeight / 2)
-      L = L < -1 ? -1 : L
-      L = L > 1 ? 1 : L
+  const { C, L } = coords
 
-      setC(C)
-      setL(L)
-    })
+  // Helpers para estilos
+  const transition = 'all 100ms 10ms ease-out'
+  const translate = (x = 0, y = 0) => ({
+    transform: `translate(${x}px, ${y}px)`,
+    transition
   })
 
-  const getFaceRotation = () => {
-    return 3 * C * L
-  }
-
-  const myComponentStyle = {
-    transform: `rotate(${getFaceRotation()}deg)`
-  }
-
-  const headYawlStyle = {
-    transform: `translateY(${L < 0 ? Math.ceil(1 * L) : Math.ceil(3 * L)}px)`,
-    transition: 'all 100ms 10ms ease-out'
-  }
-
-  const eyesStyleX = {
-    transform: `translateX(${Math.ceil(10 * C)}px)`,
-    transition: 'all 100ms 10ms ease-out'
-  }
-
-  const eyesStyleY = {
-    transform: `translateY(${Math.max(Math.ceil(10 * L), -3)}px)`,
-    transition: 'all 100ms 10ms ease-out'
-  }
-
-  const earLeft = {
-    transform: `translateX(${Math.ceil(C < 0 ? 1 : -1 * C)}px)`,
-    transition: 'all 100ms 10ms ease-out'
-  }
-
-  const earRight = {
-    transform: `translateX(${Math.ceil(C < 0 ? -1 : 1 * C)}px)`,
-    transition: 'all 100ms 10ms ease-out'
-  }
-
-  const cejaStyleIzq = {
-    transform: `translateY(${Math.ceil(C < 0 ? 2 : 5 * C) - 5}px)`,
-    transition: 'all 100ms 10ms ease-out'
-  }
-
-  const cejaStyleDer = {
-    transform: `translateY(${Math.ceil(C < 0 ? -5 : -3 * C) - 3}px)`,
-    transition: 'all 100ms 10ms ease-out'
-  }
-
-  const noseStyle = {
-    transform: `translateY(${Math.max(Math.ceil(3 * L), -3)}px)`,
-    transition: 'all 100ms 10ms ease-out'
-  }
-
-  const neckStyle = {
-    transform: `translateY(${Math.max(Math.ceil(3 * L), -1)}px)`,
-    transition: 'all 100ms 10ms ease-out'
-  }
-
-  const beardStyle = {
-    transform: `translateY(${Math.max(Math.ceil(2 * L), -1)}px)`,
-    transition: 'all 100ms 10ms ease-out'
-  }
-
-  const mouthStyle = {
-    transform: `translateY(${Math.max(Math.ceil(2 * L), -1)}px)`,
-    transition: 'all 100ms 10ms ease-out'
-  }
+  // Estilos dinámicos
+  const myComponentStyle = { transform: `rotate(${3 * C * L}deg)` }
+  const headYawlStyle = translate(0, L < 0 ? Math.ceil(1 * L) : Math.ceil(3 * L))
+  const earLeft = translate(Math.ceil(C < 0 ? 1 : -1 * C), 0)
+  const earRight = translate(Math.ceil(C < 0 ? -1 : 1 * C), 0)
+  const cejaStyleIzq = translate(0, Math.ceil(C < 0 ? 2 : 5 * C) - 5)
+  const cejaStyleDer = translate(0, Math.ceil(C < 0 ? -5 : -3 * C) - 3)
+  const noseStyle = translate(0, Math.max(Math.ceil(3 * L), -3))
+  const neckStyle = translate(0, Math.max(Math.ceil(3 * L), -1))
+  const beardStyle = translate(0, Math.max(Math.ceil(2 * L), -1))
+  const mouthStyle = translate(0, Math.max(Math.ceil(2 * L), -1))
 
   return (
     <div className={styles.avatarWrap}>
       <div className={styles.avatar}>
-
         <svg
           version='1.1' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
           viewBox='0 0 629 469' className={styles.containerBody} xmlSpace='preserve'
@@ -178,8 +126,8 @@ export function FaceAnimate () {
               />
             </g>
 
-            <g id='eyesX' style={eyesStyleX}>
-              <g id='eyesY' style={eyesStyleY}>
+            <g id='eyesX' style={{ transform: `translateX(${Math.ceil(10 * C)}px)`, transition }}>
+              <g id='eyesY' style={{ transform: `translateY(${Math.max(Math.ceil(10 * L), -3)}px)`, transition }}>
                 <circle id='' className={styles.st4} cx='361.5' cy='164.5' r='7.5' />
                 <path id='' className={styles.st4} d='M355,181c0,0,11,2,16-1' />
                 <circle id='' className={styles.st4} cx='262' cy='165' r='7' />

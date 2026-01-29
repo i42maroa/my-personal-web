@@ -1,11 +1,10 @@
 import { BACK_TECHNOLOGY, FRONT_TECHNOLOGY, MIXT_TECHNOLOGY } from '@/data/technologies.data'
-import { Technology } from '../../shared/technology/Technology'
+import { Technology } from '../../shared/cards/technology/Technology'
 import styles from './Thecnologies.module.css'
-import { LINKS, PAGES } from '@/data/links.data'
 
 export default function ThecnologiesComponent () {
   return (
-    <section id={LINKS[PAGES.ABOUT].sections[1]} className={styles.mainContainer}>
+    <section id='technology' className={styles.mainContainer}>
       <h2>Mis herramientas</h2>
 
       <div className={styles.technologiesGroupContainer}>
@@ -36,7 +35,6 @@ export default function ThecnologiesComponent () {
           </div>
         </div>
       </div>
-
     </section>
   )
 }
